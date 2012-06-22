@@ -4,15 +4,27 @@
  */
 package com.support.pit.utility;
 
+import com.support.pit.datatype.TreasuryPayment;
+import com.support.pit.system.Constants;
 import java.io.BufferedInputStream;
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Font;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 /**
  *
@@ -200,11 +212,7 @@ public class Utility {
 
             // Here BufferedInputStream is added for fast reading.
             bis = new BufferedInputStream(fis);
-            dis = new DataInputStream(bis);
-
-            // dispose all the resources after using them.
-//            fis.close();
-//            bis.close();           
+            dis = new DataInputStream(bis);       
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -227,7 +235,6 @@ public class Utility {
         String line = null;
         try {
 
-            // dis.available() returns 0 if the file does not have more lines.
             String values[] = new String[2];
 
             while ((line = dis.readLine()) != null) {
@@ -238,8 +245,6 @@ public class Utility {
                     break;
                 }
             }
-
-            // dis_.close();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -265,6 +270,141 @@ public class Utility {
 
         if (!success) {
             // File was not successfully moved                
+        }
+    }
+
+    /**
+     * create excel 2007
+     */
+    public static void createExcel2007(ArrayList<TreasuryPayment> arr_tp, String part_file) {
+        try {
+            int rowCount = 0;
+            Workbook workbook_xlsx = new XSSFWorkbook();
+            Sheet sheet = workbook_xlsx.createSheet(Constants.SHEET_DATA_PAYMENT);
+            Row row = sheet.createRow(rowCount++);
+
+            CellStyle cellStyle = workbook_xlsx.createCellStyle();
+            Font font = workbook_xlsx.createFont();
+            font.setBoldweight(Font.BOLDWEIGHT_BOLD);
+            //set first row
+            cellStyle.setFont(font);
+            for (int i = 0; i < Constants.COLUMN_DATA_PAYMENT.length; i++) {
+                Cell cell = row.createCell(i);
+                cell.setCellValue(Constants.COLUMN_DATA_PAYMENT[i]);
+                cell.setCellStyle(cellStyle);
+            }
+
+            //set next row
+            CellStyle style = workbook_xlsx.createCellStyle();
+            style.cloneStyleFrom(cellStyle);
+            for (int i = 0; i < arr_tp.size(); i++) {
+                Row dataRow = sheet.createRow(rowCount++);
+
+                Cell cell = dataRow.createCell(0);
+                //cell.setCellStyle(style);
+                cell.setCellValue(arr_tp.get(i).getFilename());
+
+                cell = dataRow.createCell(1);
+                cell.setCellValue(arr_tp.get(i).getCqt());
+
+                cell = dataRow.createCell(2);
+                cell.setCellValue(arr_tp.get(i).getMakb());
+
+                cell = dataRow.createCell(3);
+                cell.setCellValue(arr_tp.get(i).getMa_cqthu());
+
+                cell = dataRow.createCell(4);
+                cell.setCellValue(arr_tp.get(i).getTran_no());
+
+                cell = dataRow.createCell(5);
+                cell.setCellValue(arr_tp.get(i).getNgay_ct());
+
+                cell = dataRow.createCell(6);
+                cell.setCellValue(arr_tp.get(i).getNgay_kb());
+
+                cell = dataRow.createCell(7);
+                cell.setCellValue(arr_tp.get(i).getTotal_ct_khobac());
+
+                cell = dataRow.createCell(8);
+                cell.setCellValue(arr_tp.get(i).getTotal_ct_pit());
+            }
+            //out file
+            FileOutputStream outputStream = new FileOutputStream(part_file + Constants.TYPE_EXCEL_2007);
+            //write excel
+            workbook_xlsx.write(outputStream);
+            //close
+            outputStream.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Create excel 2003
+     */
+    public static void createExcel2003(ArrayList<TreasuryPayment> arr_tp, String part_file) {
+        try {
+            int rowCount = 0;
+            Workbook workbook_xls = new HSSFWorkbook();
+            Sheet sheet = workbook_xls.createSheet(Constants.SHEET_DATA_PAYMENT);
+            Row row = sheet.createRow(rowCount++);
+
+            CellStyle cellStyle = workbook_xls.createCellStyle();
+            Font font = workbook_xls.createFont();
+            //set first row
+            font.setBoldweight(Font.BOLDWEIGHT_BOLD);
+            cellStyle.setFont(font);
+            for (int i = 0; i < Constants.COLUMN_DATA_PAYMENT.length; i++) {
+                Cell cell = row.createCell(i);
+                cell.setCellValue(Constants.COLUMN_DATA_PAYMENT[i]);
+                cell.setCellStyle(cellStyle);
+            }
+            //Set next row
+            CellStyle style = workbook_xls.createCellStyle();
+            style.cloneStyleFrom(cellStyle);
+            for (int i = 0; i < arr_tp.size(); i++) {
+                Row dataRow = sheet.createRow(rowCount++);
+
+                Cell cell = dataRow.createCell(0);
+                //cell.setCellStyle(style);
+                cell.setCellValue(arr_tp.get(i).getFilename());
+
+                cell = dataRow.createCell(1);
+                cell.setCellValue(arr_tp.get(i).getCqt());
+
+                cell = dataRow.createCell(2);
+                cell.setCellValue(arr_tp.get(i).getMakb());
+
+                cell = dataRow.createCell(3);
+                cell.setCellValue(arr_tp.get(i).getMa_cqthu());
+
+                cell = dataRow.createCell(4);
+                cell.setCellValue(arr_tp.get(i).getTran_no());
+
+                cell = dataRow.createCell(5);
+                cell.setCellValue(arr_tp.get(i).getNgay_ct());
+
+                cell = dataRow.createCell(6);
+                cell.setCellValue(arr_tp.get(i).getNgay_kb());
+
+                cell = dataRow.createCell(7);
+                cell.setCellValue(arr_tp.get(i).getTotal_ct_khobac());
+
+                cell = dataRow.createCell(8);
+                cell.setCellValue(arr_tp.get(i).getTotal_ct_pit());
+            }
+            //out file
+            FileOutputStream outputStream = new FileOutputStream(part_file + Constants.TYPE_EXCEL_2003);
+            //write excel file
+            workbook_xls.write(outputStream);
+            //close
+            outputStream.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

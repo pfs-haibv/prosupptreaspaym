@@ -162,13 +162,37 @@ public class SupportTreasuryPaymView extends FrameView {
     public void InfoTreasuryPaym() {
         String source_file = txtScandFolder.getText();
         String log_file = txtFileLog.getText();
+
+        String type_excel = "";
+
+        if (radXLSX.isSelected()) {
+            type_excel = Constants.TYPE_EXCEL_2007;
+        } else {
+            type_excel = Constants.TYPE_EXCEL_2003;
+        }
+
         try {
-            FindInfoXML.readXML(source_file, log_file);
-            lblSuc1.setText(" Hoàn thành lấy thông tin file XML, kiểm tra thông tin trong " + log_file + ".");
-        } catch (ParserConfigurationException ex) {            
+            switch (type_excel) {
+                
+                case Constants.TYPE_EXCEL_2007:
+                    FindInfoXML.readXML(source_file, log_file, Constants.TYPE_EXCEL_2007);
+                    lblSuc1.setText("Hoàn thành lấy thông tin file XML, kiểm tra thông tin trong " + log_file + ".");
+                    break;
+
+                case Constants.TYPE_EXCEL_2003:
+                    FindInfoXML.readXML(source_file, log_file, Constants.TYPE_EXCEL_2003);
+                    lblSuc1.setText("Hoàn thành lấy thông tin file XML, kiểm tra thông tin trong " + log_file + ".");
+                    break;
+
+                default:
+                    lblSuc1.setText("Không tồn tại file để kiểm tra");
+                    break;                    
+            }
+
+        } catch (ParserConfigurationException ex) {
             lblSuc1.setText(" Kiểm tra lại đường dẫn khi quét file " + source_file + ".");
         } catch (SAXException ex) {
-            lblSuc1.setText(" Kiểm tra lại đường dẫn khi quét file " + source_file + ".");            
+            lblSuc1.setText(" Kiểm tra lại đường dẫn khi quét file " + source_file + ".");
         } catch (IOException ex) {
             lblSuc1.setText(" Kiểm tra lại đường dẫn khi quét file " + source_file + ".");
             JOptionPane.showMessageDialog(btnCheckXML,
@@ -230,7 +254,7 @@ public class SupportTreasuryPaymView extends FrameView {
         lblSuc.setText("DONE!!!");
 
     }
-    
+
     /**
      * Lấy dữ liệu tờ khai theo mẫu
      * @throws FileNotFoundException
@@ -568,19 +592,23 @@ public class SupportTreasuryPaymView extends FrameView {
         btnModify = new javax.swing.JButton();
         btnClose = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
+        btnCheckXML = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        lblSuc1 = new javax.swing.JLabel();
+        btnChkXML = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         txtScandFolder = new javax.swing.JTextField();
         btnSndFld = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         txtFileLog = new javax.swing.JTextField();
         btnLogFile = new javax.swing.JButton();
-        btnCheckXML = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        lblSuc1 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         txtErrFolder = new javax.swing.JTextField();
         btnErrFld = new javax.swing.JButton();
-        btnChkXML = new javax.swing.JButton();
+        radXLSX = new javax.swing.JRadioButton();
+        radXLS = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         txtInforTK = new javax.swing.JTextField();
@@ -600,6 +628,7 @@ public class SupportTreasuryPaymView extends FrameView {
         statusMessageLabel = new javax.swing.JLabel();
         statusAnimationLabel = new javax.swing.JLabel();
         progressBar = new javax.swing.JProgressBar();
+        btnRad = new javax.swing.ButtonGroup();
 
         mainPanel.setName("mainPanel"); // NOI18N
 
@@ -985,6 +1014,23 @@ public class SupportTreasuryPaymView extends FrameView {
 
         jPanel1.setName("jPanel1"); // NOI18N
 
+        btnCheckXML.setAction(actionMap.get("InfoTreasuryPaym")); // NOI18N
+        btnCheckXML.setText(resourceMap.getString("btnCheckXML.text")); // NOI18N
+        btnCheckXML.setName("btnCheckXML"); // NOI18N
+
+        jButton1.setAction(actionMap.get("quit")); // NOI18N
+        jButton1.setName("jButton1"); // NOI18N
+
+        lblSuc1.setFont(resourceMap.getFont("lblSuc1.font")); // NOI18N
+        lblSuc1.setName("lblSuc1"); // NOI18N
+
+        btnChkXML.setAction(actionMap.get("checkXML")); // NOI18N
+        btnChkXML.setText(resourceMap.getString("btnChkXML.text")); // NOI18N
+        btnChkXML.setName("btnChkXML"); // NOI18N
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(resourceMap.getString("jPanel3.border.title"))); // NOI18N
+        jPanel3.setName("jPanel3"); // NOI18N
+
         jLabel18.setText(resourceMap.getString("jLabel18.text")); // NOI18N
         jLabel18.setName("jLabel18"); // NOI18N
 
@@ -1006,16 +1052,6 @@ public class SupportTreasuryPaymView extends FrameView {
         btnLogFile.setText(resourceMap.getString("btnLogFile.text")); // NOI18N
         btnLogFile.setName("btnLogFile"); // NOI18N
 
-        btnCheckXML.setAction(actionMap.get("InfoTreasuryPaym")); // NOI18N
-        btnCheckXML.setText(resourceMap.getString("btnCheckXML.text")); // NOI18N
-        btnCheckXML.setName("btnCheckXML"); // NOI18N
-
-        jButton1.setAction(actionMap.get("quit")); // NOI18N
-        jButton1.setName("jButton1"); // NOI18N
-
-        lblSuc1.setFont(resourceMap.getFont("lblSuc1.font")); // NOI18N
-        lblSuc1.setName("lblSuc1"); // NOI18N
-
         jLabel26.setText(resourceMap.getString("jLabel26.text")); // NOI18N
         jLabel26.setName("jLabel26"); // NOI18N
 
@@ -1025,9 +1061,77 @@ public class SupportTreasuryPaymView extends FrameView {
         btnErrFld.setText(resourceMap.getString("btnErrFld.text")); // NOI18N
         btnErrFld.setName("btnErrFld"); // NOI18N
 
-        btnChkXML.setAction(actionMap.get("checkXML")); // NOI18N
-        btnChkXML.setText(resourceMap.getString("btnChkXML.text")); // NOI18N
-        btnChkXML.setName("btnChkXML"); // NOI18N
+        btnRad.add(radXLSX);
+        radXLSX.setSelected(true);
+        radXLSX.setText(resourceMap.getString("radXLSX.text")); // NOI18N
+        radXLSX.setName("radXLSX"); // NOI18N
+
+        btnRad.add(radXLS);
+        radXLS.setText(resourceMap.getString("radXLS.text")); // NOI18N
+        radXLS.setName("radXLS"); // NOI18N
+
+        jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
+        jLabel1.setName("jLabel1"); // NOI18N
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(radXLSX)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(radXLS))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtFileLog, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
+                            .addComponent(txtErrFolder, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
+                            .addComponent(txtScandFolder, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnSndFld, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnLogFile, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnErrFld, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtScandFolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18)
+                    .addComponent(btnSndFld))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtErrFolder, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnErrFld, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtFileLog, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLogFile, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(radXLSX)
+                    .addComponent(radXLS)
+                    .addComponent(jLabel1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1036,60 +1140,32 @@ public class SupportTreasuryPaymView extends FrameView {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel26)
-                            .addComponent(jLabel19)
-                            .addComponent(jLabel18))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtFileLog, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE)
-                            .addComponent(txtScandFolder, javax.swing.GroupLayout.DEFAULT_SIZE, 460, Short.MAX_VALUE)
-                            .addComponent(txtErrFolder))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLogFile, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSndFld, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnErrFld, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(lblSuc1, javax.swing.GroupLayout.PREFERRED_SIZE, 767, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(269, 269, 269)
+                        .addGap(272, 272, 272)
                         .addComponent(btnChkXML, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCheckXML, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(163, Short.MAX_VALUE))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblSuc1, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE))))
+                .addContainerGap(228, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtScandFolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18)
-                    .addComponent(btnSndFld))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtFileLog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19)
-                    .addComponent(btnLogFile))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel26)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtErrFolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnErrFld)))
-                .addGap(42, 42, 42)
+                .addGap(24, 24, 24)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblSuc1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCheckXML, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1)
                     .addComponent(btnChkXML))
-                .addGap(281, 281, 281))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
 
         tabPay.addTab(resourceMap.getString("jPanel1.TabConstraints.tabTitle"), jPanel1); // NOI18N
@@ -1272,12 +1348,14 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JButton btnModify;
     private javax.swing.JButton btnModifyTMuc;
     private javax.swing.JButton btnNNT;
+    private javax.swing.ButtonGroup btnRad;
     private javax.swing.JButton btnSndFld;
     private javax.swing.JButton btnTK;
     private javax.swing.JButton btnTKDulieu;
     private javax.swing.JComboBox cboHdr;
     private javax.swing.JComboBox cboma_tmuc;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -1302,6 +1380,7 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
     public static final javax.swing.JLabel lblMessTK = new javax.swing.JLabel();
@@ -1314,6 +1393,8 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JPanel pnlHdr;
     private javax.swing.JPanel pnlHdr1;
     private javax.swing.JProgressBar progressBar;
+    private javax.swing.JRadioButton radXLS;
+    private javax.swing.JRadioButton radXLSX;
     private javax.swing.JLabel statusAnimationLabel;
     private javax.swing.JLabel statusMessageLabel;
     private javax.swing.JPanel statusPanel;

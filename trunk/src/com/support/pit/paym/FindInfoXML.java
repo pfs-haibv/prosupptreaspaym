@@ -1,5 +1,7 @@
 package com.support.pit.paym;
 
+import com.support.pit.datatype.TreasuryPayment;
+import com.support.pit.system.Constants;
 import com.support.pit.utility.Utility;
 import java.io.File;
 import java.io.IOException;
@@ -11,13 +13,16 @@ import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.util.ArrayList;
 
 public class FindInfoXML {
 
-    // Tổng số bản ghi trong file
-    private static int record = 0;
+    //Tổng chứng từ kho bạc
+    private static int total_ct_khobac = 0;
+    //Tổng chứng từ về PIT
+    private static int total_ct_pit = 0;
     // Tiểu mục
-    private static int forTMuc_ = 0;
+    private static int tmuc = 0;
     // Mã kho bạc
     private static String ma_kbac = "";
     // Mã cơ quan thu
@@ -28,28 +33,31 @@ public class FindInfoXML {
     private static String ngay_ct = "";
     // Tên file
     private static String file_name = "";
-
-    public static String getFile_name() {
-        return file_name;
-    }
     //Tran_no
     private static String trans_no = "";
 
     public static void setFile_name(String file_name) {
         FindInfoXML.file_name = file_name;
     }
-    // Tiểu mục nhận về PIT
-    private static int[] array_timuc = {1049,1013,1012,1011,1008,1007,1006,1005,1004,1003,1001,1014};
+    
+        public static String getFile_name() {
+        return file_name;
+    }       
+     //Lưu thông tin từng file xml   
+     public static ArrayList<TreasuryPayment> arr_tp = new ArrayList<TreasuryPayment>();
+
     /**
-     * @date: 13.03.2011
-     * @desc: read info treasury payment in file XML
+     * Thông tin chứng từ
+     * @param source_file
+     * @param log_file
+     * @throws ParserConfigurationException
+     * @throws SAXException
+     * @throws IOException 
      */
-    public static void readXML(String source_file, String log_file) throws ParserConfigurationException, SAXException, IOException {
+    public static void readXML(String source_file, String log_file, String type_excel) throws ParserConfigurationException, SAXException, IOException {
 
-        // Write file text
-        FileWriter fstream = new FileWriter(log_file);
-        BufferedWriter out = new BufferedWriter(fstream);
-
+        //Clear array
+        arr_tp.clear();
         try {
 
             // Forder file scand
@@ -71,8 +79,6 @@ public class FindInfoXML {
                     Document doc = docBuilder.parse(new File(source_file + "\\" + f.getName()));
                     doc.getDocumentElement().normalize();
 
-
-
                     // Header payment
                     NodeList headerPaym = doc.getElementsByTagName("Header");
                     for (int s = 0; s < headerPaym.getLength(); s++) {
@@ -85,13 +91,12 @@ public class FindInfoXML {
                             Element tranElement = (Element) tranList.item(0);
                             NodeList textTranList = tranElement.getChildNodes();
                             trans_no = ((Node) textTranList.item(0)).getNodeValue();
-
                         }
 
                     }
                     // Detail payment
                     NodeList listOfPersons = doc.getElementsByTagName("Transaction");
-                    record = 0;
+                    
                     for (int s = 0; s < listOfPersons.getLength(); s++) {
 
                         Node chungTuNode = listOfPersons.item(s);
@@ -135,14 +140,13 @@ public class FindInfoXML {
 
                             // Loại bỏ tiểu mục values null
                             if (textAgeList.getLength() != 0) {
-                                forTMuc_ = Integer.parseInt(((Node) textAgeList.item(0)).getNodeValue());
+                                tmuc = Integer.parseInt(((Node) textAgeList.item(0)).getNodeValue());
                             }
-
                             // Load TMuc và lấy tiểu mục theo yêu cầu
-                            for (int i = 0; i < array_timuc.length; i++) {
-                                if (forTMuc_ == array_timuc[i]) {
-//                            Số bản ghi theo tiểu mục
-                                    record++;
+                            for (int i = 0; i < Constants.arr_tmuc.length; i++) {
+                                total_ct_khobac++;
+                                if (tmuc == Constants.arr_tmuc[i]) {
+                                    total_ct_pit++;
                                 }
 
                             } // End load TMuc
@@ -150,23 +154,48 @@ public class FindInfoXML {
                         } // End check element node                    
 
                     } // End Transaction_No
-                    // Write text file
-                    if (record != 0) {
-                        out.newLine();
-                        out.write("File name: " + file_name
-                                + "\tMã cqt: " + 
-                                Utility.getMapCQT(ma_kbac)
-                                + "\tNgay kho bac: " + ngay_kb
-                                + "\tTotal records: " + record);
+                    
+                    //Set thông tin từng file dữ liệu và lưu vào mảng
+                    TreasuryPayment tp = new TreasuryPayment();
+                    //set cqt
+                    tp.setCqt(Utility.getMapCQT(ma_kbac));
+                    //file name
+                    tp.setFilename(file_name);
+                    //mã cqthu
+                    tp.setMa_cqthu(ma_cqthu);
+                    //mã kho bạc
+                    tp.setMakb(ma_kbac);
+                    //ngày chứng từ
+                    tp.setNgay_ct(ngay_ct);
+                    //ngày kho bạc
+                    tp.setNgay_kb(ngay_kb);
+                    //mã gói tin
+                    tp.setTran_no(trans_no);
+                    //tổng số chứng từ kho bạc
+                    tp.setTotal_ct_khobac(total_ct_khobac);
+                    //tổng số chứng từ về pit
+                    tp.setTotal_ct_pit(total_ct_pit);         
+                    
+                    //add to array
+                    arr_tp.add(tp);                    
 
-                    }
                 }  // End scan file
             }
-            out.close();
-            fstream.close();
+            //Write to excel
+            switch(type_excel){
+                case Constants.TYPE_EXCEL_2007:
+                    Utility.createExcel2007(arr_tp, log_file);                    
+                    break;
+
+                case Constants.TYPE_EXCEL_2003:
+                   Utility.createExcel2003(arr_tp, log_file);                   
+                    break;
+
+                default:                    
+                    break;  
+            }
         } catch (SAXParseException err) {
             String desc = "Lối file: " + getFile_name() + "\n Mô tả: " + err.getMessage();
-            System.out.println("---" + desc);
             throw new RuntimeException(desc, null);
         }
     }
