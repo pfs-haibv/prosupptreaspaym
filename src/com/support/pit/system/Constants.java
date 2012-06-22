@@ -30,8 +30,15 @@ public class Constants {
     //Part tab CREATE_FORM
     public static final String PART_CREATE_FORM_CQT                            = "PART_CREATE_FORM_CQT";
     public static final String PART_CREATE_FORM_MST                            = "PART_CREATE_FORM_MST";
-    
-    
-    
+    //SHEET Data Payment
+    public static final String SHEET_DATA_PAYMENT                              = "Payment";
+    //Column Treasury Payment
+    public static final String COLUMN_DATA_PAYMENT[] = {"FILE NAME", "Mã CQT", "Mã KB", "Mã CQThu", "Mã gói", 
+                                                        "Ngày CT", "Ngày KB", "Tổng CT KB", "Tổng CT về PIT" };  
+    //Tiêu mục nhận CT về PIT
+    public static int[] arr_tmuc = {1049,1012,1008,1007,1006,1005,1004,1003,1001,1014,4268};
+    //Type excel
+    public static final String TYPE_EXCEL_2003 = ".XLS";
+    public static final String TYPE_EXCEL_2007 = ".XLSX";
     
 }
