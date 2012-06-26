@@ -14,6 +14,8 @@ import org.xml.sax.SAXParseException;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class FindInfoXML {
 
@@ -39,12 +41,12 @@ public class FindInfoXML {
     public static void setFile_name(String file_name) {
         FindInfoXML.file_name = file_name;
     }
-    
-        public static String getFile_name() {
+
+    public static String getFile_name() {
         return file_name;
-    }       
-     //Lưu thông tin từng file xml   
-     public static ArrayList<TreasuryPayment> arr_tp = new ArrayList<TreasuryPayment>();
+    }
+    //Lưu thông tin từng file xml   
+    public static ArrayList<TreasuryPayment> arr_tp = new ArrayList<TreasuryPayment>();
 
     /**
      * Thông tin chứng từ
@@ -96,7 +98,7 @@ public class FindInfoXML {
                     }
                     // Detail payment
                     NodeList listOfPersons = doc.getElementsByTagName("Transaction");
-                    
+
                     for (int s = 0; s < listOfPersons.getLength(); s++) {
 
                         Node chungTuNode = listOfPersons.item(s);
@@ -154,7 +156,7 @@ public class FindInfoXML {
                         } // End check element node                    
 
                     } // End Transaction_No
-                    
+
                     //Set thông tin từng file dữ liệu và lưu vào mảng
                     TreasuryPayment tp = new TreasuryPayment();
                     //set cqt
@@ -174,25 +176,33 @@ public class FindInfoXML {
                     //tổng số chứng từ kho bạc
                     tp.setTotal_ct_khobac(total_ct_khobac);
                     //tổng số chứng từ về pit
-                    tp.setTotal_ct_pit(total_ct_pit);         
-                    
+                    tp.setTotal_ct_pit(total_ct_pit);
+
                     //add to array
-                    arr_tp.add(tp);                    
+                    arr_tp.add(tp);
 
                 }  // End scan file
-            }
+            }            
+            //order macqt
+//            Collections.sort(arr_tp, new Comparator() {
+//                public int compare(Object o1, Object o2) {
+//                    TreasuryPayment p1 = (TreasuryPayment) o1;
+//                    TreasuryPayment p2 = (TreasuryPayment) o2;
+//                    return p1.getCqt().compareToIgnoreCase(p2.getCqt());
+//                }
+//            });
             //Write to excel
-            switch(type_excel){
+            switch (type_excel) {
                 case Constants.TYPE_EXCEL_2007:
-                    Utility.createExcel2007(arr_tp, log_file);                    
+                    Utility.createExcel2007(arr_tp, log_file);
                     break;
 
                 case Constants.TYPE_EXCEL_2003:
-                   Utility.createExcel2003(arr_tp, log_file);                   
+                    Utility.createExcel2003(arr_tp, log_file);
                     break;
 
-                default:                    
-                    break;  
+                default:
+                    break;
             }
         } catch (SAXParseException err) {
             String desc = "Lối file: " + getFile_name() + "\n Mô tả: " + err.getMessage();
