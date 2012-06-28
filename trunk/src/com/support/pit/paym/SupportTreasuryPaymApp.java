@@ -3,8 +3,6 @@
  */
 package com.support.pit.paym;
 
-import com.support.pit.utility.Utility;
-import java.io.DataInputStream;
 import java.io.IOException;
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
@@ -13,9 +11,6 @@ import org.jdesktop.application.SingleFrameApplication;
  * The main class of the application.
  */
 public class SupportTreasuryPaymApp extends SingleFrameApplication {
-
-    //get table map
-    public static DataInputStream dis;
 
     /**
      * At startup create and show the main frame of the application.
@@ -46,8 +41,7 @@ public class SupportTreasuryPaymApp extends SingleFrameApplication {
      * Main method launching the application.
      */
     public static void main(String[] args) throws IOException {
-
-        dis = Utility.getDataMapCQT("tablemap\\ztb_map_cqt.txt");
+        
         launch(SupportTreasuryPaymApp.class, args);
 
     }
