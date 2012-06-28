@@ -33,7 +33,7 @@ public class Constants {
     //SHEET Data Payment
     public static final String SHEET_DATA_PAYMENT                              = "Payment";
     //Column Treasury Payment
-    public static final String COLUMN_DATA_PAYMENT[] = {"FILE NAME", "Mã CQT", "Mã KB", "Mã CQThu", "Mã gói", 
+    public static final String COLUMN_DATA_PAYMENT[] = {"FILE NAME", "Mã CQT", "Tên CQT","Mã KB", "Mã CQThu", "Mã gói", 
                                                         "Ngày CT", "Ngày KB", "Tổng CT KB", "Tổng CT về PIT" };  
     //Tiêu mục nhận CT về PIT
     public static int[] arr_tmuc = {1049,1012,1008,1007,1006,1005,1004,1003,1001,1014,4268};

@@ -11,11 +11,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class FindInfoXML {
 
@@ -37,7 +33,8 @@ public class FindInfoXML {
     private static String file_name = "";
     //Tran_no
     private static String trans_no = "";
-
+    //map mã cqt
+    private static String map_cqt[] = new String[2];
     public static void setFile_name(String file_name) {
         FindInfoXML.file_name = file_name;
     }
@@ -160,7 +157,10 @@ public class FindInfoXML {
                     //Set thông tin từng file dữ liệu và lưu vào mảng
                     TreasuryPayment tp = new TreasuryPayment();
                     //set cqt
-                    tp.setCqt(Utility.getMapCQT(ma_kbac));
+                    map_cqt = Utility.getMapCQT(ma_kbac);
+                    tp.setCqt(map_cqt[0]);
+                    //set tên cqt
+                    tp.setTen_cqt(map_cqt[1]);
                     //file name
                     tp.setFilename(file_name);
                     //mã cqthu
