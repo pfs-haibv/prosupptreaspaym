@@ -12,6 +12,7 @@ public class TreasuryPayment {
     
     private String filename;
     private String cqt;
+    private String ten_cqt;
     private String makb;
     private String ma_cqthu;
     private String tran_no;    
@@ -95,17 +96,25 @@ public class TreasuryPayment {
     public TreasuryPayment() {
     }
 
-    public TreasuryPayment(String filename, String cqt, String makb, String tran_no, String ma_cqthu, String ngay_ct, String ngay_kb, int total_ct_khobac, int total_ct_pit) {
+    public String getTen_cqt() {
+        return ten_cqt;
+    }
+
+    public void setTen_cqt(String ten_cqt) {
+        this.ten_cqt = ten_cqt;
+    }
+
+    public TreasuryPayment(String filename, String cqt, String ten_cqt, String makb, String ma_cqthu, String tran_no, String ngay_ct, String ngay_kb, int total_ct_khobac, int total_ct_pit) {
         this.filename = filename;
         this.cqt = cqt;
+        this.ten_cqt = ten_cqt;
         this.makb = makb;
-        this.tran_no = tran_no;
         this.ma_cqthu = ma_cqthu;
+        this.tran_no = tran_no;
         this.ngay_ct = ngay_ct;
         this.ngay_kb = ngay_kb;
         this.total_ct_khobac = total_ct_khobac;
         this.total_ct_pit = total_ct_pit;
     }   
-    
     
 }

@@ -7,6 +7,7 @@ package com.support.pit.utility;
 import com.support.pit.datatype.TreasuryPayment;
 import com.support.pit.system.Constants;
 import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.File;
@@ -24,6 +25,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 
 /**
@@ -200,48 +202,18 @@ public class Utility {
      * @param file_ora
      * @return getConnORA
      */
-    public static DataInputStream getDataMapCQT(String file_map_cqt) throws IOException {
-
-        File file = new File(file_map_cqt);
-        FileInputStream fis = null;
-        BufferedInputStream bis = null;
-        DataInputStream dis = null;
-
-        try {
-            fis = new FileInputStream(file);
-
-            // Here BufferedInputStream is added for fast reading.
-            bis = new BufferedInputStream(fis);
-            dis = new DataInputStream(bis);       
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return dis;
-    }
-
-    /**
-     * Lấy thông tin mã cqt thông qua mã kho bạc trong file
-     * write thông tin config       
-     * @param file_ora
-     * @return getConnORA
-     */
-    public static String getMapCQT(String ma_kb) throws IOException {
-
-        String getConnORA = "";
-        DataInputStream dis = Utility.getDataMapCQT("tablemap\\ztb_map_cqt.txt");
+    public static String[] getMapCQT(String ma_kb) throws IOException {
+        String result[] = new String[2];
         String line = null;
         try {
-
-            String values[] = new String[2];
-
-            while ((line = dis.readLine()) != null) {
+            BufferedReader input = new BufferedReader(new FileReader(new File("tablemap\\ztb_map_cqt.txt")));
+            String values[] = new String[3];
+            while ((line = input.readLine()) != null) {
 
                 values = line.split(",");
                 if (ma_kb.equals(values[1])) {
-                    getConnORA = values[0];
+                    result[0] = values[0];
+                    result[1] = values[2];
                     break;
                 }
             }
@@ -252,7 +224,7 @@ public class Utility {
             e.printStackTrace();
         }
 
-        return getConnORA;
+        return result;
     }
 
     /**
@@ -308,24 +280,27 @@ public class Utility {
                 cell.setCellValue(arr_tp.get(i).getCqt());
 
                 cell = dataRow.createCell(2);
-                cell.setCellValue(arr_tp.get(i).getMakb());
+                cell.setCellValue(arr_tp.get(i).getTen_cqt());
 
                 cell = dataRow.createCell(3);
-                cell.setCellValue(arr_tp.get(i).getMa_cqthu());
+                cell.setCellValue(arr_tp.get(i).getMakb());
 
                 cell = dataRow.createCell(4);
-                cell.setCellValue(arr_tp.get(i).getTran_no());
+                cell.setCellValue(arr_tp.get(i).getMa_cqthu());
 
                 cell = dataRow.createCell(5);
-                cell.setCellValue(arr_tp.get(i).getNgay_ct());
+                cell.setCellValue(arr_tp.get(i).getTran_no());
 
                 cell = dataRow.createCell(6);
-                cell.setCellValue(arr_tp.get(i).getNgay_kb());
+                cell.setCellValue(arr_tp.get(i).getNgay_ct());
 
                 cell = dataRow.createCell(7);
-                cell.setCellValue(arr_tp.get(i).getTotal_ct_khobac());
+                cell.setCellValue(arr_tp.get(i).getNgay_kb());
 
                 cell = dataRow.createCell(8);
+                cell.setCellValue(arr_tp.get(i).getTotal_ct_khobac());
+
+                cell = dataRow.createCell(9);
                 cell.setCellValue(arr_tp.get(i).getTotal_ct_pit());
             }
             //out file
@@ -375,24 +350,27 @@ public class Utility {
                 cell.setCellValue(arr_tp.get(i).getCqt());
 
                 cell = dataRow.createCell(2);
-                cell.setCellValue(arr_tp.get(i).getMakb());
+                cell.setCellValue(arr_tp.get(i).getTen_cqt());
 
                 cell = dataRow.createCell(3);
-                cell.setCellValue(arr_tp.get(i).getMa_cqthu());
+                cell.setCellValue(arr_tp.get(i).getMakb());
 
                 cell = dataRow.createCell(4);
-                cell.setCellValue(arr_tp.get(i).getTran_no());
+                cell.setCellValue(arr_tp.get(i).getMa_cqthu());
 
                 cell = dataRow.createCell(5);
-                cell.setCellValue(arr_tp.get(i).getNgay_ct());
+                cell.setCellValue(arr_tp.get(i).getTran_no());
 
                 cell = dataRow.createCell(6);
-                cell.setCellValue(arr_tp.get(i).getNgay_kb());
+                cell.setCellValue(arr_tp.get(i).getNgay_ct());
 
                 cell = dataRow.createCell(7);
-                cell.setCellValue(arr_tp.get(i).getTotal_ct_khobac());
+                cell.setCellValue(arr_tp.get(i).getNgay_kb());
 
                 cell = dataRow.createCell(8);
+                cell.setCellValue(arr_tp.get(i).getTotal_ct_khobac());
+
+                cell = dataRow.createCell(9);
                 cell.setCellValue(arr_tp.get(i).getTotal_ct_pit());
             }
             //out file
