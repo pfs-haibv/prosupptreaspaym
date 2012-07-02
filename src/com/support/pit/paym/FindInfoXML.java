@@ -35,6 +35,7 @@ public class FindInfoXML {
     private static String trans_no = "";
     //map mã cqt
     private static String map_cqt[] = new String[2];
+
     public static void setFile_name(String file_name) {
         FindInfoXML.file_name = file_name;
     }
@@ -63,6 +64,9 @@ public class FindInfoXML {
             File actual = new File(source_file);
 
             for (File f : actual.listFiles()) {
+                //clear total ct
+                total_ct_khobac = 0;
+                total_ct_pit = 0;
                 // Lay file XML
                 int endIndex = f.getName().length();
                 int beginIndex = endIndex - 3;
@@ -96,8 +100,8 @@ public class FindInfoXML {
                     // Detail payment
                     NodeList listOfPersons = doc.getElementsByTagName("Transaction");
 
-                    for (int s = 0; s < listOfPersons.getLength(); s++) {
-
+                    for (int s = 0; s < listOfPersons.getLength(); s++) {                        
+                        total_ct_khobac++;                        
                         Node chungTuNode = listOfPersons.item(s);
                         //Check ELEMENT NODE
                         if (chungTuNode.getNodeType() == Node.ELEMENT_NODE) {
@@ -142,8 +146,7 @@ public class FindInfoXML {
                                 tmuc = Integer.parseInt(((Node) textAgeList.item(0)).getNodeValue());
                             }
                             // Load TMuc và lấy tiểu mục theo yêu cầu
-                            for (int i = 0; i < Constants.arr_tmuc.length; i++) {
-                                total_ct_khobac++;
+                            for (int i = 0; i < Constants.arr_tmuc.length; i++) {                               
                                 if (tmuc == Constants.arr_tmuc[i]) {
                                     total_ct_pit++;
                                 }
@@ -182,15 +185,7 @@ public class FindInfoXML {
                     arr_tp.add(tp);
 
                 }  // End scan file
-            }            
-            //order macqt
-//            Collections.sort(arr_tp, new Comparator() {
-//                public int compare(Object o1, Object o2) {
-//                    TreasuryPayment p1 = (TreasuryPayment) o1;
-//                    TreasuryPayment p2 = (TreasuryPayment) o2;
-//                    return p1.getCqt().compareToIgnoreCase(p2.getCqt());
-//                }
-//            });
+            }
             //Write to excel
             switch (type_excel) {
                 case Constants.TYPE_EXCEL_2007:
