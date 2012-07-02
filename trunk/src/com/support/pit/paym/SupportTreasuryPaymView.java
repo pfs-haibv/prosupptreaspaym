@@ -154,7 +154,12 @@ public class SupportTreasuryPaymView extends FrameView {
     public void PartFolderInFTK() {
         getDirectory(Constants.PART_CREATE_FORM_MST);
     }
-
+   
+    @Action
+    public void PartPaymErr() {
+        getDirectory(Constants.PART_INFO_PAYM_ERR_FORDER);
+    }   
+    
     /**
      * Hiển thị thông tin file xml, xem code @see FindInfoXML
      */
@@ -510,7 +515,10 @@ public class SupportTreasuryPaymView extends FrameView {
                 file = fc.getSelectedFile();
                 txtFileLog.setText(file.getPath());
                 break;
-
+            case Constants.PART_INFO_PAYM_ERR_FORDER:                
+                txtErrFolder.setText(file.getPath());
+                break;
+                
             case Constants.PART_INFO_PAYM_SRC_FORDER:
                 txtScandFolder.setText(file.getPath());
                 break;
@@ -1058,6 +1066,7 @@ public class SupportTreasuryPaymView extends FrameView {
         txtErrFolder.setText(resourceMap.getString("txtErrFolder.text")); // NOI18N
         txtErrFolder.setName("txtErrFolder"); // NOI18N
 
+        btnErrFld.setAction(actionMap.get("PartPaymErr")); // NOI18N
         btnErrFld.setText(resourceMap.getString("btnErrFld.text")); // NOI18N
         btnErrFld.setName("btnErrFld"); // NOI18N
 
