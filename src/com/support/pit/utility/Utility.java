@@ -6,6 +6,7 @@ package com.support.pit.utility;
 
 import com.support.pit.datatype.TreasuryPayment;
 import com.support.pit.system.Constants;
+import com.support.pit.table_map.ztb_map_cqt;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -203,26 +204,25 @@ public class Utility {
      * @return getConnORA
      */
     public static String[] getMapCQT(String ma_kb) throws IOException {
+        
         String result[] = new String[2];
-        String line = null;
-        try {
-            BufferedReader input = new BufferedReader(new FileReader(new File("tablemap\\ztb_map_cqt.txt")));
-            String values[] = new String[3];
-            while ((line = input.readLine()) != null) {
 
-                values = line.split(",");
-                if (ma_kb.equals(values[1])) {
-                    result[0] = values[0];
-                    result[1] = values[2];
-                    break;
+            for (int i = 0; i < ztb_map_cqt.map_cqt.length; i++) {
+
+                for (int j = 0; j < 3; j++) {
+                    //trường hợp tồn tại ma_kb
+                    if (ztb_map_cqt.map_cqt[i][1].equals(ma_kb)) {
+                        //ma_cqt
+                        result[0] = ztb_map_cqt.map_cqt[i][0];
+                        //ten cqt
+                        result[1] = ztb_map_cqt.map_cqt[i][2];
+                        //thoát khi tìm thấy
+                        break;
+                    }
+                    
                 }
-            }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            }
 
         return result;
     }
