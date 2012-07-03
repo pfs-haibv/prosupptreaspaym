@@ -1,6 +1,7 @@
 package com.support.pit.paym;
 
 import com.support.pit.datatype.TreasuryPayment;
+import com.support.pit.serializable.SerializableDemo;
 import com.support.pit.system.Constants;
 import com.support.pit.utility.Utility;
 import java.io.File;
@@ -160,7 +161,9 @@ public class FindInfoXML {
                     //Set thông tin từng file dữ liệu và lưu vào mảng
                     TreasuryPayment tp = new TreasuryPayment();
                     //set cqt
-                    map_cqt = Utility.getMapCQT(ma_kbac);
+                    //2 cách lấy tên đều ko lỗi font
+                    //map_cqt = Utility.getMapCQT(ma_kbac);
+                    map_cqt = SerializableDemo.getDataMapCQT(ma_kbac);
                     tp.setCqt(map_cqt[0]);
                     //set tên cqt
                     tp.setTen_cqt(map_cqt[1]);
