@@ -183,7 +183,6 @@ public class FindInfoXML {
 
                     //add to array
                     arr_tp.add(tp);
-
                 }  // End scan file
             }
             //Write to excel
