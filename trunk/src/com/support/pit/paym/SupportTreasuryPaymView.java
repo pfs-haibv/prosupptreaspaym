@@ -124,8 +124,7 @@ public class SupportTreasuryPaymView extends FrameView {
     @Action
     public void setSerializable() throws IOException{
         SerializableDemo.setDataMapCQT();
-    }
-    
+    }    
     
     @Action
     public void getDeserilizable() throws IOException{
