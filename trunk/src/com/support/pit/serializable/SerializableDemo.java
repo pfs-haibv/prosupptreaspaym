@@ -61,4 +61,37 @@ public class SerializableDemo {
             return;
         }
     }
+    
+    
+    public static String[] getDataMapCQT(String ma_kb) throws IOException {
+        String result[] = new String[2];
+        MapCqt cqt_ = null;
+        try {
+            FileInputStream fileIn = new FileInputStream("table/ztb_map_cqt.map");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            cqt_ = (MapCqt) in.readObject();
+            while ((cqt_ = (MapCqt) in.readObject()) != null) {
+                //trường hợp tồn tại ma_kb
+                    if (cqt_.getMa_kb().equals(ma_kb)) {
+                        //ma_cqt
+                        result[0] = cqt_.getMa_cqt();
+                        //ten cqt
+                        result[1] = cqt_.getTen_cqt();
+                        //thoát khi tìm thấy
+                        break;
+                    }
+            }
+            in.close();
+            fileIn.close();
+        } catch (IOException i) {
+            i.printStackTrace();           
+        } catch (ClassNotFoundException c) {
+            System.out.println(".Employee class not found.");
+            c.printStackTrace();            
+        }
+        
+        return result;
+    }
+    
+    
 }
