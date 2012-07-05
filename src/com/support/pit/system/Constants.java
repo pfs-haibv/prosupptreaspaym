@@ -30,6 +30,9 @@ public class Constants {
     //Part tab CREATE_FORM
     public static final String PART_CREATE_FORM_CQT                            = "PART_CREATE_FORM_CQT";
     public static final String PART_CREATE_FORM_MST                            = "PART_CREATE_FORM_MST";
+    //Part tab Tiện ích
+    public static final String PART_TIEN_ICH_SRC_FLD                           = "PART_TIEN_ICH_SRC_FLD";
+    public static final String PART_TIEN_ICH_COPY_TO_FLD                       = "PART_TIEN_ICH_COPY_TO_FLD";
     //SHEET Data Payment
     public static final String SHEET_DATA_PAYMENT                              = "Payment";
     //Column Treasury Payment
