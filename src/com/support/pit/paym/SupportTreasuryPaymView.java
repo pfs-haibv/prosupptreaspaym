@@ -171,6 +171,17 @@ public class SupportTreasuryPaymView extends FrameView {
         getDirectory(Constants.PART_INFO_PAYM_ERR_FORDER);
     }   
     
+    
+    @Action
+    public void PartTienIchScanFld() {
+        getDirectory(Constants.PART_TIEN_ICH_SRC_FLD);
+    }    
+    
+    @Action
+    public void PartTienIchCopyFld() {
+        getDirectory(Constants.PART_TIEN_ICH_COPY_TO_FLD);
+    }
+    
     /**
      * Hiển thị thông tin file xml, xem code @see FindInfoXML
      */
@@ -223,6 +234,11 @@ public class SupportTreasuryPaymView extends FrameView {
                     "Lại lỗi rồi các thầy kho bạc ơi!!! Các thầy củ hành em quá vậy trời",
                     JOptionPane.ERROR_MESSAGE);
         }
+    }
+    
+    @Action
+    public void findCopyFile() throws IOException{
+        Utility.copyDirectory(new File (txtTienIchScand.getText()), new File(txtTienIchCopy.getText()), txtFileNameCopy.getText());
     }
 
     /**
@@ -545,6 +561,14 @@ public class SupportTreasuryPaymView extends FrameView {
             case Constants.PART_CREATE_FORM_MST:
                 txtInforTK.setText(file.getPath());
                 break;
+                
+            case Constants.PART_TIEN_ICH_SRC_FLD:
+                txtTienIchScand.setText(file.getPath());
+                break;
+                
+            case Constants.PART_TIEN_ICH_COPY_TO_FLD:
+               txtTienIchCopy.setText(file.getPath());
+               break;   
 
             default:
                 break;
@@ -640,6 +664,17 @@ public class SupportTreasuryPaymView extends FrameView {
         txtTKCreate = new javax.swing.JTextField();
         btnCreateDT = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        txtTienIchScand = new javax.swing.JTextField();
+        btnTienIchScand = new javax.swing.JButton();
+        jLabel27 = new javax.swing.JLabel();
+        txtTienIchCopy = new javax.swing.JTextField();
+        btnTienIchCopy = new javax.swing.JButton();
+        btnCopy = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtFileNameCopy = new javax.swing.JTextArea();
         menuBar = new javax.swing.JMenuBar();
         javax.swing.JMenu fileMenu = new javax.swing.JMenu();
         javax.swing.JMenuItem exitMenuItem = new javax.swing.JMenuItem();
@@ -1307,6 +1342,124 @@ public class SupportTreasuryPaymView extends FrameView {
 
         tabPay.addTab(resourceMap.getString("jPanel6.TabConstraints.tabTitle"), jPanel6); // NOI18N
 
+        jPanel5.setName("jPanel5"); // NOI18N
+
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(resourceMap.getString("jPanel7.border.title"))); // NOI18N
+        jPanel7.setName("jPanel7"); // NOI18N
+
+        jLabel20.setText(resourceMap.getString("jLabel20.text")); // NOI18N
+        jLabel20.setName("jLabel20"); // NOI18N
+
+        txtTienIchScand.setText(resourceMap.getString("txtTienIchScand.text")); // NOI18N
+        txtTienIchScand.setName("txtTienIchScand"); // NOI18N
+
+        btnTienIchScand.setAction(actionMap.get("PartTienIchScanFld")); // NOI18N
+        btnTienIchScand.setText(resourceMap.getString("btnTienIchScand.text")); // NOI18N
+        btnTienIchScand.setName("btnTienIchScand"); // NOI18N
+
+        jLabel27.setText(resourceMap.getString("jLabel27.text")); // NOI18N
+        jLabel27.setName("jLabel27"); // NOI18N
+
+        txtTienIchCopy.setText(resourceMap.getString("txtTienIchCopy.text")); // NOI18N
+        txtTienIchCopy.setName("txtTienIchCopy"); // NOI18N
+
+        btnTienIchCopy.setAction(actionMap.get("PartTienIchCopyFld")); // NOI18N
+        btnTienIchCopy.setText(resourceMap.getString("btnTienIchCopy.text")); // NOI18N
+        btnTienIchCopy.setName("btnTienIchCopy"); // NOI18N
+
+        btnCopy.setAction(actionMap.get("findCopyFile")); // NOI18N
+        btnCopy.setText(resourceMap.getString("btnCopy.text")); // NOI18N
+        btnCopy.setName("btnCopy"); // NOI18N
+
+        jScrollPane1.setName("jScrollPane1"); // NOI18N
+
+        txtFileNameCopy.setColumns(20);
+        txtFileNameCopy.setRows(5);
+        txtFileNameCopy.setText(resourceMap.getString("txtFileNameCopy.text")); // NOI18N
+        txtFileNameCopy.setName("txtFileNameCopy"); // NOI18N
+        txtFileNameCopy.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtFileNameCopyMouseClicked(evt);
+            }
+        });
+        txtFileNameCopy.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtFileNameCopyKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtFileNameCopyKeyReleased(evt);
+            }
+        });
+        jScrollPane1.setViewportView(txtFileNameCopy);
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(btnCopy)
+                .addContainerGap(217, Short.MAX_VALUE))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel27))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtTienIchCopy)
+                            .addComponent(txtTienIchScand, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnTienIchScand, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnTienIchCopy, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(62, 62, 62))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtTienIchScand, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(9, 9, 9)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel27)
+                            .addComponent(txtTienIchCopy, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(btnTienIchScand)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnTienIchCopy)))
+                .addGap(18, 18, 18)
+                .addComponent(btnCopy)
+                .addGap(7, 7, 7)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(551, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(256, Short.MAX_VALUE))
+        );
+
+        tabPay.addTab(resourceMap.getString("jPanel5.TabConstraints.tabTitle"), jPanel5); // NOI18N
+
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
@@ -1375,11 +1528,25 @@ public class SupportTreasuryPaymView extends FrameView {
         setMenuBar(menuBar);
         setStatusBar(statusPanel);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtFileNameCopyKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFileNameCopyKeyPressed
+     
+    }//GEN-LAST:event_txtFileNameCopyKeyPressed
+
+    private void txtFileNameCopyKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFileNameCopyKeyReleased
+       
+    }//GEN-LAST:event_txtFileNameCopyKeyReleased
+
+    private void txtFileNameCopyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFileNameCopyMouseClicked
+        txtFileNameCopy.setText("");
+    }//GEN-LAST:event_txtFileNameCopyMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCheckXML;
     private javax.swing.JButton btnChkXML;
     private javax.swing.JButton btnClose;
     private javax.swing.JButton btnCloseTK;
+    private javax.swing.JButton btnCopy;
     private javax.swing.JButton btnCreateDT;
     private javax.swing.JButton btnErrFld;
     private javax.swing.JButton btnGetFile;
@@ -1392,6 +1559,8 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JButton btnSndFld;
     private javax.swing.JButton btnTK;
     private javax.swing.JButton btnTKDulieu;
+    private javax.swing.JButton btnTienIchCopy;
+    private javax.swing.JButton btnTienIchScand;
     private javax.swing.JComboBox cboHdr;
     private javax.swing.JComboBox cboma_tmuc;
     private javax.swing.JButton jButton1;
@@ -1408,11 +1577,13 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1424,7 +1595,10 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JScrollPane jScrollPane1;
     public static final javax.swing.JLabel lblMessTK = new javax.swing.JLabel();
     private javax.swing.JLabel lblSuc;
     private javax.swing.JLabel lblSuc1;
@@ -1443,12 +1617,15 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JTabbedPane tabPay;
     private javax.swing.JTextField txtErrFolder;
     private javax.swing.JTextField txtFileLog;
+    private javax.swing.JTextArea txtFileNameCopy;
     private javax.swing.JTextField txtInfoNNT;
     private javax.swing.JTextField txtInforTK;
     private javax.swing.JTextField txtMdfFile;
     private javax.swing.JTextField txtScandFolder;
     private javax.swing.JTextField txtSourFolder;
     private javax.swing.JTextField txtTKCreate;
+    private javax.swing.JTextField txtTienIchCopy;
+    private javax.swing.JTextField txtTienIchScand;
     private javax.swing.JTextField txtValHdr;
     private javax.swing.JTextField txtkhct;
     private javax.swing.JTextField txtky_thue;
