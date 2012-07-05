@@ -203,19 +203,19 @@ public class Utility {
      * @param file_ora
      * @return getConnORA
      */
-    public static String[] getMapCQT(String ma_kb) throws IOException {
+    public static String[] getMapCQT(String ma_kb, String ma_cqthu) throws IOException {
         
         String result[] = new String[2];
 
             for (int i = 0; i < ztb_map_cqt.map_cqt.length; i++) {
 
-                for (int j = 0; j < 3; j++) {
+                for (int j = 0; j < 4; j++) {
                     //trường hợp tồn tại ma_kb
-                    if (ztb_map_cqt.map_cqt[i][1].equals(ma_kb)) {
+                    if (ztb_map_cqt.map_cqt[i][2].equals(ma_kb) || ztb_map_cqt.map_cqt[i][1].equals(ma_cqthu)) {
                         //ma_cqt
                         result[0] = ztb_map_cqt.map_cqt[i][0];
                         //ten cqt
-                        result[1] = ztb_map_cqt.map_cqt[i][2];
+                        result[1] = ztb_map_cqt.map_cqt[i][3];
                         //thoát khi tìm thấy
                         break;
                     }
