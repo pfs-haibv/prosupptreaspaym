@@ -143,12 +143,13 @@ public class FindInfoXML {
                             NodeList textAgeList = chungTuElement.getChildNodes();
 
                             // Loại bỏ tiểu mục values null
+                            tmuc = 0;
                             if (textAgeList.getLength() != 0) {
                                 tmuc = Integer.parseInt(((Node) textAgeList.item(0)).getNodeValue());
                             }
                             // Load TMuc và lấy tiểu mục theo yêu cầu
-                            for (int i = 0; i < Constants.arr_tmuc.length; i++) {         
-                                if (tmuc == Constants.arr_tmuc[i]) {
+                            for (int i = 0; i < Constants.arr_tmuc.length; i++) {
+                                if (tmuc == Constants.arr_tmuc[i]) {                                    
                                     total_ct_pit++;
                                 }
 
