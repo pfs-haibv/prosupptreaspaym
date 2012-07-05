@@ -147,7 +147,7 @@ public class FindInfoXML {
                                 tmuc = Integer.parseInt(((Node) textAgeList.item(0)).getNodeValue());
                             }
                             // Load TMuc và lấy tiểu mục theo yêu cầu
-                            for (int i = 0; i < Constants.arr_tmuc.length; i++) {                               
+                            for (int i = 0; i < Constants.arr_tmuc.length; i++) {         
                                 if (tmuc == Constants.arr_tmuc[i]) {
                                     total_ct_pit++;
                                 }
@@ -162,8 +162,8 @@ public class FindInfoXML {
                     TreasuryPayment tp = new TreasuryPayment();
                     //set cqt
                     //2 cách lấy tên đều ko lỗi font
-                    //map_cqt = Utility.getMapCQT(ma_kbac);
-                    map_cqt = SerializableDemo.getDataMapCQT(ma_kbac);
+                    map_cqt = Utility.getMapCQT(ma_kbac, ma_cqthu);
+                    //map_cqt = SerializableDemo.getDataMapCQT(ma_kbac);
                     tp.setCqt(map_cqt[0]);
                     //set tên cqt
                     tp.setTen_cqt(map_cqt[1]);
