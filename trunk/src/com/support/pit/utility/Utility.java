@@ -27,6 +27,8 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 /**
@@ -204,25 +206,25 @@ public class Utility {
      * @return getConnORA
      */
     public static String[] getMapCQT(String ma_kb, String ma_cqthu) throws IOException {
-        
+
         String result[] = new String[2];
 
-            for (int i = 0; i < ztb_map_cqt.map_cqt.length; i++) {
+        for (int i = 0; i < ztb_map_cqt.map_cqt.length; i++) {
 
-                for (int j = 0; j < 4; j++) {
-                    //trường hợp tồn tại ma_kb
-                    if (ztb_map_cqt.map_cqt[i][2].equals(ma_kb) || ztb_map_cqt.map_cqt[i][1].equals(ma_cqthu)) {
-                        //ma_cqt
-                        result[0] = ztb_map_cqt.map_cqt[i][0];
-                        //ten cqt
-                        result[1] = ztb_map_cqt.map_cqt[i][3];
-                        //thoát khi tìm thấy
-                        break;
-                    }
-                    
+            for (int j = 0; j < 4; j++) {
+                //trường hợp tồn tại ma_kb
+                if (ztb_map_cqt.map_cqt[i][2].equals(ma_kb) || ztb_map_cqt.map_cqt[i][1].equals(ma_cqthu)) {
+                    //ma_cqt
+                    result[0] = ztb_map_cqt.map_cqt[i][0];
+                    //ten cqt
+                    result[1] = ztb_map_cqt.map_cqt[i][3];
+                    //thoát khi tìm thấy
+                    break;
                 }
 
             }
+
+        }
 
         return result;
     }
@@ -383,6 +385,91 @@ public class Utility {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    /**
+     * Copy file từ thư mục đến thư mục
+     * @param srcPath
+     * @param dstPath
+     * @throws IOException 
+     */
+    public static void copyDirectory(File srcPath, File dstPath) throws IOException {
+        // bỏ trường hợp srcPath = dstPath
+        if (!srcPath.equals(dstPath)) {
+            if (srcPath.isDirectory()) {
+                if (!dstPath.exists()) {
+                    dstPath.mkdir();
+                }
+
+                String files[] = srcPath.list();
+                for (int i = 0; i < files.length; i++) {
+                    copyDirectory(new File(srcPath, files[i]), new File(dstPath, files[i]));
+                }
+            } else {
+                if (!srcPath.exists()) {
+                    System.out.println("File or directory does not exist.");
+                    System.exit(0);
+                } else {
+                    InputStream in = new FileInputStream(srcPath);
+                    OutputStream out = new FileOutputStream(dstPath);
+
+                    // Transfer bytes from in to out
+                    byte[] buf = new byte[1024];
+                    int len;
+                    while ((len = in.read(buf)) > 0) {
+                        out.write(buf, 0, len);
+                    }
+                    in.close();
+                    out.close();
+                }
+            }
+        }
+    }
+
+    /**
+     * Tìm kiếm và copy file trong thư mục
+     * @param srcPath
+     * @param dstPath
+     * @param find_file
+     * @throws IOException 
+     */
+    public static void copyDirectory(File srcPath, File dstPath, String find_file) throws IOException {
+        String[] file_copy = find_file.split(",");
+        for (int f = 0; f < file_copy.length; f++) {
+            // bỏ trường hợp srcPath = dstPath
+            if (!srcPath.equals(dstPath)) {
+                if (srcPath.isDirectory()) {
+                    if (!dstPath.exists()) {
+                        dstPath.mkdir();
+                    }
+
+                    String files[] = srcPath.list();
+                    for (int i = 0; i < files.length; i++) {
+                        //tìm file và thực hiện copy
+                        if(files[i].equals(file_copy[f].trim())){
+                        copyDirectory(new File(srcPath, files[i]), new File(dstPath, files[i]));
+                        }
+                    }
+                } else {
+                    if (!srcPath.exists()) {
+                        System.out.println("File or directory does not exist.");
+                        System.exit(0);
+                    } else {
+                        InputStream in = new FileInputStream(srcPath);
+                        OutputStream out = new FileOutputStream(dstPath);
+
+                        // Transfer bytes from in to out
+                        byte[] buf = new byte[1024];
+                        int len;
+                        while ((len = in.read(buf)) > 0) {
+                            out.write(buf, 0, len);
+                        }
+                        in.close();
+                        out.close();
+                    }
+                }
+            }
         }
     }
 }
