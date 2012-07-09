@@ -101,8 +101,8 @@ public class FindInfoXML {
                     // Detail payment
                     NodeList listOfPersons = doc.getElementsByTagName("Transaction");
 
-                    for (int s = 0; s < listOfPersons.getLength(); s++) {                        
-                        total_ct_khobac++;                        
+                    for (int s = 0; s < listOfPersons.getLength(); s++) {
+                        total_ct_khobac++;
                         Node chungTuNode = listOfPersons.item(s);
                         //Check ELEMENT NODE
                         if (chungTuNode.getNodeType() == Node.ELEMENT_NODE) {
@@ -124,10 +124,7 @@ public class FindInfoXML {
                             NodeList ngay_kbac_List = firstCQTElement.getElementsByTagName("ngay_kbac");
                             Element ngay_kbac_Element = (Element) ngay_kbac_List.item(0);
                             NodeList textngay_kbac_List = ngay_kbac_Element.getChildNodes();
-                            ma_cqthu = "";
-                            if (textCQThuList.getLength() != 0) {
-                                ma_cqthu = ((Node) textCQThuList.item(0)).getNodeValue();
-                            }
+
                             // Mã kho bạc
                             ma_kbac = ((Node) textCQThueList.item(0)).getNodeValue();
                             // Ngày kho bạc
@@ -149,7 +146,11 @@ public class FindInfoXML {
                             }
                             // Load TMuc và lấy tiểu mục theo yêu cầu
                             for (int i = 0; i < Constants.arr_tmuc.length; i++) {
-                                if (tmuc == Constants.arr_tmuc[i]) {                                    
+                                if (tmuc == Constants.arr_tmuc[i]) {
+                                    ma_cqthu = "";
+                                    if (textCQThuList.getLength() != 0) {
+                                        ma_cqthu = ((Node) textCQThuList.item(0)).getNodeValue();
+                                    }
                                     total_ct_pit++;
                                 }
 
