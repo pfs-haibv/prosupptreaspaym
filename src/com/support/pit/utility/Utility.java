@@ -8,7 +8,6 @@ import com.support.pit.datatype.TreasuryPayment;
 import com.support.pit.system.Constants;
 import com.support.pit.table_map.ztb_map_cqt;
 import java.io.BufferedInputStream;
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.File;
@@ -26,11 +25,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
-
 /**
  *
  * @author Administrator
@@ -447,8 +444,8 @@ public class Utility {
                     String files[] = srcPath.list();
                     for (int i = 0; i < files.length; i++) {
                         //tìm file và thực hiện copy
-                        if(files[i].equals(file_copy[f].trim())){
-                        copyDirectory(new File(srcPath, files[i]), new File(dstPath, files[i]));
+                        if (files[i].equals(file_copy[f].trim())) {
+                            copyDirectory(new File(srcPath, files[i]), new File(dstPath, files[i]));
                         }
                     }
                 } else {
@@ -472,4 +469,6 @@ public class Utility {
             }
         }
     }
+
+    
 }
