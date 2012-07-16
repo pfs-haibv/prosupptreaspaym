@@ -33,8 +33,13 @@ public class Constants {
     //Part tab Tiện ích
     public static final String PART_TIEN_ICH_SRC_FLD                           = "PART_TIEN_ICH_SRC_FLD";
     public static final String PART_TIEN_ICH_COPY_TO_FLD                       = "PART_TIEN_ICH_COPY_TO_FLD";
+    //Part tab Create List User
+    public static final String PART_CREATE_LIST_USER_SCAND_FLD                 = "PART_CREATE_LIST_USER_SCAND_FLD";
+    public static final String PART_CREATE_LIST_USER_EXP_FILE                  = "PART_CREATE_LIST_USER_EXP_FILE";
     //SHEET Data Payment
     public static final String SHEET_DATA_PAYMENT                              = "Payment";
+    public static final String SHEET_USER_INFO                                 = "USER_INFO";
+    public static final String SHEET_USER_ROLE                                 = "USER_ROLE";
     //Column Treasury Payment
     public static final String COLUMN_DATA_PAYMENT[] = {"FILE NAME", "Mã CQT", "Tên CQT","Mã KB", "Mã CQThu", "Mã gói", 
                                                         "Ngày CT", "Ngày KB", "Tổng CT KB", "Tổng CT về PIT" };  
@@ -43,5 +48,7 @@ public class Constants {
     //Type excel
     public static final String TYPE_EXCEL_2003 = ".XLS";
     public static final String TYPE_EXCEL_2007 = ".XLSX";
+    
+    public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
     
 }
