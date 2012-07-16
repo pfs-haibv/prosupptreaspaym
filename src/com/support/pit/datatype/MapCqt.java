@@ -10,6 +10,7 @@ public class MapCqt implements Serializable {
     private String ma_cqt;
     private String ma_kb;
     private String ten_cqt;
+    private String short_name;
 
     public String getMa_cqt() {
         return ma_cqt;
@@ -35,13 +36,26 @@ public class MapCqt implements Serializable {
         this.ten_cqt = ten_cqt;
     }
 
+    public String getShort_name() {
+        return short_name;
+    }
+
+    public void setShort_name(String short_name) {
+        this.short_name = short_name;
+    }
+
+    
+    
     public MapCqt() {
     }
 
-    public MapCqt(String ma_cqt, String ma_kb, String ten_cqt) {
+    public MapCqt(String ma_cqt, String ma_kb, String ten_cqt, String short_name) {
         this.ma_cqt = ma_cqt;
         this.ma_kb = ma_kb;
         this.ten_cqt = ten_cqt;
-    }       
+        this.short_name = short_name;
+    }
+
+      
     
 }
