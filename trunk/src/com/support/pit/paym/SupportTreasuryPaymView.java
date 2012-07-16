@@ -3,6 +3,7 @@
  */
 package com.support.pit.paym;
 
+import com.support.pit.excel.ListUserToExcel;
 import com.support.pit.serializable.SerializableDemo;
 import com.support.pit.system.Constants;
 import com.support.pit.utility.Utility;
@@ -29,6 +30,10 @@ import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 import javax.swing.Timer;
 import javax.swing.Icon;
 import javax.swing.JDialog;
@@ -122,15 +127,15 @@ public class SupportTreasuryPaymView extends FrameView {
     }
 
     @Action
-    public void setSerializable() throws IOException{
+    public void setSerializable() throws IOException {
         SerializableDemo.setDataMapCQT();
-    }    
-    
+    }
+
     @Action
-    public void getDeserilizable() throws IOException{
+    public void getDeserilizable() throws IOException {
         SerializableDemo.getDataMapCQT();
     }
-    
+
     @Action
     public void getPartFile() {
         getDirectory(Constants.PART_MODIFY_FILES);
@@ -165,23 +170,32 @@ public class SupportTreasuryPaymView extends FrameView {
     public void PartFolderInFTK() {
         getDirectory(Constants.PART_CREATE_FORM_MST);
     }
-   
+
     @Action
     public void PartPaymErr() {
         getDirectory(Constants.PART_INFO_PAYM_ERR_FORDER);
-    }   
-    
-    
+    }
+
     @Action
     public void PartTienIchScanFld() {
         getDirectory(Constants.PART_TIEN_ICH_SRC_FLD);
-    }    
-    
+    }
+
     @Action
     public void PartTienIchCopyFld() {
         getDirectory(Constants.PART_TIEN_ICH_COPY_TO_FLD);
     }
-    
+
+    @Action
+    public void PartListUserScandFld() {
+        getDirectory(Constants.PART_CREATE_LIST_USER_SCAND_FLD);
+    }
+
+    @Action
+    public void PartListUserExportFile() {
+        getDirectory(Constants.PART_CREATE_LIST_USER_EXP_FILE);
+    }
+
     /**
      * Hiển thị thông tin file xml, xem code @see FindInfoXML
      */
@@ -200,7 +214,7 @@ public class SupportTreasuryPaymView extends FrameView {
 
         try {
             switch (type_excel) {
-                
+
                 case Constants.TYPE_EXCEL_2007:
                     FindInfoXML.readXML(source_file, log_file, Constants.TYPE_EXCEL_2007);
                     lblSuc1.setText("Hoàn thành lấy thông tin file XML, kiểm tra thông tin trong " + log_file + ".");
@@ -213,7 +227,7 @@ public class SupportTreasuryPaymView extends FrameView {
 
                 default:
                     lblSuc1.setText("Không tồn tại file để kiểm tra");
-                    break;                    
+                    break;
             }
 
         } catch (ParserConfigurationException ex) {
@@ -235,10 +249,39 @@ public class SupportTreasuryPaymView extends FrameView {
                     JOptionPane.ERROR_MESSAGE);
         }
     }
-    
+
     @Action
-    public void findCopyFile() throws IOException{
-        Utility.copyDirectory(new File (txtTienIchScand.getText()), new File(txtTienIchCopy.getText()), txtFileNameCopy.getText());
+    public void exportToListUser() throws IOException {
+        try {
+            //write log
+            FileHandler fh = new FileHandler("log.xml", true);
+            //Lấy log class ConvertDKT
+            logger = Logger.getLogger("ConvertDKT");
+            lm.addLogger(logger);
+            logger.addHandler(fh);
+            String type_excel = "";
+
+            if (radListUserXLSX.isSelected()) {
+                type_excel = Constants.TYPE_EXCEL_2007;
+            } else {
+                type_excel = Constants.TYPE_EXCEL_2003;
+            }
+            int max_role = Integer.parseInt(txtMaxRole.getText());
+            ListUserToExcel.getInfoRole(type_excel, max_role, txtListUserScandFolder.getText(), txtListUserExportFile.getText());
+            lblSucListUser.setText("Hoàn thành tạo danh sách user");
+        } catch (RuntimeException ex) {
+            logger.log(Level.WARNING, "Có lỗi xẩy ra khi xử lý ", ex.getMessage());
+            lblSucListUser.setText(ex.getMessage());
+        }
+    }
+    
+    public static void writeLog(String mess){
+        logger.log(Level.WARNING, "Có lỗi xẩy ra khi xử lý ", mess);
+    }
+
+    @Action
+    public void findCopyFile() throws IOException {
+        Utility.copyDirectory(new File(txtTienIchScand.getText()), new File(txtTienIchCopy.getText()), txtFileNameCopy.getText());
     }
 
     /**
@@ -542,10 +585,10 @@ public class SupportTreasuryPaymView extends FrameView {
                 file = fc.getSelectedFile();
                 txtFileLog.setText(file.getPath());
                 break;
-            case Constants.PART_INFO_PAYM_ERR_FORDER:                
+            case Constants.PART_INFO_PAYM_ERR_FORDER:
                 txtErrFolder.setText(file.getPath());
                 break;
-                
+
             case Constants.PART_INFO_PAYM_SRC_FORDER:
                 txtScandFolder.setText(file.getPath());
                 break;
@@ -561,14 +604,22 @@ public class SupportTreasuryPaymView extends FrameView {
             case Constants.PART_CREATE_FORM_MST:
                 txtInforTK.setText(file.getPath());
                 break;
-                
+
             case Constants.PART_TIEN_ICH_SRC_FLD:
                 txtTienIchScand.setText(file.getPath());
                 break;
-                
+
             case Constants.PART_TIEN_ICH_COPY_TO_FLD:
-               txtTienIchCopy.setText(file.getPath());
-               break;   
+                txtTienIchCopy.setText(file.getPath());
+                break;
+
+            case Constants.PART_CREATE_LIST_USER_SCAND_FLD:
+                txtListUserScandFolder.setText(file.getPath());
+                break;
+
+            case Constants.PART_CREATE_LIST_USER_EXP_FILE:
+                txtListUserExportFile.setText(file.getPath());
+                break;
 
             default:
                 break;
@@ -664,6 +715,22 @@ public class SupportTreasuryPaymView extends FrameView {
         txtTKCreate = new javax.swing.JTextField();
         btnCreateDT = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        txtListUserScandFolder = new javax.swing.JTextField();
+        btnListUserSndFld = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        txtListUserExportFile = new javax.swing.JTextField();
+        btnListUserExport = new javax.swing.JButton();
+        radListUserXLSX = new javax.swing.JRadioButton();
+        radListUserXLS = new javax.swing.JRadioButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        txtMaxRole = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        lblSucListUser = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
@@ -685,6 +752,7 @@ public class SupportTreasuryPaymView extends FrameView {
         statusAnimationLabel = new javax.swing.JLabel();
         progressBar = new javax.swing.JProgressBar();
         btnRad = new javax.swing.ButtonGroup();
+        btnGrpListUser = new javax.swing.ButtonGroup();
 
         mainPanel.setName("mainPanel"); // NOI18N
 
@@ -1342,6 +1410,160 @@ public class SupportTreasuryPaymView extends FrameView {
 
         tabPay.addTab(resourceMap.getString("jPanel6.TabConstraints.tabTitle"), jPanel6); // NOI18N
 
+        jPanel8.setName("jPanel8"); // NOI18N
+
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(resourceMap.getString("jPanel9.border.title"))); // NOI18N
+        jPanel9.setName("jPanel9"); // NOI18N
+
+        jLabel22.setText(resourceMap.getString("jLabel22.text")); // NOI18N
+        jLabel22.setName("jLabel22"); // NOI18N
+
+        txtListUserScandFolder.setText(resourceMap.getString("txtListUserScandFolder.text")); // NOI18N
+        txtListUserScandFolder.setName("txtListUserScandFolder"); // NOI18N
+
+        btnListUserSndFld.setAction(actionMap.get("PartListUserScandFld")); // NOI18N
+        btnListUserSndFld.setText(resourceMap.getString("btnListUserSndFld.text")); // NOI18N
+        btnListUserSndFld.setName("btnListUserSndFld"); // NOI18N
+
+        jLabel28.setText(resourceMap.getString("jLabel28.text")); // NOI18N
+        jLabel28.setToolTipText(resourceMap.getString("jLabel28.toolTipText")); // NOI18N
+        jLabel28.setName("jLabel28"); // NOI18N
+
+        txtListUserExportFile.setText(resourceMap.getString("txtListUserExportFile.text")); // NOI18N
+        txtListUserExportFile.setName("txtListUserExportFile"); // NOI18N
+
+        btnListUserExport.setAction(actionMap.get("PartListUserExportFile")); // NOI18N
+        btnListUserExport.setText(resourceMap.getString("btnListUserExport.text")); // NOI18N
+        btnListUserExport.setName("btnListUserExport"); // NOI18N
+
+        btnGrpListUser.add(radListUserXLSX);
+        radListUserXLSX.setSelected(true);
+        radListUserXLSX.setText(resourceMap.getString("radListUserXLSX.text")); // NOI18N
+        radListUserXLSX.setName("radListUserXLSX"); // NOI18N
+
+        btnGrpListUser.add(radListUserXLS);
+        radListUserXLS.setText(resourceMap.getString("radListUserXLS.text")); // NOI18N
+        radListUserXLS.setName("radListUserXLS"); // NOI18N
+
+        jLabel10.setText(resourceMap.getString("jLabel10.text")); // NOI18N
+        jLabel10.setName("jLabel10"); // NOI18N
+
+        jLabel29.setText(resourceMap.getString("jLabel29.text")); // NOI18N
+        jLabel29.setName("jLabel29"); // NOI18N
+
+        txtMaxRole.setText(resourceMap.getString("txtMaxRole.text")); // NOI18N
+        txtMaxRole.setName("txtMaxRole"); // NOI18N
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel28))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtListUserExportFile, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
+                            .addComponent(txtListUserScandFolder, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnListUserSndFld, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnListUserExport, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                                .addGap(160, 160, 160))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(68, 68, 68)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtMaxRole, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel9Layout.createSequentialGroup()
+                                        .addComponent(radListUserXLSX)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(radListUserXLS)))))
+                        .addGap(353, 353, 353))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel29)
+                        .addContainerGap(537, Short.MAX_VALUE))))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtListUserScandFolder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel22)
+                    .addComponent(btnListUserSndFld))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtListUserExportFile, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnListUserExport, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(radListUserXLSX)
+                    .addComponent(radListUserXLS)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(txtMaxRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jButton4.setAction(actionMap.get("exportToListUser")); // NOI18N
+        jButton4.setText(resourceMap.getString("jButton4.text")); // NOI18N
+        jButton4.setName("jButton4"); // NOI18N
+
+        jButton5.setAction(actionMap.get("quit")); // NOI18N
+        jButton5.setText(resourceMap.getString("jButton5.text")); // NOI18N
+        jButton5.setName("jButton5"); // NOI18N
+
+        lblSucListUser.setFont(resourceMap.getFont("lblSucListUser.font")); // NOI18N
+        lblSucListUser.setName("lblSucListUser"); // NOI18N
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(360, 360, 360)
+                        .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(lblSucListUser, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE))
+                            .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(190, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addComponent(lblSucListUser, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton4)
+                    .addComponent(jButton5))
+                .addContainerGap(268, Short.MAX_VALUE))
+        );
+
+        tabPay.addTab(resourceMap.getString("jPanel8.TabConstraints.tabTitle"), jPanel8); // NOI18N
+
         jPanel5.setName("jPanel5"); // NOI18N
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(resourceMap.getString("jPanel7.border.title"))); // NOI18N
@@ -1397,26 +1619,27 @@ public class SupportTreasuryPaymView extends FrameView {
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(117, 117, 117)
-                .addComponent(btnCopy)
-                .addContainerGap(217, Short.MAX_VALUE))
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel27))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtTienIchCopy)
-                            .addComponent(txtTienIchScand, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnTienIchScand, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnTienIchCopy, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(62, 62, 62))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(btnCopy))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel27))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtTienIchCopy)
+                                    .addComponent(txtTienIchScand, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnTienIchScand, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnTienIchCopy, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1530,17 +1753,14 @@ public class SupportTreasuryPaymView extends FrameView {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtFileNameCopyKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFileNameCopyKeyPressed
-     
     }//GEN-LAST:event_txtFileNameCopyKeyPressed
 
     private void txtFileNameCopyKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFileNameCopyKeyReleased
-       
     }//GEN-LAST:event_txtFileNameCopyKeyReleased
 
     private void txtFileNameCopyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFileNameCopyMouseClicked
         txtFileNameCopy.setText("");
     }//GEN-LAST:event_txtFileNameCopyMouseClicked
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCheckXML;
     private javax.swing.JButton btnChkXML;
@@ -1551,6 +1771,9 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JButton btnErrFld;
     private javax.swing.JButton btnGetFile;
     private javax.swing.JButton btnGetSrcFolder;
+    private javax.swing.ButtonGroup btnGrpListUser;
+    private javax.swing.JButton btnListUserExport;
+    private javax.swing.JButton btnListUserSndFld;
     private javax.swing.JButton btnLogFile;
     private javax.swing.JButton btnModify;
     private javax.swing.JButton btnModifyTMuc;
@@ -1566,7 +1789,10 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -1579,11 +1805,14 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1598,10 +1827,13 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     public static final javax.swing.JLabel lblMessTK = new javax.swing.JLabel();
     private javax.swing.JLabel lblSuc;
     private javax.swing.JLabel lblSuc1;
+    private javax.swing.JLabel lblSucListUser;
     private javax.swing.JLabel lbltran_no;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JMenuBar menuBar;
@@ -1609,6 +1841,8 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JPanel pnlHdr;
     private javax.swing.JPanel pnlHdr1;
     private javax.swing.JProgressBar progressBar;
+    private javax.swing.JRadioButton radListUserXLS;
+    private javax.swing.JRadioButton radListUserXLSX;
     private javax.swing.JRadioButton radXLS;
     private javax.swing.JRadioButton radXLSX;
     private javax.swing.JLabel statusAnimationLabel;
@@ -1620,6 +1854,9 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JTextArea txtFileNameCopy;
     private javax.swing.JTextField txtInfoNNT;
     private javax.swing.JTextField txtInforTK;
+    private javax.swing.JTextField txtListUserExportFile;
+    private javax.swing.JTextField txtListUserScandFolder;
+    private javax.swing.JTextField txtMaxRole;
     private javax.swing.JTextField txtMdfFile;
     private javax.swing.JTextField txtScandFolder;
     private javax.swing.JTextField txtSourFolder;
@@ -1656,4 +1893,7 @@ public class SupportTreasuryPaymView extends FrameView {
     private StringBuffer mautk2_1 = new StringBuffer();
     private StringBuffer mautk2_2 = new StringBuffer();
     private StringBuffer mautk2_3 = new StringBuffer();
+    // Log
+    static LogManager lm = LogManager.getLogManager();
+    static Logger logger;
 }
