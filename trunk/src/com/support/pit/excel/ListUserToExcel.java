@@ -143,6 +143,12 @@ public class ListUserToExcel {
 
                 //new user
                 User user = new User();
+                //Check email
+                boolean valid = EmailValidator.validate(row.getCell(2).toString());
+                if (!valid) {
+                    SupportTreasuryPaymView.writeLog("file: " + dir_file + ", lỗi email: " + row.getCell(2).toString());
+                    break;
+                }
                 //set account
                 user.setAccount(row.getCell(2).toString().substring(0, row.getCell(2).toString().indexOf("@")));
                 //set name
@@ -464,10 +470,13 @@ public class ListUserToExcel {
      * Scand folder lấy file excel cqt gửi lên
      * đọc dữ liệu trong file lấy thông tin: name, email, phongban, role
      * export sheet INFO_USER, USER_ROLE
+     * @param type_excel
+     * @param max_role
+     * @param dirScandFold
+     * @param dirExpFile 
      */
     public static void getInfoRole(String type_excel, int max_role, String dirScandFold, String dirExpFile) {
         String file_active = "";
-        String flag = "";
         try {
 
             //get map role
@@ -488,45 +497,33 @@ public class ListUserToExcel {
 
                         getInfoUser(file_active, max_role);
 
-                        //Check mail
-                        for (int c = 0; c < arr_user.size(); c++) {
-                            boolean valid = EmailValidator.validate(arr_user.get(c).getEmail());
-                            if (!valid) {
-                                SupportTreasuryPaymView.writeLog("file: " + file_active + ", lỗi email: " + arr_user.get(c).getEmail());
-                                flag = "X";
-                            }
-                        }
-                        if (flag.equals("X")) {
-                            System.out.println("Lỗi file: " + file_active);
-                        } else {
-                            switch (type_excel) {
+                        switch (type_excel) {
 
-                                case Constants.TYPE_EXCEL_2007:
-                                    //Create folder
-                                    export = new File(dirExpFile + "/" + f.getName());
-                                    if (!export.exists()) {
-                                        export.mkdir();
-                                    }
-                                    createExcel2007(arr_user, export + "/" + l.getName().substring(0, l.getName().indexOf(".")));
-                                    break;
+                            case Constants.TYPE_EXCEL_2007:
+                                //Create folder
+                                export = new File(dirExpFile + "/" + f.getName());
+                                if (!export.exists()) {
+                                    export.mkdir();
+                                }
+                                createExcel2007(arr_user, export + "/" + l.getName().substring(0, l.getName().indexOf(".")));
+                                break;
 
-                                case Constants.TYPE_EXCEL_2003:
-                                    //Create folder
-                                    export = new File(dirExpFile + "/" + f.getName());
-                                    if (!export.exists()) {
-                                        export.mkdir();
-                                    }
-                                    createExcel2003(arr_user, export + "/" + l.getName().substring(0, l.getName().indexOf(".")));
-                                    break;
+                            case Constants.TYPE_EXCEL_2003:
+                                //Create folder
+                                export = new File(dirExpFile + "/" + f.getName());
+                                if (!export.exists()) {
+                                    export.mkdir();
+                                }
+                                createExcel2003(arr_user, export + "/" + l.getName().substring(0, l.getName().indexOf(".")));
+                                break;
 
-                                default:
-                                    break;
-                            }
+                            default:
+                                break;
                         }
                     }
                 }
             }
-            //clear
+
         } catch (RuntimeException e) {
             throw new RuntimeException(e.getMessage());
         }
