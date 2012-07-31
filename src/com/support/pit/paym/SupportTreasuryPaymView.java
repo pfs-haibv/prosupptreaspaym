@@ -259,15 +259,24 @@ public class SupportTreasuryPaymView extends FrameView {
             logger = Logger.getLogger("ConvertDKT");
             lm.addLogger(logger);
             logger.addHandler(fh);
-            String type_excel = "";
-
+            String type_excel, multi_excel = "";            
+            //Excel 2003 or 2007
             if (radListUserXLSX.isSelected()) {
                 type_excel = Constants.TYPE_EXCEL_2007;
             } else {
                 type_excel = Constants.TYPE_EXCEL_2003;
             }
+            //Multi excel
+            if (radMultiExl.isSelected()) {
+                multi_excel = Constants.TYPE_MULTI_EXCEL;
+            } else {
+                multi_excel = Constants.TYPE_MULTI_SHEET;
+            }
+            
             int max_role = Integer.parseInt(txtMaxRole.getText());
-            ListUserToExcel.getInfoRole(type_excel, max_role, txtListUserScandFolder.getText(), txtListUserExportFile.getText());
+            
+            ListUserToExcel.getInfoRole(type_excel, multi_excel, max_role, txtListUserScandFolder.getText(), txtListUserExportFile.getText());
+            
             lblSucListUser.setText("Hoàn thành tạo danh sách user");
         } catch (RuntimeException ex) {
             logger.log(Level.WARNING, "Có lỗi xẩy ra khi xử lý ", ex.getMessage());
@@ -728,6 +737,9 @@ public class SupportTreasuryPaymView extends FrameView {
         jLabel10 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         txtMaxRole = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        radMultiExl = new javax.swing.JRadioButton();
+        radOneExl = new javax.swing.JRadioButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         lblSucListUser = new javax.swing.JLabel();
@@ -753,6 +765,7 @@ public class SupportTreasuryPaymView extends FrameView {
         progressBar = new javax.swing.JProgressBar();
         btnRad = new javax.swing.ButtonGroup();
         btnGrpListUser = new javax.swing.ButtonGroup();
+        btnMultiExcel = new javax.swing.ButtonGroup();
 
         mainPanel.setName("mainPanel"); // NOI18N
 
@@ -1454,6 +1467,18 @@ public class SupportTreasuryPaymView extends FrameView {
         txtMaxRole.setText(resourceMap.getString("txtMaxRole.text")); // NOI18N
         txtMaxRole.setName("txtMaxRole"); // NOI18N
 
+        jLabel30.setText(resourceMap.getString("jLabel30.text")); // NOI18N
+        jLabel30.setName("jLabel30"); // NOI18N
+
+        btnMultiExcel.add(radMultiExl);
+        radMultiExl.setSelected(true);
+        radMultiExl.setText(resourceMap.getString("radMultiExl.text")); // NOI18N
+        radMultiExl.setName("radMultiExl"); // NOI18N
+
+        btnMultiExcel.add(radOneExl);
+        radOneExl.setText(resourceMap.getString("radOneExl.text")); // NOI18N
+        radOneExl.setName("radOneExl"); // NOI18N
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -1467,8 +1492,8 @@ public class SupportTreasuryPaymView extends FrameView {
                             .addComponent(jLabel28))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtListUserExportFile, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
-                            .addComponent(txtListUserScandFolder, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE))
+                            .addComponent(txtListUserExportFile, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                            .addComponent(txtListUserScandFolder, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnListUserSndFld, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1477,20 +1502,30 @@ public class SupportTreasuryPaymView extends FrameView {
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
                                 .addGap(160, 160, 160))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addGap(68, 68, 68)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtMaxRole, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel9Layout.createSequentialGroup()
-                                        .addComponent(radListUserXLSX)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(radListUserXLS)))))
-                        .addGap(353, 353, 353))
+                                    .addComponent(radMultiExl)
+                                    .addComponent(radListUserXLSX))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(radListUserXLS)
+                                    .addComponent(radOneExl)))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel30)
+                                .addGap(194, 194, 194)))
+                        .addGap(343, 343, 343))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel29)
-                        .addContainerGap(537, Short.MAX_VALUE))))
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addComponent(jLabel29)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(68, 68, 68)
+                                .addComponent(txtMaxRole, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(519, Short.MAX_VALUE))))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1508,13 +1543,18 @@ public class SupportTreasuryPaymView extends FrameView {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(radListUserXLSX)
-                    .addComponent(radListUserXLS)
-                    .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+                    .addComponent(jLabel10)
+                    .addComponent(radListUserXLS))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(radMultiExl)
+                    .addComponent(radOneExl))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel29)
                     .addComponent(txtMaxRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         jButton4.setAction(actionMap.get("exportToListUser")); // NOI18N
@@ -1533,33 +1573,33 @@ public class SupportTreasuryPaymView extends FrameView {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(355, 355, 355)
+                .addComponent(jButton4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(424, Short.MAX_VALUE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(158, 158, 158)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(360, 360, 360)
-                        .addComponent(jButton4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(lblSucListUser, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE))
-                            .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(190, Short.MAX_VALUE))
+                        .addComponent(lblSucListUser, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
+                        .addContainerGap(190, Short.MAX_VALUE))))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
-                .addComponent(lblSucListUser, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblSucListUser, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4)
                     .addComponent(jButton5))
-                .addContainerGap(268, Short.MAX_VALUE))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
 
         tabPay.addTab(resourceMap.getString("jPanel8.TabConstraints.tabTitle"), jPanel8); // NOI18N
@@ -1777,6 +1817,7 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JButton btnLogFile;
     private javax.swing.JButton btnModify;
     private javax.swing.JButton btnModifyTMuc;
+    private javax.swing.ButtonGroup btnMultiExcel;
     private javax.swing.JButton btnNNT;
     private javax.swing.ButtonGroup btnRad;
     private javax.swing.JButton btnSndFld;
@@ -1814,6 +1855,7 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1843,6 +1885,8 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JProgressBar progressBar;
     private javax.swing.JRadioButton radListUserXLS;
     private javax.swing.JRadioButton radListUserXLSX;
+    private javax.swing.JRadioButton radMultiExl;
+    private javax.swing.JRadioButton radOneExl;
     private javax.swing.JRadioButton radXLS;
     private javax.swing.JRadioButton radXLSX;
     private javax.swing.JLabel statusAnimationLabel;
