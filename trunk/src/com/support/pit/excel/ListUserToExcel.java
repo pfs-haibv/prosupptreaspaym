@@ -37,6 +37,7 @@ public class ListUserToExcel {
     public static ArrayList<MapRole> arr_role = new ArrayList<>();
     public static ArrayList<MapCqt> arrcqt = new ArrayList<>();
     public static ArrayList<User> arr_user = new ArrayList<>();
+    public static ArrayList<String> arr_user_group = new ArrayList<>();
 
     /**
      * lấy thông tin cqt từ file excel
@@ -88,7 +89,7 @@ public class ListUserToExcel {
              **-----------------------------------------------------------------*/
             sheet_name = workbook.getSheet("MAP_ROLE");
             int t_rows = sheet_name.getLastRowNum();
-
+            //max row 100
             for (int i = 1; i <= t_rows; i++) {
                 row = sheet_name.getRow(i);
                 //new role
@@ -187,6 +188,85 @@ public class ListUserToExcel {
     }
 
     /**
+     * Lấy thông tin user và export ra nhiều sheet
+     * @param dir_file
+     * @param max_role 
+     */
+    public static void getInfoUserMultiSheet(String dir_file, int max_role) {
+        File file = new File(dir_file);
+
+        HSSFRow row = null;//Row   
+        HSSFSheet sheet_name = null;//sheet_name
+        String temp = "";
+        try {
+            FileInputStream fileInputStream = new FileInputStream(file);
+            HSSFWorkbook workbook = new HSSFWorkbook(fileInputStream);
+            /**-----------------------------------------------------------------*
+             *                      SHEET PhongBan-Vaitro-ChucNang              *
+             **-----------------------------------------------------------------*/
+            sheet_name = workbook.getSheet("DanhSachCanBo-ChucNangNghiepVu");
+            int t_rows = sheet_name.getLastRowNum();
+            for (int i = 7; i <= t_rows; i++) {
+                String[] role = new String[max_role];
+
+                int cell_role = 5;
+
+                row = sheet_name.getRow(i);
+
+                //thoát nếu ko có tên user
+                if (row.getCell(1).toString().trim().isEmpty()) {
+                    break;
+                }
+                //max row current
+                int max_row_current = row.getLastCellNum() - cell_role;
+
+                //new user
+                User user = new User();
+                //Check email
+                boolean valid = EmailValidator.validate(row.getCell(2).toString());
+                if (!valid) {
+                    SupportTreasuryPaymView.writeLog("file: " + dir_file + ", lỗi email: " + row.getCell(2).toString());
+                    break;
+                }
+                //set account
+                user.setAccount(row.getCell(2).toString().substring(0, row.getCell(2).toString().indexOf("@")));
+                //set name
+                user.setName(row.getCell(1).toString());
+                //set email
+                user.setEmail(row.getCell(2).toString());
+                //set phongban
+                user.setPhongban(row.getCell(3).toString());
+                //short_name
+                user.setShort_name(file.getName().substring(0, file.getName().indexOf(".")));
+                //mã cqt
+                user.setCqt(findCQT(user.getShort_name()));
+                //List role
+                for (int r = 0; r < max_row_current; r++) {
+                    temp = "";
+                    temp = row.getCell(cell_role).toString();
+                    if (temp != null) {
+                        //tìm kiếm role theo tên
+                        role[r] = findRole(user.getShort_name(), temp);
+                    }
+                    cell_role++;
+                }
+                user.setRole(role);
+                //add to array cqt               
+                arr_user.add(user);
+                //clear row
+                max_row_current = 0;
+            }
+            //add to group user by short_name
+            arr_user_group.add(file.getName().substring(0, file.getName().indexOf(".")));
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            throw new RuntimeException("file error:" + dir_file + ", message desc " + ex.getMessage());
+        }
+
+    }
+
+    /**
      * Tìm kiếm role
      * @param name_role
      * @return role
@@ -222,6 +302,8 @@ public class ListUserToExcel {
 
     /**
      * create excel 2007
+     * @param arr_user
+     * @param part_file 
      */
     public static void createExcel2007(ArrayList<User> arr_user, String part_file) {
         try {
@@ -346,7 +428,151 @@ public class ListUserToExcel {
     }
 
     /**
+     * create excel 2007 multi sheet
+     * @param arr_user
+     * @param part_file 
+     */
+    public static void createExcel2007MultSheet(ArrayList<User> arr_user, String part_file) {
+        try {
+
+            Workbook workbook_xlsx = new XSSFWorkbook();
+            /**
+             * Create sheet User role
+             */
+            String name_excel = "";
+            for (int k = 0; k < arr_user_group.size(); k++) {
+                name_excel = arr_user_group.get(0).substring(0, 3);
+
+                int rowCount = 0;
+                //create new sheet
+                Sheet sheet = workbook_xlsx.createSheet(arr_user_group.get(k));
+
+                CellStyle cellStyle = workbook_xlsx.createCellStyle();
+                //set next row
+                CellStyle style = workbook_xlsx.createCellStyle();
+                style.cloneStyleFrom(cellStyle);
+                for (int i = 0; i < arr_user.size(); i++) {
+                    if (arr_user.get(i).getShort_name().equals(arr_user_group.get(k))) {
+                        Row dataRow = sheet.createRow(rowCount++);
+
+                        //length account
+                        Cell cell = dataRow.createCell(0);
+                        cell.setCellValue(arr_user.get(i).getAccount().length());
+                        //account
+                        cell = dataRow.createCell(1);
+                        cell.setCellValue(arr_user.get(i).getAccount());
+                        //name
+                        cell = dataRow.createCell(2);
+                        cell.setCellValue(arr_user.get(i).getName());
+                        //phongban
+                        cell = dataRow.createCell(3);
+                        cell.setCellValue(arr_user.get(i).getPhongban());
+                        //EN
+                        cell = dataRow.createCell(4);
+                        cell.setCellValue("EN");
+                        //Email
+                        cell = dataRow.createCell(5);
+                        cell.setCellValue(arr_user.get(i).getEmail());
+                        //RML
+                        cell = dataRow.createCell(6);
+                        cell.setCellValue("RML");
+                        //A
+                        cell = dataRow.createCell(7);
+                        cell.setCellValue("A");
+                        //123123
+                        cell = dataRow.createCell(8);
+                        cell.setCellValue("123123");
+                        //123123
+                        cell = dataRow.createCell(9);
+                        cell.setCellValue("123123");
+                        //mã cqt
+                        cell = dataRow.createCell(10);
+                        cell.setCellValue(arr_user.get(i).getCqt());
+                        //VI
+                        cell = dataRow.createCell(11);
+                        cell.setCellValue("VI");
+                        //1	
+                        cell = dataRow.createCell(12);
+                        cell.setCellValue("1");
+                        //0	
+                        cell = dataRow.createCell(13);
+                        cell.setCellValue("0");
+                        //805TC	
+                        cell = dataRow.createCell(14);
+                        cell.setCellValue("805TC");
+                        //F4METHOD	
+                        cell = dataRow.createCell(15);
+                        cell.setCellValue("F4METHOD");
+                        //ZPRINTPREVIEW	
+                        cell = dataRow.createCell(16);
+                        cell.setCellValue("ZPRINTPREVIEW");
+                        //FWS	
+                        cell = dataRow.createCell(17);
+                        cell.setCellValue("FWS");
+                        //PIT	
+                        cell = dataRow.createCell(18);
+                        cell.setCellValue("PIT");
+                        //NoActiveX	
+                        cell = dataRow.createCell(19);
+                        cell.setCellValue("NoActiveX");
+                        //X	
+                        cell = dataRow.createCell(20);
+                        cell.setCellValue("X");
+                        //VND
+                        cell = dataRow.createCell(21);
+                        cell.setCellValue("VND");
+                        //mã cqt
+                        cell = dataRow.createCell(22);
+                        cell.setCellValue(arr_user.get(i).getCqt());
+
+
+                    }
+                }
+                /**
+                 * User role
+                 */
+                rowCount++;//tạo 1 dòng trắng phân đoạn thông tin user và role
+
+                style.cloneStyleFrom(cellStyle);
+                for (int i = 0; i < arr_user.size(); i++) {
+                    if (arr_user.get(i).getShort_name().equals(arr_user_group.get(k))) {
+                        Row dataRow = sheet.createRow(rowCount++);
+
+                        //account
+                        Cell cell = dataRow.createCell(0);
+                        cell.setCellValue(arr_user.get(i).getAccount());
+                        int num_role = 1;
+                        for (int r = 0; r < arr_user.get(i).getRole().length; r++) {
+                            //role user
+                            cell = dataRow.createCell(num_role);
+                            cell.setCellValue(arr_user.get(i).getRole()[r]);
+                            num_role++;
+                        }
+                    }
+
+                }
+
+            }
+
+
+            //out file
+            FileOutputStream outputStream = new FileOutputStream(part_file + "/" + name_excel + Constants.TYPE_EXCEL_2007);
+            //write excel
+            workbook_xlsx.write(outputStream);
+            //close
+            outputStream.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e.getMessage());
+            //e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * Create excel 2003
+     * @param arr_user
+     * @param part_file 
      */
     public static void createExcel2003(ArrayList<User> arr_user, String part_file) {
         try {
@@ -467,6 +693,138 @@ public class ListUserToExcel {
     }
 
     /**
+     * Create excel 2003
+     * @param arr_user
+     * @param part_file 
+     */
+    public static void createExcel2003MultiSheep(ArrayList<User> arr_user, String part_file) {
+        try {
+            Workbook workbook_xls = new HSSFWorkbook();
+
+            String name_excel = "";
+            for (int k = 0; k < arr_user_group.size(); k++) {
+                name_excel = arr_user_group.get(0).substring(0, 3);
+
+                int rowCount = 0;
+                //create new sheet
+
+                Sheet sheet = workbook_xls.createSheet(arr_user_group.get(k));
+
+                CellStyle cellStyle = workbook_xls.createCellStyle();
+                //set next row
+                CellStyle style = workbook_xls.createCellStyle();
+                style.cloneStyleFrom(cellStyle);
+                for (int i = 0; i < arr_user.size(); i++) {
+                    if (arr_user.get(i).getShort_name().equals(arr_user_group.get(k))) {
+                        Row dataRow = sheet.createRow(rowCount++);
+
+                        //length account
+                        Cell cell = dataRow.createCell(0);
+                        cell.setCellValue(arr_user.get(i).getAccount().length());
+                        //account
+                        cell = dataRow.createCell(1);
+                        cell.setCellValue(arr_user.get(i).getAccount());
+                        //name
+                        cell = dataRow.createCell(2);
+                        cell.setCellValue(arr_user.get(i).getName());
+                        //phongban
+                        cell = dataRow.createCell(3);
+                        cell.setCellValue(arr_user.get(i).getPhongban());
+                        //EN
+                        cell = dataRow.createCell(4);
+                        cell.setCellValue("EN");
+                        //Email
+                        cell = dataRow.createCell(5);
+                        cell.setCellValue(arr_user.get(i).getEmail());
+                        //RML
+                        cell = dataRow.createCell(6);
+                        cell.setCellValue("RML");
+                        //A
+                        cell = dataRow.createCell(7);
+                        cell.setCellValue("A");
+                        //123123
+                        cell = dataRow.createCell(8);
+                        cell.setCellValue("123123");
+                        //123123
+                        cell = dataRow.createCell(9);
+                        cell.setCellValue("123123");
+                        //mã cqt
+                        cell = dataRow.createCell(10);
+                        cell.setCellValue(arr_user.get(i).getCqt());
+                        //VI
+                        cell = dataRow.createCell(11);
+                        cell.setCellValue("VI");
+                        //1	
+                        cell = dataRow.createCell(12);
+                        cell.setCellValue("1");
+                        //0	
+                        cell = dataRow.createCell(13);
+                        cell.setCellValue("0");
+                        //805TC	
+                        cell = dataRow.createCell(14);
+                        cell.setCellValue("805TC");
+                        //F4METHOD	
+                        cell = dataRow.createCell(15);
+                        cell.setCellValue("F4METHOD");
+                        //ZPRINTPREVIEW	
+                        cell = dataRow.createCell(16);
+                        cell.setCellValue("ZPRINTPREVIEW");
+                        //FWS	
+                        cell = dataRow.createCell(17);
+                        cell.setCellValue("FWS");
+                        //PIT	
+                        cell = dataRow.createCell(18);
+                        cell.setCellValue("PIT");
+                        //NoActiveX	
+                        cell = dataRow.createCell(19);
+                        cell.setCellValue("NoActiveX");
+                        //X	
+                        cell = dataRow.createCell(20);
+                        cell.setCellValue("X");
+                        //VND
+                        cell = dataRow.createCell(21);
+                        cell.setCellValue("VND");
+                        //mã cqt
+                        cell = dataRow.createCell(22);
+                        cell.setCellValue(arr_user.get(i).getCqt());
+                    }
+                }
+                /**
+                 * Create sheet User role
+                 */
+                rowCount++;
+                style.cloneStyleFrom(cellStyle);
+                for (int i = 0; i < arr_user.size(); i++) {
+                    if (arr_user.get(i).getShort_name().equals(arr_user_group.get(k))) {
+                        Row dataRow = sheet.createRow(rowCount++);
+
+                        //account
+                        Cell cell = dataRow.createCell(0);
+                        cell.setCellValue(arr_user.get(i).getAccount());
+                        int num_role = 1;
+                        for (int r = 0; r < arr_user.get(i).getRole().length; r++) {
+                            //role user
+                            cell = dataRow.createCell(num_role);
+                            cell.setCellValue(arr_user.get(i).getRole()[r]);
+                            num_role++;
+                        }
+                    }
+                }
+            }
+            //out file
+            FileOutputStream outputStream = new FileOutputStream(part_file + "/" + name_excel + Constants.TYPE_EXCEL_2003);
+            //write excel file
+            workbook_xls.write(outputStream);
+            //close
+            outputStream.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e.getMessage());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * Scand folder lấy file excel cqt gửi lên
      * đọc dữ liệu trong file lấy thông tin: name, email, phongban, role
      * export sheet INFO_USER, USER_ROLE
@@ -475,7 +833,7 @@ public class ListUserToExcel {
      * @param dirScandFold
      * @param dirExpFile 
      */
-    public static void getInfoRole(String type_excel, int max_role, String dirScandFold, String dirExpFile) {
+    public static void getInfoRole(String type_excel, String multi_excel, int max_role, String dirScandFold, String dirExpFile) {
         String file_active = "";
         try {
 
@@ -494,33 +852,83 @@ public class ListUserToExcel {
                     if (l.getName().substring(l.getName().indexOf("."), l.getName().length()).equals(".xls")) {
                         //get info user
                         file_active = dirFile + "/" + l.getName();
+                        //Multi excel or multi sheep
+                        switch (multi_excel) {
 
-                        getInfoUser(file_active, max_role);
+                            case Constants.TYPE_MULTI_EXCEL:
+                                //get info multi excel
+                                getInfoUser(file_active, max_role);
+                                //type excel 2003 or 2007
+                                switch (type_excel) {
 
-                        switch (type_excel) {
+                                    case Constants.TYPE_EXCEL_2007:
+                                        //Create folder
+                                        export = new File(dirExpFile + "/" + f.getName());
+                                        if (!export.exists()) {
+                                            export.mkdir();
+                                        }
+                                        createExcel2007(arr_user, export + "/" + l.getName().substring(0, l.getName().indexOf(".")));
+                                        break;
 
-                            case Constants.TYPE_EXCEL_2007:
-                                //Create folder
-                                export = new File(dirExpFile + "/" + f.getName());
-                                if (!export.exists()) {
-                                    export.mkdir();
+                                    case Constants.TYPE_EXCEL_2003:
+                                        //Create folder
+                                        export = new File(dirExpFile + "/" + f.getName());
+                                        if (!export.exists()) {
+                                            export.mkdir();
+                                        }
+                                        createExcel2003(arr_user, export + "/" + l.getName().substring(0, l.getName().indexOf(".")));
+                                        break;
+
+                                    default:
+                                        break;
                                 }
-                                createExcel2007(arr_user, export + "/" + l.getName().substring(0, l.getName().indexOf(".")));
+
                                 break;
 
-                            case Constants.TYPE_EXCEL_2003:
-                                //Create folder
-                                export = new File(dirExpFile + "/" + f.getName());
-                                if (!export.exists()) {
-                                    export.mkdir();
-                                }
-                                createExcel2003(arr_user, export + "/" + l.getName().substring(0, l.getName().indexOf(".")));
+                            case Constants.TYPE_MULTI_SHEET:
+                                //get info multi excel
+                                getInfoUserMultiSheet(file_active, max_role);
+
                                 break;
 
                             default:
                                 break;
+
                         }
+
                     }
+                }
+                //export multi sheep
+                if (multi_excel.equals(Constants.TYPE_MULTI_SHEET)) {
+                    //export
+
+                    //type excel 2003 or 2007
+                    switch (type_excel) {
+
+                        case Constants.TYPE_EXCEL_2007:
+                            //Create folder
+                            export = new File(dirExpFile + "/" + f.getName());
+                            if (!export.exists()) {
+                                export.mkdir();
+                            }
+                            createExcel2007MultSheet(arr_user, export.toString());
+                            break;
+
+                        case Constants.TYPE_EXCEL_2003:
+                            //Create folder
+                            export = new File(dirExpFile + "/" + f.getName());
+                            if (!export.exists()) {
+                                export.mkdir();
+                            }
+                            createExcel2003MultiSheep(arr_user, export.toString());
+                            break;
+
+                        default:
+                            break;
+                    }
+                    //clear 
+                    arr_user.clear();
+                    arr_user_group.clear();
                 }
             }
 
