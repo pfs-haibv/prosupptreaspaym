@@ -48,6 +48,10 @@ public class Constants {
     //Type excel
     public static final String TYPE_EXCEL_2003 = ".XLS";
     public static final String TYPE_EXCEL_2007 = ".XLSX";
+    //Multi excel
+    public static final String TYPE_MULTI_EXCEL = "EXCELS";
+    public static final String TYPE_MULTI_SHEET = "EXCEL";
+    
     
     public static final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
     
