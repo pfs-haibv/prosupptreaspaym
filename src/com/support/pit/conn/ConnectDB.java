@@ -64,11 +64,13 @@ public class ConnectDB {
                 count++;
                  TreasuryPayment tp = new TreasuryPayment();
                 tp.setCqt(rset.getString("comp_code"));
+                tp.setTotal_ct_pit(Integer.parseInt(rset.getString("total_ct_pit")));
                 tp.setTran_no(rset.getString("parent_id"));
                 tp.setNgay_kb(rset.getString("trea_date_no"));
                 tp.setMakb(rset.getString("trea_code"));
                 tp.setMa_cqthu(rset.getString("TAX_OFFICE_ID"));
                 tp.setNgay_ct(rset.getString("crea_date"));
+                tp.setTax_mount(rset.getString("tax_amount"));
                 map_cqt = Utility.getMapCQT(rset.getString("comp_code"), rset.getString("TAX_OFFICE_ID"));
                 tp.setTen_cqt(map_cqt[1]);
                 System.out.println(comment+count);                
