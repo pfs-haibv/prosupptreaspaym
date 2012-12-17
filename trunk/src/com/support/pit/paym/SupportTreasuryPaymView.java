@@ -152,20 +152,22 @@ public class SupportTreasuryPaymView extends FrameView {
             //1 CT về PIT        
             ConnectDB.getConnORA();//Connect database
             String sql_ct_ve_pit =
-                    "                SELECT   DISTINCT a.lcn_owner,"
+                    "                SELECT   count(*) total_ct_pit, a.lcn_owner,"
                     + "                 a.crea_date,"
                     + "                 a.parent_id,"
                     + "                 b.trea_code,"
                     + "                 b.comp_code,"
                     + "                 b.tax_office_id,"
-                    + "                 b.trea_date_no"
+                    + "                 b.trea_date_no, "
+                    + " sum(b.TAX_AMOUNT) tax_amount"
                     + " FROM   data_pkg@tdtttct a, sapsr3.ztb_treas_paym b"
                     + " WHERE   b.mandt = 500 AND a.parent_id = b.tran_no"
                     + "        AND trunc (a.crea_date)  >= TO_date ('" + txtCTTuNgay.getText() + "', 'dd/MM/yyyy')"
                     /*ADVICE(12): Functions with constant parameters in WHERE clause [317] */
                     + "        AND  trunc (a.crea_date) <= TO_date ('" + txtCTDenNgay.getText() + "', 'dd/MM/yyyy')"
                     /*ADVICE(15): Functions with constant parameters in WHERE clause [317] */
-                    + "        AND a.lcn_recv = 'PIT0000000'";  
+                    + "        AND a.lcn_recv = 'PIT0000000'"
+                    + " group by a.lcn_owner,a.crea_date,a.parent_id,b.trea_code,b.comp_code,b.tax_office_id,b.trea_date_no";  
 
             String sql_ct_ve_kbac =
                     "SELECT   DISTINCT a.lcn_owner,"
