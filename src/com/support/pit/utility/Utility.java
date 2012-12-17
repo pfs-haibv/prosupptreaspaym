@@ -367,13 +367,13 @@ public class Utility {
                 cell.setCellValue(arr_tp.get(i).getTran_no());
 
                 cell = dataRow.createCell(6);
-                cell.setCellValue(arr_tp.get(i).getNgay_ct());
+                cell.setCellValue(arr_tp.get(i).getNgay_kb());
 
                 cell = dataRow.createCell(7);
                 cell.setCellValue(arr_tp.get(i).getNgay_kb());
 
-//                cell = dataRow.createCell(8);
-//                cell.setCellValue(arr_tp.get(i).getTotal_ct_khobac());
+                cell = dataRow.createCell(8);
+                cell.setCellValue(arr_tp.get(i).getNgay_ct());
 
 //                cell = dataRow.createCell(9);
 //                cell.setCellValue(arr_tp.get(i).getTotal_ct_pit());
@@ -678,5 +678,34 @@ public class Utility {
 
     }
 
+            /**
+     * Lấy ngày cuối cùng của tháng
+     * @param datetime
+     * @return max_date
+     */
+    public static String getMaxDateOnlinePaym(String datetime) {
+
+        String max_date = "";
+
+        String month_year[] = datetime.split("/");
+        //Year
+        int year = Integer.parseInt(month_year[1]);
+        //Month (January = 0 ... )
+        int month = Integer.parseInt(month_year[0]) - 1;
+        //date        
+        int date = 01;
+
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.set(year, month, date);
+
+        int maxDay = calendar.getActualMaximum(calendar.DATE);
+
+        max_date = maxDay + "/" + datetime;
+
+        return max_date;
+
+    }
+    
     
 }
