@@ -36,13 +36,23 @@ public class Constants {
     //Part tab Create List User
     public static final String PART_CREATE_LIST_USER_SCAND_FLD                 = "PART_CREATE_LIST_USER_SCAND_FLD";
     public static final String PART_CREATE_LIST_USER_EXP_FILE                  = "PART_CREATE_LIST_USER_EXP_FILE";
+    //Part tab Create List User
+    public static final String PART_ONLINE_PAYMENT_GET_FPT                     = "PART_ONLINE_PAYMENT_GET_FPT";
+    public static final String PART_ONLINE_PAYMENT_EXPORT_FILE                 = "PART_ONLINE_PAYMENT_EXPORT_FILE";
     //SHEET Data Payment
     public static final String SHEET_DATA_PAYMENT                              = "Payment";
     public static final String SHEET_USER_INFO                                 = "USER_INFO";
     public static final String SHEET_USER_ROLE                                 = "USER_ROLE";
+    //SHEET Online Payment
+    public static final String SHEET_CT_VE_PIT                                 = "Ctừ về PIT";
+    public static final String SHEET_CT_THIEU_CO_BK                            = "CTừ thiếu có trong BK";
+    public static final String SHEET_CT_THIEU_KO_BK                            = "CTừ thiếu ko có trong BK";
     //Column Treasury Payment
     public static final String COLUMN_DATA_PAYMENT[] = {"FILE NAME", "Mã CQT", "Tên CQT","Mã KB", "Mã CQThu", "Mã gói", 
                                                         "Ngày CT", "Ngày KB", "Tổng CT KB", "Tổng CT về PIT" };  
+    //Column Treasury Payment Online
+    public static final String COLUMN_DATA_PAYMENT_ONLINE[] = {"FILE NAME", "Mã CQT", "Tên CQT","Mã KB", "Mã CQThu", "Mã gói", 
+                                                        "Ngày CT", "Ngày KB", "Create Date"}; 
     //Tiêu mục nhận CT về PIT
     public static int[] arr_tmuc = {1049,1012,1008,1007,1006,1005,1004,1003,1001,1014,4268};
     //Type excel
