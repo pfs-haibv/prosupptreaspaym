@@ -20,6 +20,10 @@ import com.support.pit.utility.EmailValidator;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.Calendar;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.util.HSSFColor;
+import org.apache.poi.hssf.util.Region;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
@@ -129,7 +133,7 @@ public class ListUserToExcel {
             sheet_name = workbook.getSheet("DanhSachCanBo-ChucNangNghiepVu");
             int t_rows = sheet_name.getLastRowNum();
             for (int i = 7; i <= t_rows; i++) {
-                String[] role = new String[max_role];
+                String[] role = new String[arr_role.size()];
 
                 int cell_role = 5;
 
@@ -163,15 +167,26 @@ public class ListUserToExcel {
                 //mã cqt
                 user.setCqt(findCQT(user.getShort_name()));
                 //List role
-                for (int r = 0; r < max_row_current; r++) {
-                    temp = "";
-                    temp = row.getCell(cell_role).toString();
-                    if (temp != null) {
-                        //tìm kiếm role theo tên
-                        role[r] = findRole(user.getShort_name(), temp);
+                int role_ = 0;
+                for (int k = 0; k < arr_role.size(); k++) {
+                    if (arr_role.get(k).getName().equals(user.getPhongban())) {
+
+                        role[role_] = "Z" + user.getShort_name() + "_" + arr_role.get(k).getRole();
+                        role_++;
                     }
-                    cell_role++;
                 }
+
+//                for (int r = 0; r < max_row_current; r++) {
+//                    temp = "";
+//                    temp = row.getCell(cell_role).toString();
+//                    if (temp != null) {
+//                        //tìm kiếm role theo tên
+//                        role[r] = findRole(user.getShort_name(), temp);
+//                    }
+//                    System.out.println("Lỗi ở vai trò thứ: "+cell_role);
+//                    cell_role++;
+//                }
+                System.out.println("Xử lý hoàn thành: " + user.getName());
                 user.setRole(role);
                 //add to array cqt               
                 arr_user.add(user);
@@ -207,7 +222,7 @@ public class ListUserToExcel {
             sheet_name = workbook.getSheet("DanhSachCanBo-ChucNangNghiepVu");
             int t_rows = sheet_name.getLastRowNum();
             for (int i = 7; i <= t_rows; i++) {
-                String[] role = new String[max_role];
+                String[] role = new String[arr_role.size()];
 
                 int cell_role = 5;
 
@@ -241,15 +256,24 @@ public class ListUserToExcel {
                 //mã cqt
                 user.setCqt(findCQT(user.getShort_name()));
                 //List role
-                for (int r = 0; r < max_row_current; r++) {
-                    temp = "";
-                    temp = row.getCell(cell_role).toString();
-                    if (temp != null) {
-                        //tìm kiếm role theo tên
-                        role[r] = findRole(user.getShort_name(), temp);
+                int role_ = 0;
+                for (int k = 0; k < arr_role.size(); k++) {
+                    if (arr_role.get(k).getName().equals(user.getPhongban())) {
+
+                        role[role_] = "Z" + user.getShort_name() + "_" + arr_role.get(k).getRole();
+                        role_++;
                     }
-                    cell_role++;
                 }
+//                //List role
+//                for (int r = 0; r < max_row_current; r++) {
+//                    temp = "";
+//                    temp = row.getCell(cell_role).toString();
+//                    if (temp != null) {
+//                        //tìm kiếm role theo tên
+//                        role[r] = findRole(user.getShort_name(), temp);
+//                    }
+//                    cell_role++;
+//                }
                 user.setRole(role);
                 //add to array cqt               
                 arr_user.add(user);
@@ -345,22 +369,22 @@ public class ListUserToExcel {
                 //A
                 cell = dataRow.createCell(7);
                 cell.setCellValue("A");
-                //123123
+                //456789
                 cell = dataRow.createCell(8);
-                cell.setCellValue("123123");
-                //123123
+                cell.setCellValue("456789");
+                //456789
                 cell = dataRow.createCell(9);
-                cell.setCellValue("123123");
+                cell.setCellValue("456789");
                 //mã cqt
                 cell = dataRow.createCell(10);
                 cell.setCellValue(arr_user.get(i).getCqt());
                 //VI
                 cell = dataRow.createCell(11);
                 cell.setCellValue("VI");
-                //1	
+                //1
                 cell = dataRow.createCell(12);
                 cell.setCellValue("1");
-                //0	
+                //0
                 cell = dataRow.createCell(13);
                 cell.setCellValue("0");
                 //805TC	
@@ -450,6 +474,17 @@ public class ListUserToExcel {
                 CellStyle cellStyle = workbook_xlsx.createCellStyle();
                 //set next row
                 CellStyle style = workbook_xlsx.createCellStyle();
+
+
+                //format color, boder        
+                //cellStyle.setFillForegroundColor(HSSFColor.YELLOW.index);  
+                //cellStyle.setFillPattern(HSSFCellStyle.SOLID_FOREGROUND);  
+                cellStyle.setBorderTop((short) 1); // single line border  
+                cellStyle.setBorderBottom((short) 1); // single line border
+
+
+
+
                 style.cloneStyleFrom(cellStyle);
                 for (int i = 0; i < arr_user.size(); i++) {
                     if (arr_user.get(i).getShort_name().equals(arr_user_group.get(k))) {
@@ -458,9 +493,12 @@ public class ListUserToExcel {
                         //length account
                         Cell cell = dataRow.createCell(0);
                         cell.setCellValue(arr_user.get(i).getAccount().length());
+                        cell.setCellStyle(style);
+
                         //account
                         cell = dataRow.createCell(1);
                         cell.setCellValue(arr_user.get(i).getAccount());
+
                         //name
                         cell = dataRow.createCell(2);
                         cell.setCellValue(arr_user.get(i).getName());
@@ -479,12 +517,12 @@ public class ListUserToExcel {
                         //A
                         cell = dataRow.createCell(7);
                         cell.setCellValue("A");
-                        //123123
+                        //456789
                         cell = dataRow.createCell(8);
-                        cell.setCellValue("123123");
-                        //123123
+                        cell.setCellValue("456789");
+                        //456789
                         cell = dataRow.createCell(9);
-                        cell.setCellValue("123123");
+                        cell.setCellValue("456789");
                         //mã cqt
                         cell = dataRow.createCell(10);
                         cell.setCellValue(arr_user.get(i).getCqt());
@@ -586,13 +624,16 @@ public class ListUserToExcel {
             style.cloneStyleFrom(cellStyle);
             for (int i = 0; i < arr_user.size(); i++) {
                 Row dataRow = sheet.createRow(rowCount++);
-
                 //length account
                 Cell cell = dataRow.createCell(0);
                 cell.setCellValue(arr_user.get(i).getAccount().length());
+                //get current time
+//                cell = dataRow.createCell(0);
+//                cell.setCellValue(Calendar.getInstance().getTime().toString());
                 //account
                 cell = dataRow.createCell(1);
                 cell.setCellValue(arr_user.get(i).getAccount());
+//                sheet.addMergedRegion(new Region(2, (short)3, 2, (short)3)); 
                 //name
                 cell = dataRow.createCell(2);
                 cell.setCellValue(arr_user.get(i).getName());
@@ -611,12 +652,12 @@ public class ListUserToExcel {
                 //A
                 cell = dataRow.createCell(7);
                 cell.setCellValue("A");
-                //123123
+                //456789
                 cell = dataRow.createCell(8);
-                cell.setCellValue("123123");
-                //123123
+                cell.setCellValue("456789");
+                //456789
                 cell = dataRow.createCell(9);
-                cell.setCellValue("123123");
+                cell.setCellValue("456789");
                 //mã cqt
                 cell = dataRow.createCell(10);
                 cell.setCellValue(arr_user.get(i).getCqt());
@@ -742,12 +783,12 @@ public class ListUserToExcel {
                         //A
                         cell = dataRow.createCell(7);
                         cell.setCellValue("A");
-                        //123123
+                        //456789
                         cell = dataRow.createCell(8);
-                        cell.setCellValue("123123");
-                        //123123
+                        cell.setCellValue("456789");
+                        //456789
                         cell = dataRow.createCell(9);
-                        cell.setCellValue("123123");
+                        cell.setCellValue("456789");
                         //mã cqt
                         cell = dataRow.createCell(10);
                         cell.setCellValue(arr_user.get(i).getCqt());
