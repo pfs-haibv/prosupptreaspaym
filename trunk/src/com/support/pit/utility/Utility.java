@@ -335,9 +335,9 @@ public class Utility {
             font.setBoldweight(Font.BOLDWEIGHT_BOLD);
             //set first row
             cellStyle.setFont(font);
-            for (int i = 0; i < Constants.COLUMN_DATA_PAYMENT_ONLINE.length; i++) {
+            for (int i = 0; i < Constants.COLUMN_DATA_PAYMENT_ONLINE_PIT.length; i++) {
                 Cell cell = row.createCell(i);
-                cell.setCellValue(Constants.COLUMN_DATA_PAYMENT_ONLINE[i]);
+                cell.setCellValue(Constants.COLUMN_DATA_PAYMENT_ONLINE_PIT[i]);
                 cell.setCellStyle(cellStyle);
             }
 
@@ -373,10 +373,13 @@ public class Utility {
                 cell.setCellValue(arr_tp.get(i).getNgay_kb());
 
                 cell = dataRow.createCell(8);
-                cell.setCellValue(arr_tp.get(i).getNgay_ct());
+                cell.setCellValue(arr_tp.get(i).getTotal_ct_pit());
 
-//                cell = dataRow.createCell(9);
-//                cell.setCellValue(arr_tp.get(i).getTotal_ct_pit());
+                cell = dataRow.createCell(9);
+                cell.setCellValue(arr_tp.get(i).getTax_mount());
+                
+                cell = dataRow.createCell(10);
+                cell.setCellValue(arr_tp.get(i).getNgay_ct());
             }
             
             //Create sheet Ctừ thiếu tồn tại trong Backup
