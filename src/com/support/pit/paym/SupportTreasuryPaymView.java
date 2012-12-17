@@ -3,12 +3,18 @@
  */
 package com.support.pit.paym;
 
+import com.support.pit.conn.ConnectDB;
+import com.support.pit.datatype.TreasuryPayment;
 import com.support.pit.excel.ListUserToExcel;
 import com.support.pit.serializable.SerializableDemo;
 import com.support.pit.system.Constants;
+import com.support.pit.utility.GetFileXMLToKhai;
 import com.support.pit.utility.Utility;
+import com.support.pit.utility.getFileFPT;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.SocketException;
+import java.sql.SQLException;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -30,6 +36,11 @@ import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
@@ -112,6 +123,92 @@ public class SupportTreasuryPaymView extends FrameView {
                 }
             }
         });
+
+        //show value tab online payment
+        showOnlinePaym();
+    }
+
+    @Action
+    public void showOnlinePaym() {
+        DateFormat df = new SimpleDateFormat("MM/yyyy");
+        Date date = new Date();
+        txtCTTuNgay.setText("01/" + df.format(date));
+        txtCTDenNgay.setText(Utility.getMaxDateOnlinePaym(df.format(date)));
+    }
+
+    /**
+     * 
+     * @throws SQLException
+     * @throws IOException 
+     */
+    @Action
+    public void checkPaymOnline() throws SQLException, IOException {
+        System.out.println("Running ....");
+        //bắt buộc ngày chứng từ
+        if (txtCTTuNgay.getText().isEmpty() || txtCTDenNgay.getText().isEmpty()) {
+            lblPaymOnline.setText("Nhập ngày chứng từ từ ngày và chứng từ đến ngày");
+        } else {
+            String log_file = txtFileLogOnlinePaym.getText();
+            //1 CT về PIT        
+            ConnectDB.getConnORA();//Connect database
+            String sql_ct_ve_pit =
+                    "                SELECT   DISTINCT a.lcn_owner,"
+                    + "                 a.crea_date,"
+                    + "                 a.parent_id,"
+                    + "                 b.trea_code,"
+                    + "                 b.comp_code,"
+                    + "                 b.tax_office_id,"
+                    + "                 b.trea_date_no"
+                    + " FROM   data_pkg@tdtttct a, sapsr3.ztb_treas_paym b"
+                    + " WHERE   b.mandt = 500 AND a.parent_id = b.tran_no"
+                    + "        AND trunc (a.crea_date)  >= TO_date ('" + txtCTTuNgay.getText() + "', 'dd/MM/yyyy')"
+                    /*ADVICE(12): Functions with constant parameters in WHERE clause [317] */
+                    + "        AND  trunc (a.crea_date) <= TO_date ('" + txtCTDenNgay.getText() + "', 'dd/MM/yyyy')"
+                    /*ADVICE(15): Functions with constant parameters in WHERE clause [317] */
+                    + "        AND a.lcn_recv = 'PIT0000000'";  
+
+            String sql_ct_ve_kbac =
+                    "SELECT   DISTINCT a.lcn_owner,"
+                    + "  a.crea_date,"
+                    + "  a.parent_id,"
+                    + "  NULL AS trea_code,"
+                    + "  NULL AS comp_code,"
+                    + "  NULL AS tax_office_id,"
+                    + "  NULL AS trea_date_no"
+                    + "  FROM   data_pkg@tdtttct a"
+                    + " WHERE   trunc (a.crea_date) >="
+                    + "         TO_DATE ('" + txtCTTuNgay.getText() + "', 'dd/MM/yyyy')"
+                    /*ADVICE(13): Functions with constant parameters in WHERE clause [317] */
+                    + "         AND trunc (a.crea_date) <="
+                    + "             TO_DATE ('" + txtCTDenNgay.getText() + "', 'dd/MM/yyyy')"
+                    /*ADVICE(16): Functions with constant parameters in WHERE clause [317] */
+                    + "         AND a.parent_id NOT IN"
+                    + "                    (SELECT   DISTINCT a.lcn_owner"
+                    + "                       FROM   data_pkg@tdtttct a, sapsr3.ztb_treas_paym b"
+                    + "                      WHERE   b.mandt = 500 AND a.parent_id = b.tran_no"
+                    + "                              AND trunc (a.crea_date) >= TO_DATE ('" + txtCTTuNgay.getText() + "', 'dd/MM/yyyy')"
+                    /*ADVICE(26): Functions with constant parameters in WHERE clause [317] */
+                    + "                              AND trunc (a.crea_date) <= TO_DATE ('" + txtCTDenNgay.getText() + "', 'dd/MM/yyyy')"
+                    /*ADVICE(33): Functions with constant parameters in WHERE clause [317] */
+                    + "                              AND a.lcn_recv = 'PIT0000000')"
+                    + "         AND a.lcn_recv = 'PIT0000000' ";
+
+            ArrayList<TreasuryPayment> arr_tp_ve_pit = ConnectDB.sqlDatabase(sql_ct_ve_pit, "Load database payment on PIT rows ----> ");
+            ArrayList<TreasuryPayment> arr_tp_kbac = ConnectDB.sqlDatabase_Paym(sql_ct_ve_kbac, "Load database payment on TDTT rows --->> ");
+
+            System.out.println("Load database success ....");
+            //Export excel        
+            getFileFPT.getFTP(arr_tp_ve_pit, arr_tp_kbac, txtFileFPT.getText(), log_file);
+
+            lblPaymOnline.setText("Done!");
+        }
+
+    }
+
+    @Action
+    public void findAndGetFTP() throws SocketException, IOException {
+        getFileFPT.findAndGetFTP(txtFTP.getText(), txtFileFPT.getText());
+        lblPaymOnline.setText("Completed copy file on the ftp server");
     }
 
     @Action
@@ -196,6 +293,16 @@ public class SupportTreasuryPaymView extends FrameView {
         getDirectory(Constants.PART_CREATE_LIST_USER_EXP_FILE);
     }
 
+    @Action
+    public void PartOnlinePaymFTPFile() {
+        getDirectory(Constants.PART_ONLINE_PAYMENT_GET_FPT);
+    }
+
+    @Action
+    public void PartOnlinePaymExportFile() {
+        getDirectory(Constants.PART_ONLINE_PAYMENT_EXPORT_FILE);
+    }
+
     /**
      * Hiển thị thông tin file xml, xem code @see FindInfoXML
      */
@@ -242,6 +349,7 @@ public class SupportTreasuryPaymView extends FrameView {
                     JOptionPane.ERROR_MESSAGE);
             ex.printStackTrace();
         } catch (RuntimeException ex) {
+            ex.printStackTrace();
             lblSuc1.setText(" Kiểm tra lại đường dẫn khi quét file" + source_file + ".");
             JOptionPane.showMessageDialog(btnCheckXML,
                     ex.getMessage(),
@@ -259,7 +367,7 @@ public class SupportTreasuryPaymView extends FrameView {
             logger = Logger.getLogger("ConvertDKT");
             lm.addLogger(logger);
             logger.addHandler(fh);
-            String type_excel, multi_excel = "";            
+            String type_excel, multi_excel = "";
             //Excel 2003 or 2007
             if (radListUserXLSX.isSelected()) {
                 type_excel = Constants.TYPE_EXCEL_2007;
@@ -272,25 +380,35 @@ public class SupportTreasuryPaymView extends FrameView {
             } else {
                 multi_excel = Constants.TYPE_MULTI_SHEET;
             }
-            
+
             int max_role = Integer.parseInt(txtMaxRole.getText());
-            
+
             ListUserToExcel.getInfoRole(type_excel, multi_excel, max_role, txtListUserScandFolder.getText(), txtListUserExportFile.getText());
-            
+
             lblSucListUser.setText("Hoàn thành tạo danh sách user");
         } catch (RuntimeException ex) {
             logger.log(Level.WARNING, "Có lỗi xẩy ra khi xử lý ", ex.getMessage());
             lblSucListUser.setText(ex.getMessage());
         }
     }
-    
-    public static void writeLog(String mess){
+
+    public static void writeLog(String mess) {
         logger.log(Level.WARNING, "Có lỗi xẩy ra khi xử lý ", mess);
     }
 
     @Action
     public void findCopyFile() throws IOException {
         Utility.copyDirectory(new File(txtTienIchScand.getText()), new File(txtTienIchCopy.getText()), txtFileNameCopy.getText());
+    }
+
+    @Action
+    public void checkXMLToKhai() throws IOException {
+        GetFileXMLToKhai.checkXMLToKhai();
+    }
+
+    @Action
+    public void moveXMLToKhai() throws IOException {
+        GetFileXMLToKhai.moveFileXMLToKhai(txtFileNameCopy.getText(), txtTienIchCopy.getText());
     }
 
     /**
@@ -428,7 +546,7 @@ public class SupportTreasuryPaymView extends FrameView {
                 int endIndex = l.getName().length();
                 int beginIndex = endIndex - 3;
                 // Scan file có định dạng .XML
-                if (l.getName().substring(beginIndex, endIndex).equals("xml")) {
+                if (l.getName().substring(beginIndex, endIndex).toUpperCase().equals("XML")) {
                     f_xml = new File(dirForder + "\\" + l.getName());
                     InputSource input = null;
                     // Create SAX 2 parser...
@@ -440,6 +558,7 @@ public class SupportTreasuryPaymView extends FrameView {
                 }
             }
         } catch (SAXParseException err_) {
+            err_.printStackTrace();
             f_reader.close();
             //Move file error
             Utility.moveFiles(f_xml.toString(), errFolder);
@@ -630,6 +749,15 @@ public class SupportTreasuryPaymView extends FrameView {
                 txtListUserExportFile.setText(file.getPath());
                 break;
 
+            case Constants.PART_ONLINE_PAYMENT_GET_FPT:
+                txtFileFPT.setText(file.getPath());
+                break;
+
+            case Constants.PART_ONLINE_PAYMENT_EXPORT_FILE:
+                file = fc.getSelectedFile();
+                txtFileLogOnlinePaym.setText(file.getPath());
+                break;
+
             default:
                 break;
         }
@@ -714,6 +842,7 @@ public class SupportTreasuryPaymView extends FrameView {
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel23 = new javax.swing.JLabel();
         txtInforTK = new javax.swing.JTextField();
@@ -754,6 +883,25 @@ public class SupportTreasuryPaymView extends FrameView {
         btnCopy = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtFileNameCopy = new javax.swing.JTextArea();
+        jButton7 = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel32 = new javax.swing.JLabel();
+        txtFileFPT = new javax.swing.JTextField();
+        btnGetFPT = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
+        txtCTTuNgay = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        txtCTDenNgay = new javax.swing.JTextField();
+        lblPaymOnline = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        txtFileLogOnlinePaym = new javax.swing.JTextField();
+        btnLogExport = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtFTP = new javax.swing.JTextArea();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         menuBar = new javax.swing.JMenuBar();
         javax.swing.JMenu fileMenu = new javax.swing.JMenu();
         javax.swing.JMenuItem exitMenuItem = new javax.swing.JMenuItem();
@@ -1159,6 +1307,7 @@ public class SupportTreasuryPaymView extends FrameView {
         jButton1.setName("jButton1"); // NOI18N
 
         lblSuc1.setFont(resourceMap.getFont("lblSuc1.font")); // NOI18N
+        lblSuc1.setText(resourceMap.getString("lblSuc1.text")); // NOI18N
         lblSuc1.setName("lblSuc1"); // NOI18N
 
         btnChkXML.setAction(actionMap.get("checkXML")); // NOI18N
@@ -1200,7 +1349,6 @@ public class SupportTreasuryPaymView extends FrameView {
         btnErrFld.setName("btnErrFld"); // NOI18N
 
         btnRad.add(radXLSX);
-        radXLSX.setSelected(true);
         radXLSX.setText(resourceMap.getString("radXLSX.text")); // NOI18N
         radXLSX.setName("radXLSX"); // NOI18N
 
@@ -1279,6 +1427,10 @@ public class SupportTreasuryPaymView extends FrameView {
         jButton3.setText(resourceMap.getString("jButton3.text")); // NOI18N
         jButton3.setName("jButton3"); // NOI18N
 
+        jButton6.setAction(actionMap.get("checkXMLToKhai")); // NOI18N
+        jButton6.setText(resourceMap.getString("jButton6.text")); // NOI18N
+        jButton6.setName("jButton6"); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1302,7 +1454,9 @@ public class SupportTreasuryPaymView extends FrameView {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(btnCheckXML, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(228, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -1316,7 +1470,8 @@ public class SupportTreasuryPaymView extends FrameView {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCheckXML, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1)
-                    .addComponent(btnChkXML))
+                    .addComponent(btnChkXML)
+                    .addComponent(jButton6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
@@ -1519,9 +1674,7 @@ public class SupportTreasuryPaymView extends FrameView {
                         .addGap(343, 343, 343))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(jLabel29)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel29)
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addGap(68, 68, 68)
                                 .addComponent(txtMaxRole, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1654,31 +1807,34 @@ public class SupportTreasuryPaymView extends FrameView {
         });
         jScrollPane1.setViewportView(txtFileNameCopy);
 
+        jButton7.setAction(actionMap.get("moveXMLToKhai")); // NOI18N
+        jButton7.setText(resourceMap.getString("jButton7.text")); // NOI18N
+        jButton7.setName("jButton7"); // NOI18N
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(117, 117, 117)
-                        .addComponent(btnCopy))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel27))
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel27))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtTienIchCopy)
+                            .addComponent(txtTienIchScand, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                                .addComponent(btnCopy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtTienIchCopy)
-                                    .addComponent(txtTienIchScand, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnTienIchScand, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnTienIchCopy, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnTienIchScand, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnTienIchCopy, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -1698,7 +1854,9 @@ public class SupportTreasuryPaymView extends FrameView {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnTienIchCopy)))
                 .addGap(18, 18, 18)
-                .addComponent(btnCopy)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton7)
+                    .addComponent(btnCopy))
                 .addGap(7, 7, 7)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -1722,6 +1880,176 @@ public class SupportTreasuryPaymView extends FrameView {
         );
 
         tabPay.addTab(resourceMap.getString("jPanel5.TabConstraints.tabTitle"), jPanel5); // NOI18N
+
+        jPanel10.setName("jPanel10"); // NOI18N
+
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(resourceMap.getString("jPanel11.border.title"))); // NOI18N
+        jPanel11.setName("jPanel11"); // NOI18N
+
+        jLabel32.setText(resourceMap.getString("jLabel32.text")); // NOI18N
+        jLabel32.setToolTipText(resourceMap.getString("jLabel32.toolTipText")); // NOI18N
+        jLabel32.setName("jLabel32"); // NOI18N
+
+        txtFileFPT.setText(resourceMap.getString("txtFileFPT.text")); // NOI18N
+        txtFileFPT.setName("txtFileFPT"); // NOI18N
+
+        btnGetFPT.setAction(actionMap.get("PartOnlinePaymFTPFile")); // NOI18N
+        btnGetFPT.setText(resourceMap.getString("btnGetFPT.text")); // NOI18N
+        btnGetFPT.setName("btnGetFPT"); // NOI18N
+
+        jLabel31.setText(resourceMap.getString("jLabel31.text")); // NOI18N
+        jLabel31.setName("jLabel31"); // NOI18N
+
+        txtCTTuNgay.setText(resourceMap.getString("txtCTTuNgay.text")); // NOI18N
+        txtCTTuNgay.setName("txtCTTuNgay"); // NOI18N
+
+        jLabel33.setText(resourceMap.getString("jLabel33.text")); // NOI18N
+        jLabel33.setName("jLabel33"); // NOI18N
+
+        txtCTDenNgay.setText(resourceMap.getString("txtCTDenNgay.text")); // NOI18N
+        txtCTDenNgay.setName("txtCTDenNgay"); // NOI18N
+
+        lblPaymOnline.setFont(resourceMap.getFont("lblPaymOnline.font")); // NOI18N
+        lblPaymOnline.setText(resourceMap.getString("lblPaymOnline.text")); // NOI18N
+        lblPaymOnline.setName("lblPaymOnline"); // NOI18N
+
+        jLabel34.setText(resourceMap.getString("jLabel34.text")); // NOI18N
+        jLabel34.setToolTipText(resourceMap.getString("jLabel34.toolTipText")); // NOI18N
+        jLabel34.setName("jLabel34"); // NOI18N
+
+        txtFileLogOnlinePaym.setText(resourceMap.getString("txtFileLogOnlinePaym.text")); // NOI18N
+        txtFileLogOnlinePaym.setName("txtFileLogOnlinePaym"); // NOI18N
+
+        btnLogExport.setAction(actionMap.get("PartOnlinePaymExportFile")); // NOI18N
+        btnLogExport.setText(resourceMap.getString("btnLogExport.text")); // NOI18N
+        btnLogExport.setName("btnLogExport"); // NOI18N
+
+        jScrollPane2.setName("jScrollPane2"); // NOI18N
+
+        txtFTP.setColumns(20);
+        txtFTP.setRows(5);
+        txtFTP.setText(resourceMap.getString("txtFTP.text")); // NOI18N
+        txtFTP.setName("txtFTP"); // NOI18N
+        txtFTP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtFTPMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(txtFTP);
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLabel31)
+                .addContainerGap(575, Short.MAX_VALUE))
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel34)
+                    .addComponent(jLabel32))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addComponent(txtFileFPT, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnGetFPT, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                                .addComponent(txtCTTuNgay, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                                .addComponent(jLabel33)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtCTDenNgay, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(74, 74, 74)))
+                        .addGap(61, 61, 61))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtFileLogOnlinePaym, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 424, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnLogExport, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblPaymOnline, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel31)
+                        .addComponent(txtCTTuNgay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel33)
+                        .addComponent(txtCTDenNgay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel32)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtFileFPT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGetFPT)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel34)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtFileLogOnlinePaym, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnLogExport)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblPaymOnline, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jButton8.setAction(actionMap.get("checkPaymOnline")); // NOI18N
+        jButton8.setText(resourceMap.getString("jButton8.text")); // NOI18N
+        jButton8.setName("jButton8"); // NOI18N
+
+        jButton9.setAction(actionMap.get("quit")); // NOI18N
+        jButton9.setName("jButton9"); // NOI18N
+
+        jButton10.setAction(actionMap.get("findAndGetFTP")); // NOI18N
+        jButton10.setText(resourceMap.getString("jButton10.text")); // NOI18N
+        jButton10.setName("jButton10"); // NOI18N
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(272, 272, 272)
+                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(193, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton8)
+                    .addComponent(jButton10)
+                    .addComponent(jButton9))
+                .addContainerGap(208, Short.MAX_VALUE))
+        );
+
+        tabPay.addTab(resourceMap.getString("jPanel10.TabConstraints.tabTitle"), jPanel10); // NOI18N
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
@@ -1801,6 +2129,10 @@ public class SupportTreasuryPaymView extends FrameView {
     private void txtFileNameCopyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFileNameCopyMouseClicked
         txtFileNameCopy.setText("");
     }//GEN-LAST:event_txtFileNameCopyMouseClicked
+
+    private void txtFTPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtFTPMouseClicked
+        txtFTP.setText("");
+    }//GEN-LAST:event_txtFTPMouseClicked
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCheckXML;
     private javax.swing.JButton btnChkXML;
@@ -1809,11 +2141,13 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JButton btnCopy;
     private javax.swing.JButton btnCreateDT;
     private javax.swing.JButton btnErrFld;
+    private javax.swing.JButton btnGetFPT;
     private javax.swing.JButton btnGetFile;
     private javax.swing.JButton btnGetSrcFolder;
     private javax.swing.ButtonGroup btnGrpListUser;
     private javax.swing.JButton btnListUserExport;
     private javax.swing.JButton btnListUserSndFld;
+    private javax.swing.JButton btnLogExport;
     private javax.swing.JButton btnLogFile;
     private javax.swing.JButton btnModify;
     private javax.swing.JButton btnModifyTMuc;
@@ -1828,10 +2162,15 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JComboBox cboHdr;
     private javax.swing.JComboBox cboma_tmuc;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1856,6 +2195,10 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1863,6 +2206,8 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1872,7 +2217,9 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     public static final javax.swing.JLabel lblMessTK = new javax.swing.JLabel();
+    private javax.swing.JLabel lblPaymOnline;
     private javax.swing.JLabel lblSuc;
     private javax.swing.JLabel lblSuc1;
     private javax.swing.JLabel lblSucListUser;
@@ -1893,8 +2240,13 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JLabel statusMessageLabel;
     private javax.swing.JPanel statusPanel;
     private javax.swing.JTabbedPane tabPay;
+    private javax.swing.JTextField txtCTDenNgay;
+    private javax.swing.JTextField txtCTTuNgay;
     private javax.swing.JTextField txtErrFolder;
+    private javax.swing.JTextArea txtFTP;
+    private javax.swing.JTextField txtFileFPT;
     private javax.swing.JTextField txtFileLog;
+    private javax.swing.JTextField txtFileLogOnlinePaym;
     private javax.swing.JTextArea txtFileNameCopy;
     private javax.swing.JTextField txtInfoNNT;
     private javax.swing.JTextField txtInforTK;
