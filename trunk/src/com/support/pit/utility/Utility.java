@@ -28,6 +28,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Calendar;
 /**
  *
  * @author Administrator
@@ -95,7 +96,7 @@ public class Utility {
                 file.createNewFile();
                 //write use buffering
                 Writer output = new BufferedWriter(new FileWriter(file));
-                output.write("jdbc:oracle:thin:@10.64.8.93:1527/DE6,SAPSR3,xyz1$PIT");
+                output.write("jdbc:oracle:thin:@10.64.85.52:1527/PE1,SAP_READ,123456");
                 output.close();
             }
 
@@ -306,6 +307,7 @@ public class Utility {
             FileOutputStream outputStream = new FileOutputStream(part_file + Constants.TYPE_EXCEL_2007);
             //write excel
             workbook_xlsx.write(outputStream);
+           // workbook_xlsx.write(outputStream);
             //close
             outputStream.close();
         } catch (FileNotFoundException e) {
@@ -315,6 +317,183 @@ public class Utility {
         }
     }
 
+    /**
+     * create excel 2007
+     */
+    public static void createExcel2007OnlinePaym(ArrayList<TreasuryPayment> arr_tp,ArrayList<TreasuryPayment> arr_tp_thieu_bk,ArrayList<TreasuryPayment> arr_tp_thieu_ko_bk, String part_file) {
+        try {
+            System.out.println("size data: arr_tp_pit "+arr_tp.size()+" arr_tp_thieu_bk "+arr_tp_thieu_bk.size()+" arr_tp_thieu_ko_bk "+arr_tp_thieu_ko_bk.size());
+            System.out.println("start export sheet 1.");
+            int rowCount = 0;
+            Workbook workbook_xlsx = new XSSFWorkbook();
+            //Create sheet Ctừ về pit
+            Sheet sheet = workbook_xlsx.createSheet(Constants.SHEET_CT_VE_PIT);
+            Row row = sheet.createRow(rowCount++);
+
+            CellStyle cellStyle = workbook_xlsx.createCellStyle();
+            Font font = workbook_xlsx.createFont();
+            font.setBoldweight(Font.BOLDWEIGHT_BOLD);
+            //set first row
+            cellStyle.setFont(font);
+            for (int i = 0; i < Constants.COLUMN_DATA_PAYMENT_ONLINE.length; i++) {
+                Cell cell = row.createCell(i);
+                cell.setCellValue(Constants.COLUMN_DATA_PAYMENT_ONLINE[i]);
+                cell.setCellStyle(cellStyle);
+            }
+
+            //set next row
+            CellStyle style = workbook_xlsx.createCellStyle();
+            style.cloneStyleFrom(cellStyle);
+            for (int i = 0; i < arr_tp.size(); i++) {
+                Row dataRow = sheet.createRow(rowCount++);
+                System.out.println("write sheet 1 to rows "+i);
+                Cell cell = dataRow.createCell(0);
+                //cell.setCellStyle(style);
+                cell.setCellValue(arr_tp.get(i).getFilename());
+
+                cell = dataRow.createCell(1);
+                cell.setCellValue(arr_tp.get(i).getCqt());
+
+                cell = dataRow.createCell(2);
+                cell.setCellValue(arr_tp.get(i).getTen_cqt());
+
+                cell = dataRow.createCell(3);
+                cell.setCellValue(arr_tp.get(i).getMakb());
+
+                cell = dataRow.createCell(4);
+                cell.setCellValue(arr_tp.get(i).getMa_cqthu());
+
+                cell = dataRow.createCell(5);
+                cell.setCellValue(arr_tp.get(i).getTran_no());
+
+                cell = dataRow.createCell(6);
+                cell.setCellValue(arr_tp.get(i).getNgay_ct());
+
+                cell = dataRow.createCell(7);
+                cell.setCellValue(arr_tp.get(i).getNgay_kb());
+
+//                cell = dataRow.createCell(8);
+//                cell.setCellValue(arr_tp.get(i).getTotal_ct_khobac());
+
+//                cell = dataRow.createCell(9);
+//                cell.setCellValue(arr_tp.get(i).getTotal_ct_pit());
+            }
+            
+            //Create sheet Ctừ thiếu tồn tại trong Backup
+            System.out.println("start export sheet 2.");
+            rowCount = 0;            
+            sheet = workbook_xlsx.createSheet(Constants.SHEET_CT_THIEU_CO_BK);
+            row = sheet.createRow(rowCount++);
+            cellStyle.setFont(font);
+            for (int i = 0; i < Constants.COLUMN_DATA_PAYMENT_ONLINE.length; i++) {
+                Cell cell = row.createCell(i);
+                cell.setCellValue(Constants.COLUMN_DATA_PAYMENT_ONLINE[i]);
+                cell.setCellStyle(cellStyle);
+            }
+
+            //set next row
+            style = workbook_xlsx.createCellStyle();
+            style.cloneStyleFrom(cellStyle);
+            for (int i = 0; i < arr_tp_thieu_bk.size(); i++) {
+                Row dataRow = sheet.createRow(rowCount++);
+                System.out.println("write sheet 2 to rows "+i);
+                Cell cell = dataRow.createCell(0);
+                //cell.setCellStyle(style);
+                cell.setCellValue(arr_tp_thieu_bk.get(i).getFilename());
+
+                cell = dataRow.createCell(1);
+                cell.setCellValue(arr_tp_thieu_bk.get(i).getCqt());
+
+                cell = dataRow.createCell(2);
+                cell.setCellValue(arr_tp_thieu_bk.get(i).getTen_cqt());
+
+                cell = dataRow.createCell(3);
+                cell.setCellValue(arr_tp_thieu_bk.get(i).getMakb());
+
+                cell = dataRow.createCell(4);
+                cell.setCellValue(arr_tp_thieu_bk.get(i).getMa_cqthu());
+
+                cell = dataRow.createCell(5);
+                cell.setCellValue(arr_tp_thieu_bk.get(i).getTran_no());
+
+                cell = dataRow.createCell(6);
+                cell.setCellValue(arr_tp_thieu_bk.get(i).getNgay_ct());
+
+                cell = dataRow.createCell(7);
+                cell.setCellValue(arr_tp_thieu_bk.get(i).getNgay_kb());
+
+//                cell = dataRow.createCell(8);
+//                cell.setCellValue(arr_tp_thieu_bk.get(i).getTotal_ct_khobac());
+
+//                cell = dataRow.createCell(9);
+//                cell.setCellValue(arr_tp_thieu_bk.get(i).getTotal_ct_pit());
+            }
+            System.out.println("start export sheet 3.");
+            //Create sheet Ctừ thiếu không tồn tại trong Backup            
+            rowCount = 0;            
+            sheet = workbook_xlsx.createSheet(Constants.SHEET_CT_THIEU_KO_BK);
+            row = sheet.createRow(rowCount++);
+            cellStyle.setFont(font);
+            for (int i = 0; i < Constants.COLUMN_DATA_PAYMENT_ONLINE.length; i++) {
+                Cell cell = row.createCell(i);
+                cell.setCellValue(Constants.COLUMN_DATA_PAYMENT_ONLINE[i]);
+                cell.setCellStyle(cellStyle);
+            }
+
+            //set next row
+            style = workbook_xlsx.createCellStyle();
+            style.cloneStyleFrom(cellStyle);
+            for (int i = 0; i < arr_tp_thieu_ko_bk.size(); i++) {
+                System.out.println("write sheet 3 to rows "+i);
+                Row dataRow = sheet.createRow(rowCount++);
+
+                Cell cell = dataRow.createCell(0);
+                //cell.setCellStyle(style);
+                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getLcn_owner());
+
+                cell = dataRow.createCell(1);
+                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getCqt());
+
+                cell = dataRow.createCell(2);
+                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getTen_cqt());
+
+                cell = dataRow.createCell(3);
+                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getMakb());
+
+                cell = dataRow.createCell(4);
+                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getMa_cqthu());
+
+                cell = dataRow.createCell(5);
+                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getTran_no());
+
+                cell = dataRow.createCell(6);
+                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getNgay_ct());
+
+                cell = dataRow.createCell(7);
+                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getNgay_kb());
+
+//                cell = dataRow.createCell(8);
+//                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getTotal_ct_khobac());
+//
+//                cell = dataRow.createCell(9);
+//                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getTotal_ct_pit());
+            }            
+            
+            //out file
+            FileOutputStream outputStream = new FileOutputStream(part_file + Constants.TYPE_EXCEL_2007);
+            //write excel
+            workbook_xlsx.write(outputStream);
+           // workbook_xlsx.write(outputStream);
+            //close
+            outputStream.close();
+            System.out.println("size data: arr_tp_pit "+arr_tp.size()+" arr_tp_thieu_bk "+arr_tp_thieu_bk.size()+" arr_tp_thieu_ko_bk "+arr_tp_thieu_ko_bk.size());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
     /**
      * Create excel 2003
      */
@@ -468,6 +647,35 @@ public class Utility {
                 }
             }
         }
+    }
+    
+        /**
+     * Lấy ngày cuối cùng của tháng
+     * @param datetime
+     * @return max_date
+     */
+    public static String getMaxDate(String datetime) {
+
+        String max_date = "";
+
+        String month_year[] = datetime.split("-");
+        //Year
+        int year = Integer.parseInt(month_year[1]);
+        //Month (January = 0 ... )
+        int month = Integer.parseInt(month_year[0]) - 1;
+        //date        
+        int date = 01;
+
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.set(year, month, date);
+
+        int maxDay = calendar.getActualMaximum(calendar.DATE);
+
+        max_date = maxDay + "-" + datetime;
+
+        return max_date;
+
     }
 
     
