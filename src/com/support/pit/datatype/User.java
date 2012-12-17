@@ -11,12 +11,13 @@ package com.support.pit.datatype;
 public class User {
 
     private String account;
+    private String password;
     private String name;
     private String email;
     private String phongban;
     private String[] role;
     private String cqt;
-    private String short_name;
+    private String short_name;    
 
     public String getEmail() {
         return email;
@@ -70,12 +71,30 @@ public class User {
         return short_name;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public void setShort_name(String short_name) {
         this.short_name = short_name;
-    }
-       
-    
+    }    
+
     public User() {
     }
+
+    public User(String account, String password, String name, String email, String phongban, String[] role, String cqt, String short_name) {
+        this.account = account;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+        this.phongban = phongban;
+        this.role = role;
+        this.cqt = cqt;
+        this.short_name = short_name;
+    } 
 
 }
