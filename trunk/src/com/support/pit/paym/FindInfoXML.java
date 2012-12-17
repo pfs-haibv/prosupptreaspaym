@@ -133,7 +133,10 @@ public class FindInfoXML {
                             String date = ((Node) textngay_kb_List.item(0)).getNodeValue().substring(6, 8);
                             ngay_kb = date + "/" + month + "/" + year;
                             // Ngày chứng từ
-                            ngay_ct = ((Node) textngay_kbac_List.item(0)).getNodeValue();
+                            if (textngay_kbac_List.getLength() != 0) {
+                                ngay_ct = ((Node) textngay_kbac_List.item(0)).getNodeValue();
+                            }
+
                             // Tiểu mục
                             NodeList chungTuList = firstCQTElement.getElementsByTagName("ma_tmuc");
                             Element chungTuElement = (Element) chungTuList.item(0);
@@ -188,6 +191,7 @@ public class FindInfoXML {
 
                     //add to array
                     arr_tp.add(tp);
+                    System.out.println("loi" + file_name);
                 }  // End scan file
             }
             //Write to excel
@@ -204,8 +208,11 @@ public class FindInfoXML {
                     break;
             }
         } catch (SAXParseException err) {
+            err.printStackTrace();
             String desc = "Lối file: " + getFile_name() + "\n Mô tả: " + err.getMessage();
             throw new RuntimeException(desc, null);
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 }
