@@ -20,6 +20,7 @@ public class TreasuryPayment {
     private String ngay_kb;
     private int total_ct_khobac;
     private int total_ct_pit;
+    private String lcn_owner;
 
     public String getCqt() {
         return cqt;
@@ -104,6 +105,14 @@ public class TreasuryPayment {
         this.ten_cqt = ten_cqt;
     }
 
+    public String getLcn_owner() {
+        return lcn_owner;
+    }
+
+    public void setLcn_owner(String lcn_owner) {
+        this.lcn_owner = lcn_owner;
+    }    
+    
     public TreasuryPayment(String filename, String cqt, String ten_cqt, String makb, String ma_cqthu, String tran_no, String ngay_ct, String ngay_kb, int total_ct_khobac, int total_ct_pit) {
         this.filename = filename;
         this.cqt = cqt;
