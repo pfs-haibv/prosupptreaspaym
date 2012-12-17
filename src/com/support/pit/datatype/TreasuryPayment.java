@@ -21,6 +21,7 @@ public class TreasuryPayment {
     private int total_ct_khobac;
     private int total_ct_pit;
     private String lcn_owner;
+    private String tax_mount;
 
     public String getCqt() {
         return cqt;
@@ -111,7 +112,15 @@ public class TreasuryPayment {
 
     public void setLcn_owner(String lcn_owner) {
         this.lcn_owner = lcn_owner;
-    }    
+    }
+
+    public String getTax_mount() {
+        return tax_mount;
+    }
+
+    public void setTax_mount(String tax_mount) {
+        this.tax_mount = tax_mount;
+    }   
     
     public TreasuryPayment(String filename, String cqt, String ten_cqt, String makb, String ma_cqthu, String tran_no, String ngay_ct, String ngay_kb, int total_ct_khobac, int total_ct_pit) {
         this.filename = filename;
