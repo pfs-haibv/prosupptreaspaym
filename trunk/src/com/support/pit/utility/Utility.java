@@ -38,8 +38,8 @@ public class Utility {
     public static String array_timuc = "1049, 1013, 1012, 1011, 1008, 1007, 1006, 1005, 1004, 1003, 1001, 1014";
 
     /**
-     * @param read text file
-     * @param file 
+     * 
+     * @param file_ 
      */
     public static void readTXT(String file_) {
         File file = new File(file_);
@@ -76,13 +76,13 @@ public class Utility {
     }
 
     /**
-     * @desc Tạo file lấy thông số config oracle
-     *       write thông tin config       
+     * Create file config oracle
      * @param file_ora
-     * @return getConnORA
+     * @return get connection
+     * @throws IOException 
      */
     public static String getConfigORA(String file_ora) throws IOException {
-
+        
         String getConnORA = "";
         File file = new File(file_ora);
         FileInputStream fis = null;
@@ -123,7 +123,11 @@ public class Utility {
         }
         return getConnORA;
     }
-
+    /**
+     * Create data TK
+     * @param source_file
+     * @throws IOException 
+     */
     public void createDataTK(String source_file) throws IOException {
         //StringBuffer chứa thông tin mẫu tk
         String line = null;
@@ -199,31 +203,33 @@ public class Utility {
 
     /**
      * Lấy thông tin mã cqt thông qua mã kho bạc trong file
-     * write thông tin config       
-     * @param file_ora
-     * @return getConnORA
+     * <p>write thông tin config
+     * @param ma_kb
+     * @param ma_cqthu
+     * @return info_cqt (mã cqt, tên cqt)
+     * @throws IOException 
      */
-    public static String[] getMapCQT(String ma_kb, String ma_cqthu) throws IOException {
+    public static String[] getMapCQT(String ma_kb, String ma_cqthu, String lcn_owner) throws IOException {
 
-        String result[] = new String[2];
-
+        String result[] = new String[4];
         for (int i = 0; i < ztb_map_cqt.map_cqt.length; i++) {
 
-            for (int j = 0; j < 4; j++) {
+            for (int j = 0; j < 5; j++) {
                 //trường hợp tồn tại ma_kb
-                if (ztb_map_cqt.map_cqt[i][2].equals(ma_kb) || ztb_map_cqt.map_cqt[i][1].equals(ma_cqthu)) {
+                if (ztb_map_cqt.map_cqt[i][2].equals(ma_kb) || ztb_map_cqt.map_cqt[i][1].equals(ma_cqthu) || ztb_map_cqt.map_cqt[i][3].equals(lcn_owner)) {
                     //ma_cqt
                     result[0] = ztb_map_cqt.map_cqt[i][0];
                     //ten cqt
-                    result[1] = ztb_map_cqt.map_cqt[i][3];
+                    result[1] = ztb_map_cqt.map_cqt[i][4];                    
+                    //mã kho bạc
+                    result[2] = ztb_map_cqt.map_cqt[i][2];
+                    //Mã cqthu
+                    result[3] = ztb_map_cqt.map_cqt[i][1];
                     //thoát khi tìm thấy
                     break;
                 }
-
             }
-
         }
-
         return result;
     }
 
@@ -246,7 +252,9 @@ public class Utility {
     }
 
     /**
-     * create excel 2007
+     * Create file excel 2007 for payment treasury
+     * @param arr_tp
+     * @param part_file 
      */
     public static void createExcel2007(ArrayList<TreasuryPayment> arr_tp, String part_file) {
         try {
@@ -318,7 +326,11 @@ public class Utility {
     }
 
     /**
-     * create excel 2007
+     * Create excel 2007 for payment onlinet (check payment treasury)
+     * @param arr_tp
+     * @param arr_tp_thieu_bk
+     * @param arr_tp_thieu_ko_bk
+     * @param part_file 
      */
     public static void createExcel2007OnlinePaym(ArrayList<TreasuryPayment> arr_tp,ArrayList<TreasuryPayment> arr_tp_thieu_bk,ArrayList<TreasuryPayment> arr_tp_thieu_ko_bk, String part_file) {
         try {
@@ -349,36 +361,36 @@ public class Utility {
                 System.out.println("write sheet 1 to rows "+i);
                 Cell cell = dataRow.createCell(0);
                 //cell.setCellStyle(style);
-                cell.setCellValue(arr_tp.get(i).getFilename());
+//                cell.setCellValue(arr_tp.get(i).getFilename());
 
-                cell = dataRow.createCell(1);
+//                cell = dataRow.createCell(0);
                 cell.setCellValue(arr_tp.get(i).getCqt());
 
-                cell = dataRow.createCell(2);
+                cell = dataRow.createCell(1);
                 cell.setCellValue(arr_tp.get(i).getTen_cqt());
 
-                cell = dataRow.createCell(3);
+                cell = dataRow.createCell(2);
                 cell.setCellValue(arr_tp.get(i).getMakb());
 
-                cell = dataRow.createCell(4);
+                cell = dataRow.createCell(3);
                 cell.setCellValue(arr_tp.get(i).getMa_cqthu());
 
-                cell = dataRow.createCell(5);
+                cell = dataRow.createCell(4);
                 cell.setCellValue(arr_tp.get(i).getTran_no());
+
+                cell = dataRow.createCell(5);
+                cell.setCellValue(arr_tp.get(i).getNgay_kb());
 
                 cell = dataRow.createCell(6);
                 cell.setCellValue(arr_tp.get(i).getNgay_kb());
 
                 cell = dataRow.createCell(7);
-                cell.setCellValue(arr_tp.get(i).getNgay_kb());
-
-                cell = dataRow.createCell(8);
                 cell.setCellValue(arr_tp.get(i).getTotal_ct_pit());
 
-                cell = dataRow.createCell(9);
+                cell = dataRow.createCell(8);
                 cell.setCellValue(arr_tp.get(i).getTax_mount());
                 
-                cell = dataRow.createCell(10);
+                cell = dataRow.createCell(9);
                 cell.setCellValue(arr_tp.get(i).getNgay_ct());
             }
             
@@ -422,14 +434,9 @@ public class Utility {
                 cell = dataRow.createCell(6);
                 cell.setCellValue(arr_tp_thieu_bk.get(i).getNgay_ct());
 
-                cell = dataRow.createCell(7);
+                cell = dataRow.createCell(8);
                 cell.setCellValue(arr_tp_thieu_bk.get(i).getNgay_kb());
 
-//                cell = dataRow.createCell(8);
-//                cell.setCellValue(arr_tp_thieu_bk.get(i).getTotal_ct_khobac());
-
-//                cell = dataRow.createCell(9);
-//                cell.setCellValue(arr_tp_thieu_bk.get(i).getTotal_ct_pit());
             }
             System.out.println("start export sheet 3.");
             //Create sheet Ctừ thiếu không tồn tại trong Backup            
@@ -472,21 +479,14 @@ public class Utility {
                 cell = dataRow.createCell(6);
                 cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getNgay_ct());
 
-                cell = dataRow.createCell(7);
+                cell = dataRow.createCell(8);
                 cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getNgay_kb());
-
-//                cell = dataRow.createCell(8);
-//                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getTotal_ct_khobac());
-//
-//                cell = dataRow.createCell(9);
-//                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getTotal_ct_pit());
             }            
             
             //out file
             FileOutputStream outputStream = new FileOutputStream(part_file + Constants.TYPE_EXCEL_2007);
             //write excel
             workbook_xlsx.write(outputStream);
-           // workbook_xlsx.write(outputStream);
             //close
             outputStream.close();
             System.out.println("size data: arr_tp_pit "+arr_tp.size()+" arr_tp_thieu_bk "+arr_tp_thieu_bk.size()+" arr_tp_thieu_ko_bk "+arr_tp_thieu_ko_bk.size());
@@ -496,9 +496,11 @@ public class Utility {
             e.printStackTrace();
         }
     }
-    
+
     /**
-     * Create excel 2003
+     * Create excel 2003 for treasury payment
+     * @param arr_tp
+     * @param part_file 
      */
     public static void createExcel2003(ArrayList<TreasuryPayment> arr_tp, String part_file) {
         try {
@@ -652,7 +654,7 @@ public class Utility {
         }
     }
     
-        /**
+    /**
      * Lấy ngày cuối cùng của tháng
      * @param datetime
      * @return max_date
@@ -681,7 +683,7 @@ public class Utility {
 
     }
 
-            /**
+    /**
      * Lấy ngày cuối cùng của tháng
      * @param datetime
      * @return max_date
@@ -707,8 +709,6 @@ public class Utility {
         max_date = maxDay + "/" + datetime;
 
         return max_date;
-
-    }
-    
+    }    
     
 }
