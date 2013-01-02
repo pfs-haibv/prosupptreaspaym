@@ -103,7 +103,8 @@ public class GetFileXMLToKhai {
     }
 
     /**
-     * @param args the command line arguments
+     * check xml tờ khai
+     * @throws IOException 
      */
     public static void checkXMLToKhai() throws IOException {
         File dirForder = new File("E:/PIT_IMPORT/Data");
@@ -124,10 +125,13 @@ public class GetFileXMLToKhai {
             }
         }
     }
-
+    /**
+     * move file xml
+     * @param list_file
+     * @param dir_move_file
+     * @throws IOException 
+     */
     public static void moveFileXMLToKhai(String list_file, String dir_move_file) throws IOException {
-
-
 
         File dirForder = new File("E:/PIT_IMPORT/Data");
 
@@ -147,7 +151,6 @@ public class GetFileXMLToKhai {
             }
 
         }
-
-
     }
+    
 }

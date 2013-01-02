@@ -18,7 +18,7 @@ import org.apache.commons.lang.ArrayUtils;
 public class getFileFPT {
 
     public static void getFTP(ArrayList<TreasuryPayment> arr_tp_pit, ArrayList<TreasuryPayment> arr_tp_thieu, String fold_ftp, String excel_fld) {
-        System.out.println("Loading files ftp server ...please wait");
+        System.out.println("Loading files on ftp server ...please wait");
         FileOutputStream fos = null;
         FTPClient client = new FTPClient();
         ArrayList<TreasuryPayment> arr_tp_thieu_ko_bk = new ArrayList<TreasuryPayment>();
@@ -54,6 +54,10 @@ public class getFileFPT {
                     tp1.setLcn_owner(arr_tp_thieu.get(i).getLcn_owner());
                     tp1.setNgay_kb(arr_tp_thieu.get(i).getNgay_kb());
                     tp1.setTran_no(arr_tp_thieu.get(i).getTran_no());
+                    tp1.setCqt(arr_tp_thieu.get(i).getCqt());
+                    tp1.setMa_cqthu(arr_tp_thieu.get(i).getMa_cqthu());
+                    tp1.setTen_cqt(arr_tp_thieu.get(i).getTen_cqt());
+                    tp1.setMakb(arr_tp_thieu.get(i).getMakb());
                     tp1.setFilename(file_name);
                     arr_tp_thieu_co_bk.add(tp1);
 
@@ -63,7 +67,11 @@ public class getFileFPT {
                     TreasuryPayment tp = new TreasuryPayment();
                     tp.setLcn_owner(arr_tp_thieu.get(i).getLcn_owner());
                     tp.setNgay_kb(arr_tp_thieu.get(i).getNgay_kb());
-                    tp.setTran_no(arr_tp_thieu.get(i).getTran_no());
+                    tp.setTran_no(arr_tp_thieu.get(i).getTran_no());                    
+                    tp.setCqt(arr_tp_thieu.get(i).getCqt());
+                    tp.setMa_cqthu(arr_tp_thieu.get(i).getMa_cqthu());
+                    tp.setTen_cqt(arr_tp_thieu.get(i).getTen_cqt());
+                    tp.setMakb(arr_tp_thieu.get(i).getMakb());
                     arr_tp_thieu_ko_bk.add(tp);
                     //System.out.println("no file ftp on backup, tran_no --->>> " + arr_tp_thieu.get(i).getTran_no());
                 }
