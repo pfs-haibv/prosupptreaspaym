@@ -112,9 +112,10 @@ public class ListUserToExcel {
     }
 
     /**
-     * Lấy thông tin user
-     * @param file
-     * @return arr_user
+     * Get info user
+     * @param dir_file
+     * @param max_role
+     * @return list user
      */
     public static ArrayList<User> getInfoUser(String dir_file, int max_role) {
         //Clear
@@ -176,16 +177,6 @@ public class ListUserToExcel {
                     }
                 }
 
-//                for (int r = 0; r < max_row_current; r++) {
-//                    temp = "";
-//                    temp = row.getCell(cell_role).toString();
-//                    if (temp != null) {
-//                        //tìm kiếm role theo tên
-//                        role[r] = findRole(user.getShort_name(), temp);
-//                    }
-//                    System.out.println("Lỗi ở vai trò thứ: "+cell_role);
-//                    cell_role++;
-//                }
                 System.out.println("Xử lý hoàn thành: " + user.getName());
                 user.setRole(role);
                 //add to array cqt               
@@ -203,7 +194,7 @@ public class ListUserToExcel {
     }
 
     /**
-     * Lấy thông tin user và export ra nhiều sheet
+     * Export use multisheet excel
      * @param dir_file
      * @param max_role 
      */
@@ -211,8 +202,7 @@ public class ListUserToExcel {
         File file = new File(dir_file);
 
         HSSFRow row = null;//Row   
-        HSSFSheet sheet_name = null;//sheet_name
-        String temp = "";
+        HSSFSheet sheet_name = null;//sheet_name       
         try {
             FileInputStream fileInputStream = new FileInputStream(file);
             HSSFWorkbook workbook = new HSSFWorkbook(fileInputStream);
@@ -264,16 +254,6 @@ public class ListUserToExcel {
                         role_++;
                     }
                 }
-//                //List role
-//                for (int r = 0; r < max_row_current; r++) {
-//                    temp = "";
-//                    temp = row.getCell(cell_role).toString();
-//                    if (temp != null) {
-//                        //tìm kiếm role theo tên
-//                        role[r] = findRole(user.getShort_name(), temp);
-//                    }
-//                    cell_role++;
-//                }
                 user.setRole(role);
                 //add to array cqt               
                 arr_user.add(user);
@@ -291,9 +271,10 @@ public class ListUserToExcel {
     }
 
     /**
-     * Tìm kiếm role
+     * search role of user
+     * @param short_name
      * @param name_role
-     * @return role
+     * @return list user
      */
     public static String findRole(String short_name, String name_role) {
         String temp = "Z" + short_name + "_";
