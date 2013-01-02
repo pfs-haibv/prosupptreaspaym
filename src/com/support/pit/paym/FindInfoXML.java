@@ -167,7 +167,7 @@ public class FindInfoXML {
                     TreasuryPayment tp = new TreasuryPayment();
                     //set cqt
                     //2 cách lấy tên đều ko lỗi font
-                    map_cqt = Utility.getMapCQT(ma_kbac, ma_cqthu);
+                    map_cqt = Utility.getMapCQT(ma_kbac, ma_cqthu, "");
                     //map_cqt = SerializableDemo.getDataMapCQT(ma_kbac);
                     tp.setCqt(map_cqt[0]);
                     //set tên cqt
