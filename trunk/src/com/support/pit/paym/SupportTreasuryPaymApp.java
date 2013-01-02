@@ -50,7 +50,7 @@ public class SupportTreasuryPaymApp extends SingleFrameApplication {
     public static void main(String[] args) throws IOException, SQLException {
         try {
             connORA = ConnectDB.getConnORA();
-        } catch (SQLException ex) {            
+        } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,ex.getMessage(),
                                     "Lỗi kết nối CSDL",
                                     JOptionPane.ERROR_MESSAGE);            

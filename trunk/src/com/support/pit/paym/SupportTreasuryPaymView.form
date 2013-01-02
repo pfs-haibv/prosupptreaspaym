@@ -1681,6 +1681,8 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jButton10" min="-2" pref="103" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButton11" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jButton9" min="-2" pref="104" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -1698,6 +1700,7 @@
                               <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton10" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButton11" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="208" max="32767" attributes="0"/>
                       </Group>
@@ -1932,6 +1935,12 @@
                     </Property>
                     <Property name="text" type="java.lang.String" resourceKey="jButton10.text"/>
                     <Property name="name" type="java.lang.String" value="jButton10" noResource="true"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton11">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" resourceKey="jButton11.text"/>
+                    <Property name="name" type="java.lang.String" value="jButton11" noResource="true"/>
                   </Properties>
                 </Component>
               </SubComponents>

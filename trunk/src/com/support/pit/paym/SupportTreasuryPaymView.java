@@ -160,8 +160,8 @@ public class SupportTreasuryPaymView extends FrameView {
                     + "                 b.tax_office_id,"
                     + "                 b.trea_date_no, "
                     + " sum(b.TAX_AMOUNT) tax_amount"
-                    + " FROM   data_pkg@tdtttct a, sapsr3.ztb_treas_paym b"
-                    + " WHERE   b.mandt = 500 AND a.parent_id = b.tran_no"
+                    + " FROM   data_pkg@tdtttct a, sapsr3.ztb_treasury_61 b"
+                    + " WHERE   b.client = 500 AND a.parent_id = b.tran_no"
                     + "        AND trunc (a.crea_date)  >= TO_date ('" + txtCTTuNgay.getText() + "', 'dd/MM/yyyy')"
                     /*ADVICE(12): Functions with constant parameters in WHERE clause [317] */
                     + "        AND  trunc (a.crea_date) <= TO_date ('" + txtCTDenNgay.getText() + "', 'dd/MM/yyyy')"
@@ -185,9 +185,9 @@ public class SupportTreasuryPaymView extends FrameView {
                     + "             TO_DATE ('" + txtCTDenNgay.getText() + "', 'dd/MM/yyyy')"
                     /*ADVICE(16): Functions with constant parameters in WHERE clause [317] */
                     + "         AND a.parent_id NOT IN"
-                    + "                    (SELECT   DISTINCT a.lcn_owner"
-                    + "                       FROM   data_pkg@tdtttct a, sapsr3.ztb_treas_paym b"
-                    + "                      WHERE   b.mandt = 500 AND a.parent_id = b.tran_no"
+                    + "                    (SELECT   DISTINCT a.parent_id"
+                    + "                       FROM   data_pkg@tdtttct a, sapsr3.ztb_treasury_61 b"
+                    + "                      WHERE   b.client = 500 AND a.parent_id = b.tran_no"
                     + "                              AND trunc (a.crea_date) >= TO_DATE ('" + txtCTTuNgay.getText() + "', 'dd/MM/yyyy')"
                     /*ADVICE(26): Functions with constant parameters in WHERE clause [317] */
                     + "                              AND trunc (a.crea_date) <= TO_DATE ('" + txtCTDenNgay.getText() + "', 'dd/MM/yyyy')"
@@ -692,8 +692,8 @@ public class SupportTreasuryPaymView extends FrameView {
     }
 
     /**
-     * @desc display file choose
-     * @param c 
+     * display partfile choose
+     * @param part 
      */
     public void getDirectory(String part) {
 
@@ -904,6 +904,7 @@ public class SupportTreasuryPaymView extends FrameView {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         menuBar = new javax.swing.JMenuBar();
         javax.swing.JMenu fileMenu = new javax.swing.JMenu();
         javax.swing.JMenuItem exitMenuItem = new javax.swing.JMenuItem();
@@ -2020,6 +2021,9 @@ public class SupportTreasuryPaymView extends FrameView {
         jButton10.setText(resourceMap.getString("jButton10.text")); // NOI18N
         jButton10.setName("jButton10"); // NOI18N
 
+        jButton11.setText(resourceMap.getString("jButton11.text")); // NOI18N
+        jButton11.setName("jButton11"); // NOI18N
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
@@ -2035,6 +2039,8 @@ public class SupportTreasuryPaymView extends FrameView {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(193, Short.MAX_VALUE))
         );
@@ -2047,7 +2053,8 @@ public class SupportTreasuryPaymView extends FrameView {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton8)
                     .addComponent(jButton10)
-                    .addComponent(jButton9))
+                    .addComponent(jButton9)
+                    .addComponent(jButton11))
                 .addContainerGap(208, Short.MAX_VALUE))
         );
 
@@ -2165,6 +2172,7 @@ public class SupportTreasuryPaymView extends FrameView {
     private javax.swing.JComboBox cboma_tmuc;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

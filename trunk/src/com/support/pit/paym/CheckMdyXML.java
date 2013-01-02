@@ -43,8 +43,10 @@ public class CheckMdyXML {
     private String array_tmuc = "1049, 1013, 1012, 1011, 1008, 1007, 1006, 1005, 1004, 1003, 1001, 1014";
 
     /**
-     * @date: 13.03.2011
-     * @desc: read info treasury payment in file XML
+     * read info treasury payment in file XML
+     * @throws ParserConfigurationException
+     * @throws SAXException
+     * @throws IOException 
      */
     public void readXML() throws ParserConfigurationException, SAXException, IOException {
 
@@ -165,8 +167,30 @@ public class CheckMdyXML {
     }
 
     /**
-     * @date: 13.03.2011
-     * @desc: read info treasury payment in file XML
+     * read info treasury payment in file XML
+     * @param file
+     * @param field_hdr
+     * @param val_hdr
+     * @param f_nnt
+     * @param tran_no
+     * @param ma_cqthu
+     * @param so_ctu
+     * @param ngay_kbac
+     * @param so_tkno
+     * @param ma_chuong
+     * @param ma_tmuc
+     * @param so_tien
+     * @param ngay_kb
+     * @param ma_kbac
+     * @param khct
+     * @param so_tkco
+     * @param ma_khoan
+     * @param ky_thue
+     * @throws ParserConfigurationException
+     * @throws SAXException
+     * @throws IOException
+     * @throws TransformerConfigurationException
+     * @throws TransformerException 
      */
     public void writeXML(String file, String field_hdr, String val_hdr, String f_nnt, String tran_no,
             String ma_cqthu, String so_ctu, String ngay_kbac, String so_tkno, String ma_chuong,
@@ -343,8 +367,13 @@ public class CheckMdyXML {
     }
 
     /**
-     * @date: 13.03.2011
-     * @desc: read info treasury payment in file XML
+     * read info treasury payment in file XML
+     * @param file
+     * @throws ParserConfigurationException
+     * @throws SAXException
+     * @throws IOException
+     * @throws TransformerConfigurationException
+     * @throws TransformerException 
      */
     public void writeXML_TMuc(String file)
             throws ParserConfigurationException, SAXException, IOException, TransformerConfigurationException, TransformerException {
@@ -402,7 +431,12 @@ public class CheckMdyXML {
             err.printStackTrace();
         }
     }
-
+    /**
+     * remove all file
+     * @param node
+     * @param nodeType
+     * @param name 
+     */
     public static void removeAll(Node node, short nodeType, String name) {
     if (node.getNodeType() == nodeType && (name == null || node.getNodeName().equals(name))) {
       node.getParentNode().removeChild(node);
@@ -415,9 +449,14 @@ public class CheckMdyXML {
     }
     
     /**
-     * @desc: Thay đổi thông tin tiểu mục theo folder chứa file xml VD: 1010/name.xml
-     * @date: 22.03.2012
-     * @desc: read info treasury payment in file XML
+     * Thay đổi thông tin tiểu mục theo folder chứa file xml VD: 1010/name.xml
+     * <p> read info treasury payment in file XML
+     * @param srcfolder
+     * @throws ParserConfigurationException
+     * @throws SAXException
+     * @throws IOException
+     * @throws TransformerConfigurationException
+     * @throws TransformerException 
      */
     public void modifyTMuc(String srcfolder)
             throws ParserConfigurationException, SAXException, IOException, TransformerConfigurationException, TransformerException {
