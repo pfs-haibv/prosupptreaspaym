@@ -44,7 +44,7 @@ public class ConfigDatabase {
         if (!cfg.exists()) {
             try {
                 FileOutputStream fos = new FileOutputStream(cfg, false);
-                properties.storeToXML(fos, "Configuration for connect database convert PSCD");
+                properties.storeToXML(fos, "Configuration for connect database convert PSCD", "utf-8");
                 fos.close();
                 PROPERTIES_CONFIG_DB_ORACLE.startsWith("100");
             } catch (Exception e) {
