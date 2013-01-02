@@ -51,10 +51,10 @@ public class Constants {
     public static final String COLUMN_DATA_PAYMENT[] = {"FILE NAME", "Mã CQT", "Tên CQT","Mã KB", "Mã CQThu", "Mã gói", 
                                                         "Ngày CT", "Ngày KB", "Tổng CT KB", "Tổng CT về PIT" };  
     //Column Treasury Payment Online
-    public static final String COLUMN_DATA_PAYMENT_ONLINE_PIT[] = {"FILE NAME", "Mã CQT", "Tên CQT","Mã KB", "Mã CQThu", "Mã gói", 
-                                                        "Ngày CT", "Ngày KB", "Tổng CT về PIT", "Tax_Amount", "Create Date"}; 
-        public static final String COLUMN_DATA_PAYMENT_ONLINE[] = {"FILE NAME", "Mã CQT", "Tên CQT","Mã KB", "Mã CQThu", "Mã gói", 
-                                                        "Ngày CT", "Ngày KB", "Create Date"};
+    public static final String COLUMN_DATA_PAYMENT_ONLINE_PIT[] = {"Mã CQT", "Tên CQT","Mã KB", "Mã CQThu", "Mã gói", 
+                                                        "Ngày CT", "Ngày KB", "Tổng CT về PIT", "Tổng số tiền", "Ngày tạo"}; 
+    public static final String COLUMN_DATA_PAYMENT_ONLINE[] = {"FILE NAME", "Mã CQT", "Tên CQT","Mã KB", "Mã CQThu", "Mã gói", 
+                                                        "Ngày CT", "Ngày KB", "Ngày tạo"};
     //Tiêu mục nhận CT về PIT
     public static int[] arr_tmuc = {1049,1012,1008,1007,1006,1005,1004,1003,1001,1014,4268};
     //Type excel
