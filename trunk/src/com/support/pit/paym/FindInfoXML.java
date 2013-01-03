@@ -1,7 +1,8 @@
 package com.support.pit.paym;
 
+import com.support.pit.datatype.MapCqt;
 import com.support.pit.datatype.TreasuryPayment;
-import com.support.pit.serializable.SerializableDemo;
+//import com.support.pit.serializable.SerializableDemo;
 import com.support.pit.system.Constants;
 import com.support.pit.utility.Utility;
 import java.io.File;
@@ -34,8 +35,6 @@ public class FindInfoXML {
     private static String file_name = "";
     //Tran_no
     private static String trans_no = "";
-    //map mã cqt
-    private static String map_cqt[] = new String[2];
 
     public static void setFile_name(String file_name) {
         FindInfoXML.file_name = file_name;
@@ -167,11 +166,11 @@ public class FindInfoXML {
                     TreasuryPayment tp = new TreasuryPayment();
                     //set cqt
                     //2 cách lấy tên đều ko lỗi font
-                    map_cqt = Utility.getMapCQT(ma_kbac, ma_cqthu, "");
+                    MapCqt map_cqt = Utility.getInfoDMuc(ma_kbac, ma_cqthu, "");
                     //map_cqt = SerializableDemo.getDataMapCQT(ma_kbac);
-                    tp.setCqt(map_cqt[0]);
+                    tp.setCqt(map_cqt.getMa_cqt());
                     //set tên cqt
-                    tp.setTen_cqt(map_cqt[1]);
+                    tp.setTen_cqt(map_cqt.getTen_cqt());
                     //file name
                     tp.setFilename(file_name);
                     //mã cqthu
