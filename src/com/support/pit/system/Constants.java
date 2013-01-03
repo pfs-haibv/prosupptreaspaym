@@ -38,6 +38,7 @@ public class Constants {
     public static final String PART_CREATE_LIST_USER_EXP_FILE                  = "PART_CREATE_LIST_USER_EXP_FILE";
     //Part tab Create List User
     public static final String PART_ONLINE_PAYMENT_GET_FPT                     = "PART_ONLINE_PAYMENT_GET_FPT";
+    public static final String PART_ONLINE_PAYMENT_BACKUP_FPT                  = "PART_ONLINE_PAYMENT_BACKUP_FPT";
     public static final String PART_ONLINE_PAYMENT_EXPORT_FILE                 = "PART_ONLINE_PAYMENT_EXPORT_FILE";
     //SHEET Data Payment
     public static final String SHEET_DATA_PAYMENT                              = "Payment";
