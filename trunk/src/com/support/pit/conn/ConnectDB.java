@@ -4,48 +4,41 @@
  */
 package com.support.pit.conn;
 
-import com.support.pit.config.ConfigDatabase;
+import com.support.pit.datatype.MapCqt;
 import com.support.pit.datatype.TreasuryPayment;
 import com.support.pit.paym.SupportTreasuryPaymApp;
+import com.support.pit.paym.SupportTreasuryPaymView;
+import com.support.pit.system.Message;
 import java.io.IOException;
 import com.support.pit.utility.Utility;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Properties;
+import java.util.logging.Level;
 
 /**
  *
  * @author Administrator
  */
 public class ConnectDB {
-    
+
     /**
      * Thực hiện connect database oracle
      * @return Connection
      * @throws SQLException
      * @throws IOException 
      */
-    public static Connection getConnORA() throws SQLException, IOException {
-        
-        //Load info database oracle         
-        ConfigDatabase conf = new ConfigDatabase();
-        Properties prop = new Properties();             
-        InputStream is = new FileInputStream("CONFIG_DATABASE_ORACLE.CONF");        
-        prop.loadFromXML(is);
+    public static Connection getConnORA() {
+            
         Connection conn = null;
-        
         try {
-            Class.forName(prop.getProperty("db.class"));
-            conn = DriverManager.getConnection(prop.getProperty("db.url"), prop.getProperty("db.user"), 
-                                               prop.getProperty("db.password"));
-        } catch (SQLException ex) {
-            throw new SQLException(ex.getMessage());
-        } catch (ClassNotFoundException cnfe) {
-            System.err.println("Driver not found." + cnfe.getMessage());
-        } catch (Exception e) {
-            e.printStackTrace();
+
+            Class.forName(SupportTreasuryPaymApp.prop.getProperty("db.class"));
+            conn = DriverManager.getConnection(SupportTreasuryPaymApp.prop.getProperty("db.url"), SupportTreasuryPaymApp.prop.getProperty("db.user"),
+                    SupportTreasuryPaymApp.prop.getProperty("db.password"));
+        } catch (SQLException | ClassNotFoundException e) {
+
+            SupportTreasuryPaymView.logger.log(Level.WARNING, Message.ERR_MESS_CONNECTION_DATABASE, e.getMessage());
+
         }
         return conn;
     }
@@ -62,8 +55,7 @@ public class ConnectDB {
     public static ArrayList<TreasuryPayment> sqlDatabase(String sql, String comment) throws SQLException, IOException {
         Connection conn = null;
         Statement stmt = null;
-        ResultSet rset = null;        
-        String map_cqt[] = new String[3];
+        ResultSet rset = null;
         ArrayList<TreasuryPayment> arr_tp = new ArrayList<TreasuryPayment>();
         try {
             conn = SupportTreasuryPaymApp.connORA;
@@ -82,8 +74,8 @@ public class ConnectDB {
                 tp.setNgay_ct(rset.getString("crea_date"));
                 tp.setTax_mount(rset.getString("tax_amount"));
                 tp.setLcn_owner(rset.getString("lcn_owner"));
-                map_cqt = Utility.getMapCQT(rset.getString("trea_code"), rset.getString("TAX_OFFICE_ID"), rset.getString("lcn_owner"));
-                tp.setTen_cqt(map_cqt[1]);
+                MapCqt cqt = Utility.getInfoDMuc(rset.getString("trea_code"), rset.getString("TAX_OFFICE_ID"), rset.getString("lcn_owner"));
+                tp.setTen_cqt(cqt.getTen_cqt());
                 System.out.println(comment + count);
                 arr_tp.add(tp);
             }
@@ -109,7 +101,7 @@ public class ConnectDB {
         Connection conn = null;
         Statement stmt = null;
         ResultSet rset = null;
-        String map_cqt[] = new String[3];
+
         ArrayList<TreasuryPayment> arr_tp = new ArrayList<TreasuryPayment>();
         try {
             conn = SupportTreasuryPaymApp.connORA;
@@ -119,25 +111,23 @@ public class ConnectDB {
             while (rset.next()) {
                 count++;
                 TreasuryPayment tp = new TreasuryPayment();
-                tp.setTran_no(rset.getString("parent_id"));                
+                tp.setTran_no(rset.getString("parent_id"));
                 tp.setNgay_kb(rset.getString("crea_date"));
                 tp.setLcn_owner(rset.getString("lcn_owner"));
-                map_cqt = Utility.getMapCQT(rset.getString("trea_code"), rset.getString("TAX_OFFICE_ID"), rset.getString("lcn_owner"));
-                tp.setCqt(map_cqt[0]);
-                tp.setMakb(map_cqt[2]);
-                tp.setTen_cqt(map_cqt[1]);
-                tp.setMa_cqthu(map_cqt[3]);
+                MapCqt map_cqt = Utility.getInfoDMuc(rset.getString("trea_code"), rset.getString("TAX_OFFICE_ID"), rset.getString("lcn_owner"));
+                tp.setCqt(map_cqt.getMa_cqt());
+                tp.setMakb(map_cqt.getMa_kb());
+                tp.setTen_cqt(map_cqt.getTen_cqt());
+                tp.setMa_cqthu(map_cqt.getMa_cqthu());
                 System.out.println(comment + count);
                 arr_tp.add(tp);
             }
-
         } catch (SQLException ex) {
             ex.printStackTrace();
         } finally {
             rset.close();
             stmt.close();
         }
-
         return arr_tp;
     }
 }
