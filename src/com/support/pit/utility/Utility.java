@@ -4,9 +4,11 @@
  */
 package com.support.pit.utility;
 
+import com.support.pit.config.LoadMapDMuc;
+import com.support.pit.datatype.MapCqt;
 import com.support.pit.datatype.TreasuryPayment;
+import com.support.pit.paym.SupportTreasuryPaymView;
 import com.support.pit.system.Constants;
-import com.support.pit.table_map.ztb_map_cqt;
 import java.io.BufferedInputStream;
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
@@ -29,6 +31,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.logging.Level;
+
 /**
  *
  * @author Administrator
@@ -82,7 +86,7 @@ public class Utility {
      * @throws IOException 
      */
     public static String getConfigORA(String file_ora) throws IOException {
-        
+
         String getConnORA = "";
         File file = new File(file_ora);
         FileInputStream fis = null;
@@ -123,6 +127,7 @@ public class Utility {
         }
         return getConnORA;
     }
+
     /**
      * Create data TK
      * @param source_file
@@ -202,35 +207,22 @@ public class Utility {
     }
 
     /**
-     * Lấy thông tin mã cqt thông qua mã kho bạc trong file
-     * <p>write thông tin config
+     * get info cqt từ danh mục
      * @param ma_kb
      * @param ma_cqthu
-     * @return info_cqt (mã cqt, tên cqt)
-     * @throws IOException 
+     * @param lcn_owner
+     * @return 
      */
-    public static String[] getMapCQT(String ma_kb, String ma_cqthu, String lcn_owner) throws IOException {
+    public static MapCqt getInfoDMuc(String ma_kb, String ma_cqthu, String lcn_owner) {
 
-        String result[] = new String[4];
-        for (int i = 0; i < ztb_map_cqt.map_cqt.length; i++) {
-
-            for (int j = 0; j < 5; j++) {
-                //trường hợp tồn tại ma_kb
-                if (ztb_map_cqt.map_cqt[i][2].equals(ma_kb) || ztb_map_cqt.map_cqt[i][1].equals(ma_cqthu) || ztb_map_cqt.map_cqt[i][3].equals(lcn_owner)) {
-                    //ma_cqt
-                    result[0] = ztb_map_cqt.map_cqt[i][0];
-                    //ten cqt
-                    result[1] = ztb_map_cqt.map_cqt[i][4];                    
-                    //mã kho bạc
-                    result[2] = ztb_map_cqt.map_cqt[i][2];
-                    //Mã cqthu
-                    result[3] = ztb_map_cqt.map_cqt[i][1];
-                    //thoát khi tìm thấy
-                    break;
-                }
+        MapCqt cqt = new MapCqt();
+        for (MapCqt cqt_ : LoadMapDMuc.arr_cqt) {            
+            if (cqt_.getMa_kb().equals(ma_kb) || cqt_.getMa_cqthu().equals(ma_cqthu) || cqt_.getLcn_owner().equals(lcn_owner)) {
+                cqt = cqt_;
+                break;
             }
         }
-        return result;
+        return cqt;        
     }
 
     /**
@@ -315,7 +307,7 @@ public class Utility {
             FileOutputStream outputStream = new FileOutputStream(part_file + Constants.TYPE_EXCEL_2007);
             //write excel
             workbook_xlsx.write(outputStream);
-           // workbook_xlsx.write(outputStream);
+            // workbook_xlsx.write(outputStream);
             //close
             outputStream.close();
         } catch (FileNotFoundException e) {
@@ -332,9 +324,9 @@ public class Utility {
      * @param arr_tp_thieu_ko_bk
      * @param part_file 
      */
-    public static void createExcel2007OnlinePaym(ArrayList<TreasuryPayment> arr_tp,ArrayList<TreasuryPayment> arr_tp_thieu_bk,ArrayList<TreasuryPayment> arr_tp_thieu_ko_bk, String part_file) {
+    public static void createExcel2007OnlinePaym(ArrayList<TreasuryPayment> arr_tp, ArrayList<TreasuryPayment> arr_tp_thieu_bk, ArrayList<TreasuryPayment> arr_tp_thieu_ko_bk, String part_file) {
         try {
-            System.out.println("size data: arr_tp_pit "+arr_tp.size()+" arr_tp_thieu_bk "+arr_tp_thieu_bk.size()+" arr_tp_thieu_ko_bk "+arr_tp_thieu_ko_bk.size());
+            System.out.println("size data: arr_tp_pit " + arr_tp.size() + " arr_tp_thieu_bk " + arr_tp_thieu_bk.size() + " arr_tp_thieu_ko_bk " + arr_tp_thieu_ko_bk.size());
             System.out.println("start export sheet 1.");
             int rowCount = 0;
             Workbook workbook_xlsx = new XSSFWorkbook();
@@ -356,47 +348,46 @@ public class Utility {
             //set next row
             CellStyle style = workbook_xlsx.createCellStyle();
             style.cloneStyleFrom(cellStyle);
-            for (int i = 0; i < arr_tp.size(); i++) {
+            for (TreasuryPayment tp : arr_tp) {
                 Row dataRow = sheet.createRow(rowCount++);
-                System.out.println("write sheet 1 to rows "+i);
                 Cell cell = dataRow.createCell(0);
                 //cell.setCellStyle(style);
 //                cell.setCellValue(arr_tp.get(i).getFilename());
 
 //                cell = dataRow.createCell(0);
-                cell.setCellValue(arr_tp.get(i).getCqt());
+                cell.setCellValue(tp.getCqt());
 
                 cell = dataRow.createCell(1);
-                cell.setCellValue(arr_tp.get(i).getTen_cqt());
+                cell.setCellValue(tp.getTen_cqt());
 
                 cell = dataRow.createCell(2);
-                cell.setCellValue(arr_tp.get(i).getMakb());
+                cell.setCellValue(tp.getMakb());
 
                 cell = dataRow.createCell(3);
-                cell.setCellValue(arr_tp.get(i).getMa_cqthu());
+                cell.setCellValue(tp.getMa_cqthu());
 
                 cell = dataRow.createCell(4);
-                cell.setCellValue(arr_tp.get(i).getTran_no());
+                cell.setCellValue(tp.getTran_no());
 
                 cell = dataRow.createCell(5);
-                cell.setCellValue(arr_tp.get(i).getNgay_kb());
+                cell.setCellValue(tp.getNgay_kb());
 
                 cell = dataRow.createCell(6);
-                cell.setCellValue(arr_tp.get(i).getNgay_kb());
+                cell.setCellValue(tp.getNgay_kb());
 
                 cell = dataRow.createCell(7);
-                cell.setCellValue(arr_tp.get(i).getTotal_ct_pit());
+                cell.setCellValue(tp.getTotal_ct_pit());
 
                 cell = dataRow.createCell(8);
-                cell.setCellValue(arr_tp.get(i).getTax_mount());
-                
+                cell.setCellValue(tp.getTax_mount());
+
                 cell = dataRow.createCell(9);
-                cell.setCellValue(arr_tp.get(i).getNgay_ct());
+                cell.setCellValue(tp.getNgay_ct());
             }
-            
+
             //Create sheet Ctừ thiếu tồn tại trong Backup
             System.out.println("start export sheet 2.");
-            rowCount = 0;            
+            rowCount = 0;
             sheet = workbook_xlsx.createSheet(Constants.SHEET_CT_THIEU_CO_BK);
             row = sheet.createRow(rowCount++);
             cellStyle.setFont(font);
@@ -409,38 +400,39 @@ public class Utility {
             //set next row
             style = workbook_xlsx.createCellStyle();
             style.cloneStyleFrom(cellStyle);
-            for (int i = 0; i < arr_tp_thieu_bk.size(); i++) {
+            for (TreasuryPayment tp : arr_tp_thieu_bk) {
+
                 Row dataRow = sheet.createRow(rowCount++);
-                System.out.println("write sheet 2 to rows "+i);
+
                 Cell cell = dataRow.createCell(0);
                 //cell.setCellStyle(style);
-                cell.setCellValue(arr_tp_thieu_bk.get(i).getFilename());
+                cell.setCellValue(tp.getFilename());
 
                 cell = dataRow.createCell(1);
-                cell.setCellValue(arr_tp_thieu_bk.get(i).getCqt());
+                cell.setCellValue(tp.getCqt());
 
                 cell = dataRow.createCell(2);
-                cell.setCellValue(arr_tp_thieu_bk.get(i).getTen_cqt());
+                cell.setCellValue(tp.getTen_cqt());
 
                 cell = dataRow.createCell(3);
-                cell.setCellValue(arr_tp_thieu_bk.get(i).getMakb());
+                cell.setCellValue(tp.getMakb());
 
                 cell = dataRow.createCell(4);
-                cell.setCellValue(arr_tp_thieu_bk.get(i).getMa_cqthu());
+                cell.setCellValue(tp.getMa_cqthu());
 
                 cell = dataRow.createCell(5);
-                cell.setCellValue(arr_tp_thieu_bk.get(i).getTran_no());
+                cell.setCellValue(tp.getTran_no());
 
                 cell = dataRow.createCell(6);
-                cell.setCellValue(arr_tp_thieu_bk.get(i).getNgay_ct());
+                cell.setCellValue(tp.getNgay_ct());
 
                 cell = dataRow.createCell(8);
-                cell.setCellValue(arr_tp_thieu_bk.get(i).getNgay_kb());
+                cell.setCellValue(tp.getNgay_kb());
 
             }
             System.out.println("start export sheet 3.");
             //Create sheet Ctừ thiếu không tồn tại trong Backup            
-            rowCount = 0;            
+            rowCount = 0;
             sheet = workbook_xlsx.createSheet(Constants.SHEET_CT_THIEU_KO_BK);
             row = sheet.createRow(rowCount++);
             cellStyle.setFont(font);
@@ -453,47 +445,44 @@ public class Utility {
             //set next row
             style = workbook_xlsx.createCellStyle();
             style.cloneStyleFrom(cellStyle);
-            for (int i = 0; i < arr_tp_thieu_ko_bk.size(); i++) {
-                System.out.println("write sheet 3 to rows "+i);
+            for (TreasuryPayment tp : arr_tp_thieu_ko_bk) {
                 Row dataRow = sheet.createRow(rowCount++);
 
                 Cell cell = dataRow.createCell(0);
                 //cell.setCellStyle(style);
-                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getLcn_owner());
+                cell.setCellValue(tp.getLcn_owner());
 
                 cell = dataRow.createCell(1);
-                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getCqt());
+                cell.setCellValue(tp.getCqt());
 
                 cell = dataRow.createCell(2);
-                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getTen_cqt());
+                cell.setCellValue(tp.getTen_cqt());
 
                 cell = dataRow.createCell(3);
-                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getMakb());
+                cell.setCellValue(tp.getMakb());
 
                 cell = dataRow.createCell(4);
-                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getMa_cqthu());
+                cell.setCellValue(tp.getMa_cqthu());
 
                 cell = dataRow.createCell(5);
-                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getTran_no());
+                cell.setCellValue(tp.getTran_no());
 
                 cell = dataRow.createCell(6);
-                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getNgay_ct());
+                cell.setCellValue(tp.getNgay_ct());
 
                 cell = dataRow.createCell(8);
-                cell.setCellValue(arr_tp_thieu_ko_bk.get(i).getNgay_kb());
-            }            
-            
+                cell.setCellValue(tp.getNgay_kb());
+            }
+
             //out file
             FileOutputStream outputStream = new FileOutputStream(part_file + Constants.TYPE_EXCEL_2007);
             //write excel
             workbook_xlsx.write(outputStream);
             //close
             outputStream.close();
-            System.out.println("size data: arr_tp_pit "+arr_tp.size()+" arr_tp_thieu_bk "+arr_tp_thieu_bk.size()+" arr_tp_thieu_ko_bk "+arr_tp_thieu_ko_bk.size());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("size data: arr_tp_pit " + arr_tp.size() + " arr_tp_thieu_bk " + arr_tp_thieu_bk.size() + " arr_tp_thieu_ko_bk " + arr_tp_thieu_ko_bk.size());
         } catch (IOException e) {
-            e.printStackTrace();
+            SupportTreasuryPaymView.logger.log(Level.WARNING, e.getMessage());
         }
     }
 
@@ -653,7 +642,7 @@ public class Utility {
             }
         }
     }
-    
+
     /**
      * Lấy ngày cuối cùng của tháng
      * @param datetime
@@ -709,6 +698,5 @@ public class Utility {
         max_date = maxDay + "/" + datetime;
 
         return max_date;
-    }    
-    
+    }
 }
