@@ -4,12 +4,19 @@
  */
 package com.support.pit.ziper;
 
+import com.support.pit.paym.SupportTreasuryPaymApp;
+import com.support.pit.paym.SupportTreasuryPaymView;
+import com.support.pit.system.Message;
+import com.support.pit.utility.GetFileFTP;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.logging.Level;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+import org.apache.commons.net.ftp.FTP;
+import org.apache.commons.net.ftp.FTPClient;
 
 /**
  *
@@ -29,7 +36,7 @@ public class FolderZiper {
         zip.close();
     }
 
-    static private void addFileToZip(String path, String srcFile, ZipOutputStream zip) throws Exception {
+    public static void addFileToZip(String path, String srcFile, ZipOutputStream zip) throws Exception {
 
         File folder = new File(srcFile);
         if (folder.isDirectory()) {
@@ -45,7 +52,7 @@ public class FolderZiper {
         }
     }
 
-    static private void addFolderToZip(String path, String srcFolder, ZipOutputStream zip) throws Exception {
+    public static void addFolderToZip(String path, String srcFolder, ZipOutputStream zip) throws Exception {
         File folder = new File(srcFolder);
 
         for (String fileName : folder.list()) {
@@ -57,19 +64,46 @@ public class FolderZiper {
         }
     }
 
-    public static void main(String[] args) throws FileNotFoundException, Exception {
+    public static void backupFolderFTP(String folderCopy, File fileBackup) {
+        //Connection ftp
+        FTPClient client = GetFileFTP.ftpConnection();
 
-        ZipOutputStream zip = null;
-        FileOutputStream fileWriter = null;
-        fileWriter = new FileOutputStream("d:\\test.zip");
-        zip = new ZipOutputStream(fileWriter);
-        
-        addFileToZip("", "D:/zip/CauTruc2011.xml", zip);
-        addFileToZip("", "D:/xml/KBA7010000_KBA000000127402560_20121128-094535-737.xml", zip);
-        
-        zip.flush();
-        zip.close();
+        FileOutputStream fos = null;
+        try {
+            client.setFileType(FTP.BINARY_FILE_TYPE, FTP.BINARY_FILE_TYPE);
+            client.setFileTransferMode(FTP.BINARY_FILE_TYPE);
+            //Load all file on ftp -> local directory
+            String[] names = client.listNames();
 
+            for (String name : names) {
+
+                fos = new FileOutputStream(folderCopy + name);
+                //Download file on ftp
+                client.retrieveFile(name, fos);
+                //Delete file on ftp
+                client.deleteFile(name);
+            }
+
+            //Zip folder
+            zipFolder(folderCopy, fileBackup.getAbsolutePath().toString());
+
+            //upload file -> ftp   
+            client.changeWorkingDirectory(SupportTreasuryPaymApp.prop.getProperty("ftp.WorkingDirectoryBackup"));
+            FileInputStream fis = new FileInputStream(fileBackup.getAbsolutePath());
+
+            client.storeFile(fileBackup.getName(), fis);
+            fis.close();
+
+            //delete file backup on local        
+            File file = new File(fileBackup.getAbsolutePath());
+            file.delete();
+
+            client.logout();
+            
+        } catch (Exception e) {
+            SupportTreasuryPaymView.logger.log(Level.WARNING, Message.ERR_MESS_BACKUP_FTP, e.getMessage());
+        }
+        
     }
-    
+
 }
