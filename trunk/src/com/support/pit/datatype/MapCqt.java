@@ -8,12 +8,30 @@ import java.io.Serializable;
  */
 public class MapCqt implements Serializable {
     private String ma_cqt;
+    private String ma_cqthu;
+    private String lcn_owner;
     private String ma_kb;
     private String ten_cqt;
     private String short_name;
 
     public String getMa_cqt() {
         return ma_cqt;
+    }
+
+    public String getLcn_owner() {
+        return lcn_owner;
+    }
+
+    public void setLcn_owner(String lcn_owner) {
+        this.lcn_owner = lcn_owner;
+    }
+
+    public String getMa_cqthu() {
+        return ma_cqthu;
+    }
+
+    public void setMa_cqthu(String ma_cqthu) {
+        this.ma_cqthu = ma_cqthu;
     }
 
     public void setMa_cqt(String ma_cqt) {
@@ -43,19 +61,5 @@ public class MapCqt implements Serializable {
     public void setShort_name(String short_name) {
         this.short_name = short_name;
     }
-
-    
-    
-    public MapCqt() {
-    }
-
-    public MapCqt(String ma_cqt, String ma_kb, String ten_cqt, String short_name) {
-        this.ma_cqt = ma_cqt;
-        this.ma_kb = ma_kb;
-        this.ten_cqt = ten_cqt;
-        this.short_name = short_name;
-    }
-
-      
-    
+ 
 }
