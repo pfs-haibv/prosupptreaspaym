@@ -20,13 +20,8 @@ import com.support.pit.utility.EmailValidator;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.util.Calendar;
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
-import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.hssf.util.Region;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -52,7 +47,7 @@ public class ListUserToExcel {
         HSSFSheet sheet_name = null;//sheet_name
 
         try {
-            FileInputStream fileInputStream = new FileInputStream("table/WD_AU_CS_Map_v003.xls");
+            FileInputStream fileInputStream = new FileInputStream("mapping/WD_AU_CS_Map_v003.xls");
             HSSFWorkbook workbook = new HSSFWorkbook(fileInputStream);
             /**-----------------------------------------------------------------*
              *                      SHEET MAP_CQT_ROLE                          *
@@ -86,7 +81,7 @@ public class ListUserToExcel {
         HSSFSheet sheet_name = null;//sheet_name
 
         try {
-            FileInputStream fileInputStream = new FileInputStream("table/WD_AU_CS_Map_v003.xls");
+            FileInputStream fileInputStream = new FileInputStream("mapping/WD_AU_CS_Map_v003.xls");
             HSSFWorkbook workbook = new HSSFWorkbook(fileInputStream);
             /**-----------------------------------------------------------------*
              *                      SHEET MAP_CQT_ROLE                          *
