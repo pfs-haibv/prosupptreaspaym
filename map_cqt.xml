@@ -1,0 +1,5772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by haibv (pfs) -->
+<map_cqt>
+	<info_cqt>
+		<ma_cqt>0000</ma_cqt>
+		<ma_cqthu>1056271</ma_cqthu>
+		<ma_kb>0002</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Tổng cục Thuế</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0010</ma_cqt>
+		<ma_cqthu>1054560</ma_cqthu>
+		<ma_kb>0003</ma_kb>
+		<lcn_owner>KBA0000000</lcn_owner>
+		<ten_cqt>Văn phòng Tổng cục Thuế</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0100</ma_cqt>
+		<ma_cqthu>1054449</ma_cqthu>
+		<ma_kb>0010</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế T.Phố Hà Nội</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0101</ma_cqt>
+		<ma_cqthu>1054557</ma_cqthu>
+		<ma_kb>0011</ma_kb>
+		<lcn_owner>KBA1010000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Tp. Hà Nội</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0103</ma_cqt>
+		<ma_cqthu>1054634</ma_cqthu>
+		<ma_kb>0012</ma_kb>
+		<lcn_owner>KBA1010100</lcn_owner>
+		<ten_cqt>Chi cục Thuế Quận Ba Đình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0105</ma_cqt>
+		<ma_cqthu>1054635</ma_cqthu>
+		<ma_kb>0021</ma_kb>
+		<lcn_owner>KBA1010300</lcn_owner>
+		<ten_cqt>Chi cục Thuế Quận Tây Hồ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0106</ma_cqt>
+		<ma_cqthu>1054633</ma_cqthu>
+		<ma_kb>0013</ma_kb>
+		<lcn_owner>KBA1010500</lcn_owner>
+		<ten_cqt>Chi cục thuế quận Hoàn Kiếm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0107</ma_cqt>
+		<ma_cqthu>1062153</ma_cqthu>
+		<ma_kb>0016</ma_kb>
+		<lcn_owner>KBA1010600</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Long Biên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0108</ma_cqt>
+		<ma_cqthu>1054631</ma_cqthu>
+		<ma_kb>0014</ma_kb>
+		<lcn_owner>KBA1010700</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Hai Bà Trưng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0109</ma_cqt>
+		<ma_cqthu>1064161</ma_cqthu>
+		<ma_kb>0025</ma_kb>
+		<lcn_owner>KBA1010800</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Hoàng Mai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0111</ma_cqt>
+		<ma_cqthu>1054632</ma_cqthu>
+		<ma_kb>0015</ma_kb>
+		<lcn_owner>KBA1010900</lcn_owner>
+		<ten_cqt>Chi cục Thuế Quận Đống Đa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0113</ma_cqt>
+		<ma_cqthu>1054744</ma_cqthu>
+		<ma_kb>0022</ma_kb>
+		<lcn_owner>KBA1011100</lcn_owner>
+		<ten_cqt>Chi cục Thuế Quận Thanh Xuân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0115</ma_cqt>
+		<ma_cqthu>1054743</ma_cqthu>
+		<ma_kb>0023</ma_kb>
+		<lcn_owner>KBA1011300</lcn_owner>
+		<ten_cqt>Chi cục Thuế Quận Cầu Giấy</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0117</ma_cqt>
+		<ma_cqthu>1054741</ma_cqthu>
+		<ma_kb>0019</ma_kb>
+		<lcn_owner>KBA1011500</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Sóc Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0119</ma_cqt>
+		<ma_cqthu>1054742</ma_cqthu>
+		<ma_kb>0020</ma_kb>
+		<lcn_owner>KBA1011700</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Đông Anh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0121</ma_cqt>
+		<ma_cqthu>1054921</ma_cqthu>
+		<ma_kb>0024</ma_kb>
+		<lcn_owner>KBA1011900</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Gia Lâm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0123</ma_cqt>
+		<ma_cqthu>1054816</ma_cqthu>
+		<ma_kb>0017</ma_kb>
+		<lcn_owner>KBA1012100</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Từ Liêm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0125</ma_cqt>
+		<ma_cqthu>1054817</ma_cqthu>
+		<ma_kb>0018</ma_kb>
+		<lcn_owner>KBA1012300</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Thanh Trì</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0127</ma_cqt>
+		<ma_cqthu>1083886</ma_cqthu>
+		<ma_kb>0040</ma_kb>
+		<lcn_owner>KBA1012500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mê Linh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0129</ma_cqt>
+		<ma_cqthu>1053963</ma_cqthu>
+		<ma_kb>0026</ma_kb>
+		<lcn_owner>KBA1012700</lcn_owner>
+		<ten_cqt>Chi cục thuế  Quận Hà Đông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0131</ma_cqt>
+		<ma_cqthu>1053964</ma_cqthu>
+		<ma_kb>0033</ma_kb>
+		<lcn_owner>KBA1012900</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Sơn Tây</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0133</ma_cqt>
+		<ma_cqthu>1053961</ma_cqthu>
+		<ma_kb>0037</ma_kb>
+		<lcn_owner>KBA1013100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phúc Thọ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0135</ma_cqt>
+		<ma_cqthu>1054063</ma_cqthu>
+		<ma_kb>0035</ma_kb>
+		<lcn_owner>KBA1013300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đan Phượng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0137</ma_cqt>
+		<ma_cqthu>1054064</ma_cqthu>
+		<ma_kb>0038</ma_kb>
+		<lcn_owner>KBA1013500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thạch Thất</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0139</ma_cqt>
+		<ma_cqthu>1054065</ma_cqthu>
+		<ma_kb>0036</ma_kb>
+		<lcn_owner>KBA1013700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hoài Đức</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0141</ma_cqt>
+		<ma_cqthu>1053965</ma_cqthu>
+		<ma_kb>0031</ma_kb>
+		<lcn_owner>KBA1013900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quốc Oai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0143</ma_cqt>
+		<ma_cqthu>1054068</ma_cqthu>
+		<ma_kb>0039</ma_kb>
+		<lcn_owner>KBA1014100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thanh Oai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0145</ma_cqt>
+		<ma_cqthu>1054069</ma_cqthu>
+		<ma_kb>0030</ma_kb>
+		<lcn_owner>KBA1014300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thường Tín</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0147</ma_cqt>
+		<ma_cqthu>1054070</ma_cqthu>
+		<ma_kb>0028</ma_kb>
+		<lcn_owner>KBA1014500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mỹ Đức</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0149</ma_cqt>
+		<ma_cqthu>1054066</ma_cqthu>
+		<ma_kb>0029</ma_kb>
+		<lcn_owner>KBA1014700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ứng Hoà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0151</ma_cqt>
+		<ma_cqthu>1054067</ma_cqthu>
+		<ma_kb>0027</ma_kb>
+		<lcn_owner>KBA1014900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Xuyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0153</ma_cqt>
+		<ma_cqthu>1053960</ma_cqthu>
+		<ma_kb>0034</ma_kb>
+		<lcn_owner>KBA1015100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ba Vì</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0155</ma_cqt>
+		<ma_cqthu>1054062</ma_cqthu>
+		<ma_kb>0032</ma_kb>
+		<lcn_owner>KBA1015300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Chương Mỹ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0200</ma_cqt>
+		<ma_cqthu>1055087</ma_cqthu>
+		<ma_kb>2510</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Hà Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0201</ma_cqt>
+		<ma_cqthu>1055088</ma_cqthu>
+		<ma_kb>2511</ma_kb>
+		<lcn_owner>KBA2010000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Hà Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0202</ma_cqt>
+		<ma_cqthu>1055266</ma_cqthu>
+		<ma_kb>2522</ma_kb>
+		<lcn_owner>KBA2010100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Hà Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0203</ma_cqt>
+		<ma_cqthu>1055262</ma_cqthu>
+		<ma_kb>2514</ma_kb>
+		<lcn_owner>KBA2010300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đồng Văn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0204</ma_cqt>
+		<ma_cqthu>1055263</ma_cqthu>
+		<ma_kb>2516</ma_kb>
+		<lcn_owner>KBA2010500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mèo Vạc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0205</ma_cqt>
+		<ma_cqthu>1055264</ma_cqthu>
+		<ma_kb>2520</ma_kb>
+		<lcn_owner>KBA2010700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Minh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0206</ma_cqt>
+		<ma_cqthu>1055260</ma_cqthu>
+		<ma_kb>2517</ma_kb>
+		<lcn_owner>KBA2010900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quản Bạ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0207</ma_cqt>
+		<ma_cqthu>1055269</ma_cqthu>
+		<ma_kb>2512</ma_kb>
+		<lcn_owner>KBA2011100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bắc Mê</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0208</ma_cqt>
+		<ma_cqthu>1054450</ma_cqthu>
+		<ma_kb>2515</ma_kb>
+		<lcn_owner>KBA2011300</lcn_owner>
+		<ten_cqt>Chi cụcThuế huyện Hoàng Su Phì</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0209</ma_cqt>
+		<ma_cqthu>1055267</ma_cqthu>
+		<ma_kb>2518</ma_kb>
+		<lcn_owner>KBA2011500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vị Xuyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0210</ma_cqt>
+		<ma_cqthu>1055268</ma_cqthu>
+		<ma_kb>2519</ma_kb>
+		<lcn_owner>KBA2011700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Xín Mần</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0211</ma_cqt>
+		<ma_cqthu>1070968</ma_cqthu>
+		<ma_kb>2521</ma_kb>
+		<lcn_owner>KBA2011800</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quang Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0212</ma_cqt>
+		<ma_cqthu>1055265</ma_cqthu>
+		<ma_kb>2513</ma_kb>
+		<lcn_owner>KBA2011900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bắc Quang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0400</ma_cqt>
+		<ma_cqthu>1054457</ma_cqthu>
+		<ma_kb>2360</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Cao Bằng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0401</ma_cqt>
+		<ma_cqthu>1054453</ma_cqthu>
+		<ma_kb>2361</ma_kb>
+		<lcn_owner>KBA2030000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Cao Bằng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0402</ma_cqt>
+		<ma_cqthu>1054454</ma_cqthu>
+		<ma_kb>2361</ma_kb>
+		<lcn_owner>KBA2030100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Cao Bằng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0403</ma_cqt>
+		<ma_cqthu>1054451</ma_cqthu>
+		<ma_kb>2363</ma_kb>
+		<lcn_owner>KBA2030300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bảo Lạc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0404</ma_cqt>
+		<ma_cqthu>1054637</ma_cqthu>
+		<ma_kb>2364</ma_kb>
+		<lcn_owner>KBA2030500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hà Quảng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0405</ma_cqt>
+		<ma_cqthu>1054458</ma_cqthu>
+		<ma_kb>2371</ma_kb>
+		<lcn_owner>KBA2030700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thông Nông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0406</ma_cqt>
+		<ma_cqthu>1054459</ma_cqthu>
+		<ma_kb>2369</ma_kb>
+		<lcn_owner>KBA2030900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Trà Lĩnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0407</ma_cqt>
+		<ma_cqthu>1054036</ma_cqthu>
+		<ma_kb>2370</ma_kb>
+		<lcn_owner>KBA2031100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Trùng Khánh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0408</ma_cqt>
+		<ma_cqthu>1054455</ma_cqthu>
+		<ma_kb>2366</ma_kb>
+		<lcn_owner>KBA2031300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nguyên Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0409</ma_cqt>
+		<ma_cqthu>1054456</ma_cqthu>
+		<ma_kb>2365</ma_kb>
+		<lcn_owner>KBA2031500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hoà An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0410</ma_cqt>
+		<ma_cqthu>1054641</ma_cqthu>
+		<ma_kb>2367</ma_kb>
+		<lcn_owner>KBA2031700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quảng Uyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0411</ma_cqt>
+		<ma_cqthu>1083888</ma_cqthu>
+		<ma_kb>2373</ma_kb>
+		<lcn_owner>KBA2031800</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phục Hòa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0412</ma_cqt>
+		<ma_cqthu>1054642</ma_cqthu>
+		<ma_kb>2362</ma_kb>
+		<lcn_owner>KBA2031900</lcn_owner>
+		<ten_cqt>Chi cục thế huyện Hạ Lang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0413</ma_cqt>
+		<ma_cqthu>1054638</ma_cqthu>
+		<ma_kb>2368</ma_kb>
+		<lcn_owner>KBA2032100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thạch An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0415</ma_cqt>
+		<ma_cqthu>1054452</ma_cqthu>
+		<ma_kb>2372</ma_kb>
+		<lcn_owner>KBA2032300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bảo Lâm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0600</ma_cqt>
+		<ma_cqthu>1055000</ma_cqthu>
+		<ma_kb>2310</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Bắc Kạn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0601</ma_cqt>
+		<ma_cqthu>1054826</ma_cqthu>
+		<ma_kb>2311</ma_kb>
+		<lcn_owner>KBA2070000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Bắc Cạn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0602</ma_cqt>
+		<ma_cqthu>1054827</ma_cqthu>
+		<ma_kb>2311</ma_kb>
+		<lcn_owner>KBA2070100</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Bắc Cạn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0603</ma_cqt>
+		<ma_cqthu>1054823</ma_cqthu>
+		<ma_kb>2313</ma_kb>
+		<lcn_owner>KBA2070300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ba Bể</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0604</ma_cqt>
+		<ma_cqthu>1055006</ma_cqthu>
+		<ma_kb>2312</ma_kb>
+		<lcn_owner>KBA2070500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ngân Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0605</ma_cqt>
+		<ma_cqthu>1055003</ma_cqthu>
+		<ma_kb>2316</ma_kb>
+		<lcn_owner>KBA2070700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Chợ Đồn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0606</ma_cqt>
+		<ma_cqthu>1055004</ma_cqthu>
+		<ma_kb>2317</ma_kb>
+		<lcn_owner>KBA2070900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Na Rì</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0607</ma_cqt>
+		<ma_cqthu>1055001</ma_cqthu>
+		<ma_kb>2315</ma_kb>
+		<lcn_owner>KBA2071100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bạch Thông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0608</ma_cqt>
+		<ma_cqthu>1055002</ma_cqthu>
+		<ma_kb>2314</ma_kb>
+		<lcn_owner>KBA2071300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Chợ Mới</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0609</ma_cqt>
+		<ma_cqthu>1016951</ma_cqthu>
+		<ma_kb>2318</ma_kb>
+		<lcn_owner>KBA2070400</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Pác Nặm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0800</ma_cqt>
+		<ma_cqthu>1055186</ma_cqthu>
+		<ma_kb>2460</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Tuyên Quang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0801</ma_cqt>
+		<ma_cqthu>1054037</ma_cqthu>
+		<ma_kb>2461</ma_kb>
+		<lcn_owner>KBA2110000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Tuyên Quang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0802</ma_cqt>
+		<ma_cqthu>1054034</ma_cqthu>
+		<ma_kb>2461</ma_kb>
+		<lcn_owner>KBA2110100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Tuyên Quang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0803</ma_cqt>
+		<ma_cqthu>1054035</ma_cqthu>
+		<ma_kb>2464</ma_kb>
+		<lcn_owner>KBA2110300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Na Hang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0804</ma_cqt>
+		<ma_cqthu>1053966</ma_cqthu>
+		<ma_kb>2462</ma_kb>
+		<lcn_owner>KBA2110500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Chiêm Hoá</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0805</ma_cqt>
+		<ma_cqthu>1054072</ma_cqthu>
+		<ma_kb>2463</ma_kb>
+		<lcn_owner>KBA2110700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hàm Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0806</ma_cqt>
+		<ma_cqthu>1054038</ma_cqthu>
+		<ma_kb>2466</ma_kb>
+		<lcn_owner>KBA2110900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0807</ma_cqt>
+		<ma_cqthu>1054039</ma_cqthu>
+		<ma_kb>2465</ma_kb>
+		<lcn_owner>KBA2111100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sơn Dương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>0808</ma_cqt>
+		<ma_cqthu>1108933</ma_cqthu>
+		<ma_kb>2468</ma_kb>
+		<lcn_owner>KBA2111300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lâm Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1000</ma_cqt>
+		<ma_cqthu>1054639</ma_cqthu>
+		<ma_kb>2610</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Lào Cai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1001</ma_cqt>
+		<ma_cqthu>1054636</ma_cqthu>
+		<ma_kb>2611</ma_kb>
+		<lcn_owner>KBA2050000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Lào Cai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1002</ma_cqt>
+		<ma_cqthu>1054645</ma_cqthu>
+		<ma_kb>2612</ma_kb>
+		<lcn_owner>KBA2050100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Lào Cai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1004</ma_cqt>
+		<ma_cqthu>1054643</ma_cqthu>
+		<ma_kb>2613</ma_kb>
+		<lcn_owner>KBA2050500</lcn_owner>
+		<ten_cqt>Chi cụcThuế huyện Mường Khương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1005</ma_cqt>
+		<ma_cqthu>1054644</ma_cqthu>
+		<ma_kb>2619</ma_kb>
+		<lcn_owner>KBA2050700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bát Xát</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1006</ma_cqt>
+		<ma_cqthu>1054824</ma_cqthu>
+		<ma_kb>2618</ma_kb>
+		<lcn_owner>KBA2050900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bắc Hà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1007</ma_cqt>
+		<ma_cqthu>1054825</ma_cqthu>
+		<ma_kb>2616</ma_kb>
+		<lcn_owner>KBA2051100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bảo Thắng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1008</ma_cqt>
+		<ma_cqthu>1054820</ma_cqthu>
+		<ma_kb>2615</ma_kb>
+		<lcn_owner>KBA2051300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sa Pa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1009</ma_cqt>
+		<ma_cqthu>1054821</ma_cqthu>
+		<ma_kb>2617</ma_kb>
+		<lcn_owner>KBA2051500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bảo Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1010</ma_cqt>
+		<ma_cqthu>1054828</ma_cqthu>
+		<ma_kb>2614</ma_kb>
+		<lcn_owner>KBA2051900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Văn Bàn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1011</ma_cqt>
+		<ma_cqthu>1054640</ma_cqthu>
+		<ma_kb>2620</ma_kb>
+		<lcn_owner>KBA2052100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Si Ma Cai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1100</ma_cqt>
+		<ma_cqthu>1054805</ma_cqthu>
+		<ma_kb>2760</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Điện Biên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1101</ma_cqt>
+		<ma_cqthu>1054802</ma_cqthu>
+		<ma_kb>2761</ma_kb>
+		<lcn_owner>KBA3010000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Điện Biên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1102</ma_cqt>
+		<ma_cqthu>1054803</ma_cqthu>
+		<ma_kb>2761</ma_kb>
+		<lcn_owner>KBA3010100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP. Điện Biên Phủ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1103</ma_cqt>
+		<ma_cqthu>1056186</ma_cqthu>
+		<ma_kb>2768</ma_kb>
+		<lcn_owner>KBA3010400</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mường Nhé</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1104</ma_cqt>
+		<ma_cqthu>1054806</ma_cqthu>
+		<ma_kb>2763</ma_kb>
+		<lcn_owner>KBA3011100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mường Chà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1105</ma_cqt>
+		<ma_cqthu>1055732</ma_cqthu>
+		<ma_kb>2762</ma_kb>
+		<lcn_owner>KBA3011300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tủa Chùa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1106</ma_cqt>
+		<ma_cqthu>1054355</ma_cqthu>
+		<ma_kb>2764</ma_kb>
+		<lcn_owner>KBA3011500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tuần Giáo</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1107</ma_cqt>
+		<ma_cqthu>1054356</ma_cqthu>
+		<ma_kb>2767</ma_kb>
+		<lcn_owner>KBA3011700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Điện Biên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1108</ma_cqt>
+		<ma_cqthu>1054353</ma_cqthu>
+		<ma_kb>2766</ma_kb>
+		<lcn_owner>KBA3011900</lcn_owner>
+		<ten_cqt>Chi cụcThuế huyện ĐiệnBiênĐông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1109</ma_cqt>
+		<ma_cqthu>1027868</ma_cqthu>
+		<ma_kb>2769</ma_kb>
+		<lcn_owner>KBA3012100</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Mường Ảng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1110</ma_cqt>
+		<ma_cqthu>1054351</ma_cqthu>
+		<ma_kb>2765</ma_kb>
+		<lcn_owner>KBA3010300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Mường Lay</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1200</ma_cqt>
+		<ma_cqthu>1072657</ma_cqthu>
+		<ma_kb>3160</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Lai Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1201</ma_cqt>
+		<ma_cqthu>1072658</ma_cqthu>
+		<ma_kb>3161</ma_kb>
+		<lcn_owner>KBA3020000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Lai Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1202</ma_cqt>
+		<ma_cqthu>1054352</ma_cqthu>
+		<ma_kb>3162</ma_kb>
+		<lcn_owner>KBA3020100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mường Tè</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1203</ma_cqt>
+		<ma_cqthu>1056185</ma_cqthu>
+		<ma_kb>3163</ma_kb>
+		<lcn_owner>KBA3020300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phong Thổ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1204</ma_cqt>
+		<ma_cqthu>1054349</ma_cqthu>
+		<ma_kb>3166</ma_kb>
+		<lcn_owner>KBA3020500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tam Đường</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1205</ma_cqt>
+		<ma_cqthu>1054350</ma_cqthu>
+		<ma_kb>3164</ma_kb>
+		<lcn_owner>KBA3020700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sìn Hồ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1206</ma_cqt>
+		<ma_cqthu>1093462</ma_cqthu>
+		<ma_kb>3167</ma_kb>
+		<lcn_owner>KBA3021100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Uyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1207</ma_cqt>
+		<ma_cqthu>1019671</ma_cqthu>
+		<ma_kb>3168</ma_kb>
+		<lcn_owner>KBA3020200</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Lai Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1208</ma_cqt>
+		<ma_cqthu>1054822</ma_cqthu>
+		<ma_kb>3165</ma_kb>
+		<lcn_owner>KBA3020900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Than Uyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1400</ma_cqt>
+		<ma_cqthu>1054354</ma_cqthu>
+		<ma_kb>2710</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Sơn La</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1401</ma_cqt>
+		<ma_cqthu>1055736</ma_cqthu>
+		<ma_kb>2711</ma_kb>
+		<lcn_owner>KBA3030000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Sơn La</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1402</ma_cqt>
+		<ma_cqthu>1055733</ma_cqthu>
+		<ma_kb>2722</ma_kb>
+		<lcn_owner>KBA3030100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố  Sơn La</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1403</ma_cqt>
+		<ma_cqthu>1055734</ma_cqthu>
+		<ma_kb>2720</ma_kb>
+		<lcn_owner>KBA3030300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quỳnh Nhai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1404</ma_cqt>
+		<ma_cqthu>1054357</ma_cqthu>
+		<ma_kb>2719</ma_kb>
+		<lcn_owner>KBA3030500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mường La</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1405</ma_cqt>
+		<ma_cqthu>1055798</ma_cqthu>
+		<ma_kb>2713</ma_kb>
+		<lcn_owner>KBA3030700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thuận Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1406</ma_cqt>
+		<ma_cqthu>1055737</ma_cqthu>
+		<ma_kb>2718</ma_kb>
+		<lcn_owner>KBA3030900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bắc Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1407</ma_cqt>
+		<ma_cqthu>1055796</ma_cqthu>
+		<ma_kb>2717</ma_kb>
+		<lcn_owner>KBA3031100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phù Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1408</ma_cqt>
+		<ma_cqthu>1055735</ma_cqthu>
+		<ma_kb>2716</ma_kb>
+		<lcn_owner>KBA3031300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mai Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1409</ma_cqt>
+		<ma_cqthu>1055886</ma_cqthu>
+		<ma_kb>2714</ma_kb>
+		<lcn_owner>KBA3031500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sông Mã</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1410</ma_cqt>
+		<ma_cqthu>1055883</ma_cqthu>
+		<ma_kb>2712</ma_kb>
+		<lcn_owner>KBA3031700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1411</ma_cqt>
+		<ma_cqthu>1055884</ma_cqthu>
+		<ma_kb>2715</ma_kb>
+		<lcn_owner>KBA3031900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mộc Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1412</ma_cqt>
+		<ma_cqthu>1050073</ma_cqthu>
+		<ma_kb>2721</ma_kb>
+		<lcn_owner>KBA3032100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sốp Cộp</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1500</ma_cqt>
+		<ma_cqthu>1054077</ma_cqthu>
+		<ma_kb>2560</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Yên Bái</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1501</ma_cqt>
+		<ma_cqthu>1054073</ma_cqthu>
+		<ma_kb>2561</ma_kb>
+		<lcn_owner>KBA2130000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Yên Bái</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1502</ma_cqt>
+		<ma_cqthu>1054074</ma_cqthu>
+		<ma_kb>2570</ma_kb>
+		<lcn_owner>KBA2130100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Yên Bái</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1503</ma_cqt>
+		<ma_cqthu>1054040</ma_cqthu>
+		<ma_kb>2569</ma_kb>
+		<lcn_owner>KBA2130300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Nghĩa Lộ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1504</ma_cqt>
+		<ma_cqthu>1054078</ma_cqthu>
+		<ma_kb>2565</ma_kb>
+		<lcn_owner>KBA2130500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lục Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1505</ma_cqt>
+		<ma_cqthu>1054079</ma_cqthu>
+		<ma_kb>2568</ma_kb>
+		<lcn_owner>KBA2130700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Văn Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1506</ma_cqt>
+		<ma_cqthu>1054080</ma_cqthu>
+		<ma_kb>2562</ma_kb>
+		<lcn_owner>KBA2130900</lcn_owner>
+		<ten_cqt>Chi cụcThuế huyện Mù Cang Chải</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1507</ma_cqt>
+		<ma_cqthu>1054075</ma_cqthu>
+		<ma_kb>2563</ma_kb>
+		<lcn_owner>KBA2131100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Trấn Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1508</ma_cqt>
+		<ma_cqthu>1054076</ma_cqthu>
+		<ma_kb>2564</ma_kb>
+		<lcn_owner>KBA2131300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1509</ma_cqt>
+		<ma_cqthu>1054031</ma_cqthu>
+		<ma_kb>2566</ma_kb>
+		<lcn_owner>KBA2131500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Văn Chấn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1510</ma_cqt>
+		<ma_cqthu>1054032</ma_cqthu>
+		<ma_kb>2567</ma_kb>
+		<lcn_owner>KBA2131700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Trạm Tấu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1700</ma_cqt>
+		<ma_cqthu>1055797</ma_cqthu>
+		<ma_kb>2660</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Hoà Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1701</ma_cqt>
+		<ma_cqthu>1055889</ma_cqthu>
+		<ma_kb>2661</ma_kb>
+		<lcn_owner>KBA3050000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Hoà Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1702</ma_cqt>
+		<ma_cqthu>1055890</ma_cqthu>
+		<ma_kb>2661</ma_kb>
+		<lcn_owner>KBA3050100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố  Hoà Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1703</ma_cqt>
+		<ma_cqthu>1055887</ma_cqthu>
+		<ma_kb>2664</ma_kb>
+		<lcn_owner>KBA3050300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đà Bắc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1704</ma_cqt>
+		<ma_cqthu>1055885</ma_cqthu>
+		<ma_kb>2669</ma_kb>
+		<lcn_owner>KBA3050500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mai Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1705</ma_cqt>
+		<ma_cqthu>1055888</ma_cqthu>
+		<ma_kb>2662</ma_kb>
+		<lcn_owner>KBA3050700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kỳ Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1706</ma_cqt>
+		<ma_cqthu>1056036</ma_cqthu>
+		<ma_kb>2667</ma_kb>
+		<lcn_owner>KBA3050900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lương Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1707</ma_cqt>
+		<ma_cqthu>1056181</ma_cqthu>
+		<ma_kb>2671</ma_kb>
+		<lcn_owner>KBA3051000</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cao Phong</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1708</ma_cqt>
+		<ma_cqthu>1056037</ma_cqthu>
+		<ma_kb>2665</ma_kb>
+		<lcn_owner>KBA3051100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kim Bôi</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1709</ma_cqt>
+		<ma_cqthu>1055891</ma_cqthu>
+		<ma_kb>2670</ma_kb>
+		<lcn_owner>KBA3051300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Lạc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1710</ma_cqt>
+		<ma_cqthu>1056035</ma_cqthu>
+		<ma_kb>2666</ma_kb>
+		<lcn_owner>KBA3051500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lạc Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1711</ma_cqt>
+		<ma_cqthu>1056043</ma_cqthu>
+		<ma_kb>2668</ma_kb>
+		<lcn_owner>KBA3051700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lạc Thuỷ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1712</ma_cqt>
+		<ma_cqthu>1056040</ma_cqthu>
+		<ma_kb>2663</ma_kb>
+		<lcn_owner>KBA3051900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Thủy</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1900</ma_cqt>
+		<ma_cqthu>1054033</ma_cqthu>
+		<ma_kb>2260</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Thái Nguyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1901</ma_cqt>
+		<ma_cqthu>1054081</ma_cqthu>
+		<ma_kb>2261</ma_kb>
+		<lcn_owner>KBA2150000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Thái Nguyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1902</ma_cqt>
+		<ma_cqthu>1054030</ma_cqthu>
+		<ma_kb>2270</ma_kb>
+		<lcn_owner>KBA2150100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Thái Nguyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1903</ma_cqt>
+		<ma_cqthu>1054119</ma_cqthu>
+		<ma_kb>2269</ma_kb>
+		<lcn_owner>KBA2150300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Sông Công</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1904</ma_cqt>
+		<ma_cqthu>1054120</ma_cqthu>
+		<ma_kb>2262</ma_kb>
+		<lcn_owner>KBA2150500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Định Hoá</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1905</ma_cqt>
+		<ma_cqthu>1054117</ma_cqthu>
+		<ma_kb>2268</ma_kb>
+		<lcn_owner>KBA2150700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Võ Nhai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1906</ma_cqt>
+		<ma_cqthu>1054118</ma_cqthu>
+		<ma_kb>2264</ma_kb>
+		<lcn_owner>KBA2150900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Lương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1907</ma_cqt>
+		<ma_cqthu>1054160</ma_cqthu>
+		<ma_kb>2266</ma_kb>
+		<lcn_owner>KBA2151100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đồng Hỷ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1908</ma_cqt>
+		<ma_cqthu>1054157</ma_cqthu>
+		<ma_kb>2265</ma_kb>
+		<lcn_owner>KBA2151300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đại Từ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1909</ma_cqt>
+		<ma_cqthu>1054158</ma_cqthu>
+		<ma_kb>2267</ma_kb>
+		<lcn_owner>KBA2151500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>1910</ma_cqt>
+		<ma_cqthu>1054121</ma_cqthu>
+		<ma_kb>2263</ma_kb>
+		<lcn_owner>KBA2151700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phổ Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2000</ma_cqt>
+		<ma_cqthu>1055009</ma_cqthu>
+		<ma_kb>2410</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Lạng Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2001</ma_cqt>
+		<ma_cqthu>1055110</ma_cqthu>
+		<ma_kb>2411</ma_kb>
+		<lcn_owner>KBA2090000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Lạng Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2002</ma_cqt>
+		<ma_cqthu>1055007</ma_cqthu>
+		<ma_kb>2411</ma_kb>
+		<lcn_owner>KBA2090100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Lạng Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2003</ma_cqt>
+		<ma_cqthu>1055008</ma_cqthu>
+		<ma_kb>2418</ma_kb>
+		<lcn_owner>KBA2090300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tràng Định</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2004</ma_cqt>
+		<ma_cqthu>1055005</ma_cqthu>
+		<ma_kb>2413</ma_kb>
+		<lcn_owner>KBA2090500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Văn Lãng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2005</ma_cqt>
+		<ma_cqthu>1055183</ma_cqthu>
+		<ma_kb>2414</ma_kb>
+		<lcn_owner>KBA2090700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bình Gia</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2006</ma_cqt>
+		<ma_cqthu>1055184</ma_cqthu>
+		<ma_kb>2417</ma_kb>
+		<lcn_owner>KBA2090900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bắc Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2007</ma_cqt>
+		<ma_cqthu>1055181</ma_cqthu>
+		<ma_kb>2415</ma_kb>
+		<lcn_owner>KBA2091100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Văn Quan</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2008</ma_cqt>
+		<ma_cqthu>1055182</ma_cqthu>
+		<ma_kb>2421</ma_kb>
+		<lcn_owner>KBA2091300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cao Lộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2009</ma_cqt>
+		<ma_cqthu>1053967</ma_cqthu>
+		<ma_kb>2420</ma_kb>
+		<lcn_owner>KBA2091500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lộc Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2010</ma_cqt>
+		<ma_cqthu>1055187</ma_cqthu>
+		<ma_kb>2419</ma_kb>
+		<lcn_owner>KBA2091700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Chi Lăng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2011</ma_cqt>
+		<ma_cqthu>1055188</ma_cqthu>
+		<ma_kb>2416</ma_kb>
+		<lcn_owner>KBA2091900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đình Lập</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2012</ma_cqt>
+		<ma_cqthu>1055185</ma_cqthu>
+		<ma_kb>2412</ma_kb>
+		<lcn_owner>KBA2092100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hữu Lũng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2200</ma_cqt>
+		<ma_cqthu>1054619</ma_cqthu>
+		<ma_kb>2810</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Quảng Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2201</ma_cqt>
+		<ma_cqthu>1054620</ma_cqthu>
+		<ma_kb>2811</ma_kb>
+		<lcn_owner>KBA2250000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Quảng Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2202</ma_cqt>
+		<ma_cqthu>1054617</ma_cqthu>
+		<ma_kb>2824</ma_kb>
+		<lcn_owner>KBA2250100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Hạ Long</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2203</ma_cqt>
+		<ma_cqthu>1054618</ma_cqthu>
+		<ma_kb>2813</ma_kb>
+		<lcn_owner>KBA2250300</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Cẩm Phả</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2204</ma_cqt>
+		<ma_cqthu>1054435</ma_cqthu>
+		<ma_kb>2812</ma_kb>
+		<lcn_owner>KBA2250500</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Uông Bí</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2205</ma_cqt>
+		<ma_cqthu>1054624</ma_cqthu>
+		<ma_kb>2819</ma_kb>
+		<lcn_owner>KBA2250700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bình Liêu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2206</ma_cqt>
+		<ma_cqthu>1054623</ma_cqthu>
+		<ma_kb>2818</ma_kb>
+		<lcn_owner>KBA2250900</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố  Móng Cái</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2207</ma_cqt>
+		<ma_cqthu>1054621</ma_cqthu>
+		<ma_kb>2821</ma_kb>
+		<lcn_owner>KBA2251100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hải Hà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2208</ma_cqt>
+		<ma_cqthu>1054622</ma_cqthu>
+		<ma_kb>2814</ma_kb>
+		<lcn_owner>KBA2251300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tiên Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2209</ma_cqt>
+		<ma_cqthu>1054800</ma_cqthu>
+		<ma_kb>2816</ma_kb>
+		<lcn_owner>KBA2251500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ba Chẽ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2210</ma_cqt>
+		<ma_cqthu>1054801</ma_cqthu>
+		<ma_kb>2822</ma_kb>
+		<lcn_owner>KBA2251700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vân Đồn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2211</ma_cqt>
+		<ma_cqthu>1054798</ma_cqthu>
+		<ma_kb>2820</ma_kb>
+		<lcn_owner>KBA2251900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hoành Bồ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2212</ma_cqt>
+		<ma_cqthu>1054799</ma_cqthu>
+		<ma_kb>2815</ma_kb>
+		<lcn_owner>KBA2252100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đông Triều</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2213</ma_cqt>
+		<ma_cqthu>1054348</ma_cqthu>
+		<ma_kb>2823</ma_kb>
+		<lcn_owner>KBA2252300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cô Tô</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2214</ma_cqt>
+		<ma_cqthu>1054804</ma_cqthu>
+		<ma_kb>2817</ma_kb>
+		<lcn_owner>KBA2252500</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Quảng Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2215</ma_cqt>
+		<ma_cqthu>1056121</ma_cqthu>
+		<ma_kb>2825</ma_kb>
+		<lcn_owner>KBA2252700</lcn_owner>
+		<ten_cqt>Chi cục Thuế Huyện Đầm Hà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2400</ma_cqt>
+		<ma_cqthu>1054115</ma_cqthu>
+		<ma_kb>1160</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Bắc Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2401</ma_cqt>
+		<ma_cqthu>1054112</ma_cqthu>
+		<ma_kb>1161</ma_kb>
+		<lcn_owner>KBA2210000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Tỉnh Bắc Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2402</ma_cqt>
+		<ma_cqthu>1054429</ma_cqthu>
+		<ma_kb>1171</ma_kb>
+		<lcn_owner>KBA2210100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Bắc Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2403</ma_cqt>
+		<ma_cqthu>1054430</ma_cqthu>
+		<ma_kb>1169</ma_kb>
+		<lcn_owner>KBA2210300</lcn_owner>
+		<ten_cqt>Chi cục  thuế huyện Yên Thế</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2404</ma_cqt>
+		<ma_cqthu>1054427</ma_cqthu>
+		<ma_kb>1170</ma_kb>
+		<lcn_owner>KBA2210500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2405</ma_cqt>
+		<ma_cqthu>1054428</ma_cqthu>
+		<ma_kb>1167</ma_kb>
+		<lcn_owner>KBA2210700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lục Ngạn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2406</ma_cqt>
+		<ma_cqthu>1054116</ma_cqthu>
+		<ma_kb>1164</ma_kb>
+		<lcn_owner>KBA2210900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hiệp Hoà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2407</ma_cqt>
+		<ma_cqthu>1054616</ma_cqthu>
+		<ma_kb>1166</ma_kb>
+		<lcn_owner>KBA2211100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lạng Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2408</ma_cqt>
+		<ma_cqthu>1054433</ma_cqthu>
+		<ma_kb>1163</ma_kb>
+		<lcn_owner>KBA2211300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sơn Động</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2409</ma_cqt>
+		<ma_cqthu>1054434</ma_cqthu>
+		<ma_kb>1162</ma_kb>
+		<lcn_owner>KBA2211500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lục Nam</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2410</ma_cqt>
+		<ma_cqthu>1054431</ma_cqthu>
+		<ma_kb>1168</ma_kb>
+		<lcn_owner>KBA2211700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Việt Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2411</ma_cqt>
+		<ma_cqthu>1054432</ma_cqthu>
+		<ma_kb>1165</ma_kb>
+		<lcn_owner>KBA2211900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Dũng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2500</ma_cqt>
+		<ma_cqthu>1054122</ma_cqthu>
+		<ma_kb>1260</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Phú Thọ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2501</ma_cqt>
+		<ma_cqthu>1054163</ma_cqthu>
+		<ma_kb>1261</ma_kb>
+		<lcn_owner>KBA2170000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Phú Thọ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2502</ma_cqt>
+		<ma_cqthu>1054164</ma_cqthu>
+		<ma_kb>1261</ma_kb>
+		<lcn_owner>KBA2170100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Việt Trì</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2503</ma_cqt>
+		<ma_cqthu>1054161</ma_cqthu>
+		<ma_kb>1262</ma_kb>
+		<lcn_owner>KBA2170300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Phú Thọ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2504</ma_cqt>
+		<ma_cqthu>1054162</ma_cqthu>
+		<ma_kb>1265</ma_kb>
+		<lcn_owner>KBA2170500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đoan Hùng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2505</ma_cqt>
+		<ma_cqthu>1054159</ma_cqthu>
+		<ma_kb>1270</ma_kb>
+		<lcn_owner>KBA2170700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hạ Hoà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2506</ma_cqt>
+		<ma_cqthu>1054113</ma_cqthu>
+		<ma_kb>1264</ma_kb>
+		<lcn_owner>KBA2170900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thanh Ba</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2507</ma_cqt>
+		<ma_cqthu>1054110</ma_cqthu>
+		<ma_kb>1266</ma_kb>
+		<lcn_owner>KBA2171100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phù Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2508</ma_cqt>
+		<ma_cqthu>1054109</ma_cqthu>
+		<ma_kb>1269</ma_kb>
+		<lcn_owner>KBA2171500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Lập</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2509</ma_cqt>
+		<ma_cqthu>1054189</ma_cqthu>
+		<ma_kb>1267</ma_kb>
+		<lcn_owner>KBA2171700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tam Nông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2510</ma_cqt>
+		<ma_cqthu>1054114</ma_cqthu>
+		<ma_kb>1268</ma_kb>
+		<lcn_owner>KBA2171900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thanh Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2511</ma_cqt>
+		<ma_cqthu>1054111</ma_cqthu>
+		<ma_kb>1271</ma_kb>
+		<lcn_owner>KBA2172100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lâm Thao</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2512</ma_cqt>
+		<ma_cqthu>1054190</ma_cqthu>
+		<ma_kb>1272</ma_kb>
+		<lcn_owner>KBA2172300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thanh Thủy</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2513</ma_cqt>
+		<ma_cqthu>1029342</ma_cqthu>
+		<ma_kb>1273</ma_kb>
+		<lcn_owner>KBA2172000</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2514</ma_cqt>
+		<ma_cqthu>1054165</ma_cqthu>
+		<ma_kb>1263</ma_kb>
+		<lcn_owner>KBA2171300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cẩm Khê</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2600</ma_cqt>
+		<ma_cqthu>1054998</ma_cqthu>
+		<ma_kb>1210</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Vĩnh Phúc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2601</ma_cqt>
+		<ma_cqthu>1055107</ma_cqthu>
+		<ma_kb>1211</ma_kb>
+		<lcn_owner>KBA2190000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Vĩnh Phúc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2602</ma_cqt>
+		<ma_cqthu>1055108</ma_cqthu>
+		<ma_kb>1220</ma_kb>
+		<lcn_owner>KBA2190100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Vĩnh Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2603</ma_cqt>
+		<ma_cqthu>1007207</ma_cqthu>
+		<ma_kb>1219</ma_kb>
+		<lcn_owner>KBA2190200</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Phúc Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2604</ma_cqt>
+		<ma_cqthu>1055105</ma_cqthu>
+		<ma_kb>1213</ma_kb>
+		<lcn_owner>KBA2190300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lập Thạch</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2605</ma_cqt>
+		<ma_cqthu>1007203</ma_cqthu>
+		<ma_kb>1218</ma_kb>
+		<lcn_owner>KBA2190400</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tam Đảo</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2606</ma_cqt>
+		<ma_cqthu>1055106</ma_cqthu>
+		<ma_kb>1212</ma_kb>
+		<lcn_owner>KBA2190500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tam Dương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2607</ma_cqt>
+		<ma_cqthu>1053959</ma_cqthu>
+		<ma_kb>1214</ma_kb>
+		<lcn_owner>KBA2190700</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Vĩnh Tường</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2608</ma_cqt>
+		<ma_cqthu>1055109</ma_cqthu>
+		<ma_kb>1216</ma_kb>
+		<lcn_owner>KBA2190900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Lạc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2609</ma_cqt>
+		<ma_cqthu>1053958</ma_cqthu>
+		<ma_kb>1217</ma_kb>
+		<lcn_owner>KBA2191300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bình Xuyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2610</ma_cqt>
+		<ma_cqthu>1096460</ma_cqthu>
+		<ma_kb>1215</ma_kb>
+		<lcn_owner>KBA2191500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sông Lô</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2700</ma_cqt>
+		<ma_cqthu>1054024</ma_cqthu>
+		<ma_kb>1110</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Bắc Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2701</ma_cqt>
+		<ma_cqthu>1054021</ma_cqthu>
+		<ma_kb>1111</ma_kb>
+		<lcn_owner>KBA2230000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Bắc Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2702</ma_cqt>
+		<ma_cqthu>1054022</ma_cqthu>
+		<ma_kb>1117</ma_kb>
+		<lcn_owner>KBA2230100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Bắc Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2703</ma_cqt>
+		<ma_cqthu>1054071</ma_cqthu>
+		<ma_kb>1112</ma_kb>
+		<lcn_owner>KBA2230300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Phong</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2704</ma_cqt>
+		<ma_cqthu>1054020</ma_cqthu>
+		<ma_kb>1115</ma_kb>
+		<lcn_owner>KBA2230500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quế Võ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2705</ma_cqt>
+		<ma_cqthu>1054027</ma_cqthu>
+		<ma_kb>1114</ma_kb>
+		<lcn_owner>KBA2230700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tiên Du</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2706</ma_cqt>
+		<ma_cqthu>1054025</ma_cqthu>
+		<ma_kb>1116</ma_kb>
+		<lcn_owner>KBA2230900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thuận Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2707</ma_cqt>
+		<ma_cqthu>1054026</ma_cqthu>
+		<ma_kb>1113</ma_kb>
+		<lcn_owner>KBA2231100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lương Tài</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2708</ma_cqt>
+		<ma_cqthu>1054028</ma_cqthu>
+		<ma_kb>1118</ma_kb>
+		<lcn_owner>KBA2231300</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Từ Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>2709</ma_cqt>
+		<ma_cqthu>1054023</ma_cqthu>
+		<ma_kb>1119</ma_kb>
+		<lcn_owner>KBA2231500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Gia Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3000</ma_cqt>
+		<ma_cqthu>1054149</ma_cqthu>
+		<ma_kb>0360</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Hải Dương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3001</ma_cqt>
+		<ma_cqthu>1054150</ma_cqthu>
+		<ma_kb>0361</ma_kb>
+		<lcn_owner>KBA1070000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Hải Dương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3002</ma_cqt>
+		<ma_cqthu>1054029</ma_cqthu>
+		<ma_kb>0373</ma_kb>
+		<lcn_owner>KBA1070100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Hải Dương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3003</ma_cqt>
+		<ma_cqthu>1054148</ma_cqthu>
+		<ma_kb>0366</ma_kb>
+		<lcn_owner>KBA1070300</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Chí Linh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3004</ma_cqt>
+		<ma_cqthu>1054156</ma_cqthu>
+		<ma_kb>0363</ma_kb>
+		<lcn_owner>KBA1070500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nam Sách</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3005</ma_cqt>
+		<ma_cqthu>1054153</ma_cqthu>
+		<ma_kb>0371</ma_kb>
+		<lcn_owner>KBA1070700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thanh Hà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3006</ma_cqt>
+		<ma_cqthu>1054154</ma_cqthu>
+		<ma_kb>0372</ma_kb>
+		<lcn_owner>KBA1070900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kinh Môn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3007</ma_cqt>
+		<ma_cqthu>1054151</ma_cqthu>
+		<ma_kb>0364</ma_kb>
+		<lcn_owner>KBA1071100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kim Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3008</ma_cqt>
+		<ma_cqthu>1054152</ma_cqthu>
+		<ma_kb>0367</ma_kb>
+		<lcn_owner>KBA1071300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Gia Lộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3009</ma_cqt>
+		<ma_cqthu>1054103</ma_cqthu>
+		<ma_kb>0369</ma_kb>
+		<lcn_owner>KBA1071500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tứ Kỳ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3010</ma_cqt>
+		<ma_cqthu>1054100</ma_cqthu>
+		<ma_kb>0365</ma_kb>
+		<lcn_owner>KBA1071700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cẩm Giàng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3011</ma_cqt>
+		<ma_cqthu>1054101</ma_cqthu>
+		<ma_kb>0370</ma_kb>
+		<lcn_owner>KBA1071900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bình Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3012</ma_cqt>
+		<ma_cqthu>1054155</ma_cqthu>
+		<ma_kb>0362</ma_kb>
+		<lcn_owner>KBA1072100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thanh Miện</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3013</ma_cqt>
+		<ma_cqthu>1054106</ma_cqthu>
+		<ma_kb>0368</ma_kb>
+		<lcn_owner>KBA1072300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ninh Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3100</ma_cqt>
+		<ma_cqthu>1054745</ma_cqthu>
+		<ma_kb>0060</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế T.Phố Hải phòng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3101</ma_cqt>
+		<ma_cqthu>1054815</ma_cqthu>
+		<ma_kb>0061</ma_kb>
+		<lcn_owner>KBA1030000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Tp Hải phòng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3102</ma_cqt>
+		<ma_cqthu>1054925</ma_cqthu>
+		<ma_kb>0063</ma_kb>
+		<lcn_owner>KBA1030100</lcn_owner>
+		<ten_cqt>Chi cục Thuế Quận Hồng Bàng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3103</ma_cqt>
+		<ma_cqthu>1054922</ma_cqthu>
+		<ma_kb>0062</ma_kb>
+		<lcn_owner>KBA1030300</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Ngô Quyền</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3104</ma_cqt>
+		<ma_cqthu>1011716</ma_cqthu>
+		<ma_kb>0075</ma_kb>
+		<lcn_owner>KBA1030400</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Hải An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3105</ma_cqt>
+		<ma_cqthu>1054923</ma_cqthu>
+		<ma_kb>0064</ma_kb>
+		<lcn_owner>KBA1030500</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Lê Chân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3106</ma_cqt>
+		<ma_cqthu>1054818</ma_cqthu>
+		<ma_kb>0065</ma_kb>
+		<lcn_owner>KBA1030700</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Kiến An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3107</ma_cqt>
+		<ma_cqthu>1054999</ma_cqthu>
+		<ma_kb>0066</ma_kb>
+		<lcn_owner>KBA1030900</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Đồ Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3108</ma_cqt>
+		<ma_cqthu>1054926</ma_cqthu>
+		<ma_kb>0070</ma_kb>
+		<lcn_owner>KBA1031100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thủy Nguyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3109</ma_cqt>
+		<ma_cqthu>1054927</ma_cqthu>
+		<ma_kb>0068</ma_kb>
+		<lcn_owner>KBA1031300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện An Dương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3110</ma_cqt>
+		<ma_cqthu>1054924</ma_cqthu>
+		<ma_kb>0071</ma_kb>
+		<lcn_owner>KBA1031500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện An Lão</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3111</ma_cqt>
+		<ma_cqthu>1055103</ma_cqthu>
+		<ma_kb>0072</ma_kb>
+		<lcn_owner>KBA1031700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kiến Thuỵ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3112</ma_cqt>
+		<ma_cqthu>1055104</ma_cqthu>
+		<ma_kb>0067</ma_kb>
+		<lcn_owner>KBA1031900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tiên Lãng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3113</ma_cqt>
+		<ma_cqthu>1055101</ma_cqthu>
+		<ma_kb>0069</ma_kb>
+		<lcn_owner>KBA1032100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vĩnh Bảo</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3114</ma_cqt>
+		<ma_cqthu>1055102</ma_cqthu>
+		<ma_kb>0073</ma_kb>
+		<lcn_owner>KBA1032300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cát Hải</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3115</ma_cqt>
+		<ma_cqthu>1095143</ma_cqthu>
+		<ma_kb>0076</ma_kb>
+		<lcn_owner>KBA1032700</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Dương Kinh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3116</ma_cqt>
+		<ma_cqthu>null</ma_cqthu>
+		<ma_kb>null</ma_kb>
+		<lcn_owner>KBA1032500</lcn_owner>
+		<ten_cqt>CCT Huyện Bạch Long Vĩ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3300</ma_cqt>
+		<ma_cqthu>1054107</ma_cqthu>
+		<ma_kb>0410</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Hưng Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3301</ma_cqt>
+		<ma_cqthu>1054104</ma_cqthu>
+		<ma_kb>0411</ma_kb>
+		<lcn_owner>KBA1090000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Hưng Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3302</ma_cqt>
+		<ma_cqthu>1054105</ma_cqthu>
+		<ma_kb>0411</ma_kb>
+		<lcn_owner>KBA1090100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Hưng Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3303</ma_cqt>
+		<ma_cqthu>1054012</ma_cqthu>
+		<ma_kb>0412</ma_kb>
+		<lcn_owner>KBA1090300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mỹ Hào</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3304</ma_cqt>
+		<ma_cqthu>1054011</ma_cqthu>
+		<ma_kb>0415</ma_kb>
+		<lcn_owner>KBA1090500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Khoái Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3305</ma_cqt>
+		<ma_cqthu>1054423</ma_cqthu>
+		<ma_kb>0413</ma_kb>
+		<lcn_owner>KBA1090700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ân Thi</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3306</ma_cqt>
+		<ma_cqthu>1054424</ma_cqthu>
+		<ma_kb>0420</ma_kb>
+		<lcn_owner>KBA1090900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kim Động</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3307</ma_cqt>
+		<ma_cqthu>1054420</ma_cqthu>
+		<ma_kb>0416</ma_kb>
+		<lcn_owner>KBA1091100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phù Cừ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3308</ma_cqt>
+		<ma_cqthu>1054421</ma_cqthu>
+		<ma_kb>0414</ma_kb>
+		<lcn_owner>KBA1091300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tiên Lữ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3309</ma_cqt>
+		<ma_cqthu>1054108</ma_cqthu>
+		<ma_kb>0419</ma_kb>
+		<lcn_owner>KBA1091500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Văn Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3310</ma_cqt>
+		<ma_cqthu>1054102</ma_cqthu>
+		<ma_kb>0417</ma_kb>
+		<lcn_owner>KBA1091700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Văn Lâm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3311</ma_cqt>
+		<ma_cqthu>1054013</ma_cqthu>
+		<ma_kb>0418</ma_kb>
+		<lcn_owner>KBA1091900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Mỹ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3400</ma_cqt>
+		<ma_cqthu>1054797</ma_cqthu>
+		<ma_kb>0460</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Thái Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3401</ma_cqt>
+		<ma_cqthu>1054899</ma_cqthu>
+		<ma_kb>0461</ma_kb>
+		<lcn_owner>KBA1150000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Thái Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3402</ma_cqt>
+		<ma_cqthu>1054795</ma_cqthu>
+		<ma_kb>0461</ma_kb>
+		<lcn_owner>KBA1150100</lcn_owner>
+		<ten_cqt>Chi cục thuế Thành phố Thái Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3403</ma_cqt>
+		<ma_cqthu>1054796</ma_cqthu>
+		<ma_kb>0463</ma_kb>
+		<lcn_owner>KBA1150300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quỳnh Phụ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3404</ma_cqt>
+		<ma_cqthu>1054904</ma_cqthu>
+		<ma_kb>0468</ma_kb>
+		<lcn_owner>KBA1150500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hưng Hà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3405</ma_cqt>
+		<ma_cqthu>1054905</ma_cqthu>
+		<ma_kb>0465</ma_kb>
+		<lcn_owner>KBA1150700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thái Thuỵ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3406</ma_cqt>
+		<ma_cqthu>1054902</ma_cqthu>
+		<ma_kb>0464</ma_kb>
+		<lcn_owner>KBA1150900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đông Hưng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3407</ma_cqt>
+		<ma_cqthu>1054903</ma_cqthu>
+		<ma_kb>0466</ma_kb>
+		<lcn_owner>KBA1151100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vũ Thư</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3408</ma_cqt>
+		<ma_cqthu>1054900</ma_cqthu>
+		<ma_kb>0467</ma_kb>
+		<lcn_owner>KBA1151300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kiến Xương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3409</ma_cqt>
+		<ma_cqthu>1055081</ma_cqthu>
+		<ma_kb>0462</ma_kb>
+		<lcn_owner>KBA1151500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tiền Hải</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3500</ma_cqt>
+		<ma_cqthu>1054422</ma_cqthu>
+		<ma_kb>0310</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Hà Nam</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3501</ma_cqt>
+		<ma_cqthu>1054534</ma_cqthu>
+		<ma_kb>0311</ma_kb>
+		<lcn_owner>KBA1110000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Hà Nam</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3502</ma_cqt>
+		<ma_cqthu>1054535</ma_cqthu>
+		<ma_kb>0317</ma_kb>
+		<lcn_owner>KBA1110100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Phủ Lý</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3503</ma_cqt>
+		<ma_cqthu>1054425</ma_cqthu>
+		<ma_kb>0315</ma_kb>
+		<lcn_owner>KBA1110300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Duy Tiên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3504</ma_cqt>
+		<ma_cqthu>1054426</ma_cqthu>
+		<ma_kb>0313</ma_kb>
+		<lcn_owner>KBA1110500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kim Bảng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3505</ma_cqt>
+		<ma_cqthu>1054533</ma_cqthu>
+		<ma_kb>0314</ma_kb>
+		<lcn_owner>KBA1110700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lý Nhân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3506</ma_cqt>
+		<ma_cqthu>1054611</ma_cqthu>
+		<ma_kb>0316</ma_kb>
+		<lcn_owner>KBA1110900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thanh Liêm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3507</ma_cqt>
+		<ma_cqthu>1054612</ma_cqthu>
+		<ma_kb>0312</ma_kb>
+		<lcn_owner>KBA1111100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bình Lục</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3600</ma_cqt>
+		<ma_cqthu>1054613</ma_cqthu>
+		<ma_kb>0260</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Nam Định</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3601</ma_cqt>
+		<ma_cqthu>1054536</ma_cqthu>
+		<ma_kb>0261</ma_kb>
+		<lcn_owner>KBA1130000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Nam Định</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3602</ma_cqt>
+		<ma_cqthu>1054537</ma_cqthu>
+		<ma_kb>0271</ma_kb>
+		<lcn_owner>KBA1130100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Nam Định</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3603</ma_cqt>
+		<ma_cqthu>1054717</ma_cqthu>
+		<ma_kb>0265</ma_kb>
+		<lcn_owner>KBA1130300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vụ Bản</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3604</ma_cqt>
+		<ma_cqthu>1054718</ma_cqthu>
+		<ma_kb>0268</ma_kb>
+		<lcn_owner>KBA1130500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mỹ Lộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3605</ma_cqt>
+		<ma_cqthu>1054614</ma_cqthu>
+		<ma_kb>0266</ma_kb>
+		<lcn_owner>KBA1130700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện ý Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3606</ma_cqt>
+		<ma_cqthu>1054615</ma_cqthu>
+		<ma_kb>0270</ma_kb>
+		<lcn_owner>KBA1130900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nam Trực</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3607</ma_cqt>
+		<ma_cqthu>1054721</ma_cqthu>
+		<ma_kb>0267</ma_kb>
+		<lcn_owner>KBA1131100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Trực Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3608</ma_cqt>
+		<ma_cqthu>1054722</ma_cqthu>
+		<ma_kb>0262</ma_kb>
+		<lcn_owner>KBA1131300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Xuân Trường</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3609</ma_cqt>
+		<ma_cqthu>1054719</ma_cqthu>
+		<ma_kb>0269</ma_kb>
+		<lcn_owner>KBA1131500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Giao Thủy</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3610</ma_cqt>
+		<ma_cqthu>1054720</ma_cqthu>
+		<ma_kb>0263</ma_kb>
+		<lcn_owner>KBA1131700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nghĩa Hưng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3611</ma_cqt>
+		<ma_cqthu>1054901</ma_cqthu>
+		<ma_kb>0264</ma_kb>
+		<lcn_owner>KBA1131900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hải Hậu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3700</ma_cqt>
+		<ma_cqthu>1055082</ma_cqthu>
+		<ma_kb>1310</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Ninh Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3701</ma_cqt>
+		<ma_cqthu>1054906</ma_cqthu>
+		<ma_kb>1311</ma_kb>
+		<lcn_owner>KBA1170000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Tỉnh Ninh Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3702</ma_cqt>
+		<ma_cqthu>1054977</ma_cqthu>
+		<ma_kb>1311</ma_kb>
+		<lcn_owner>KBA1170100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Ninh Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3703</ma_cqt>
+		<ma_cqthu>1055085</ma_cqthu>
+		<ma_kb>1312</ma_kb>
+		<lcn_owner>KBA1170300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Tam Điệp</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3704</ma_cqt>
+		<ma_cqthu>1055086</ma_cqthu>
+		<ma_kb>1315</ma_kb>
+		<lcn_owner>KBA1170500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nho Quan</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3705</ma_cqt>
+		<ma_cqthu>1055083</ma_cqthu>
+		<ma_kb>1314</ma_kb>
+		<lcn_owner>KBA1170700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Gia Viễn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3706</ma_cqt>
+		<ma_cqthu>1055084</ma_cqthu>
+		<ma_kb>1317</ma_kb>
+		<lcn_owner>KBA1170900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hoa Lư</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3707</ma_cqt>
+		<ma_cqthu>1055090</ma_cqthu>
+		<ma_kb>1313</ma_kb>
+		<lcn_owner>KBA1171100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Mô</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3708</ma_cqt>
+		<ma_cqthu>1055261</ma_cqthu>
+		<ma_kb>1318</ma_kb>
+		<lcn_owner>KBA1171300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Khánh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3709</ma_cqt>
+		<ma_cqthu>1055089</ma_cqthu>
+		<ma_kb>1316</ma_kb>
+		<lcn_owner>KBA1171500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kim Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3800</ma_cqt>
+		<ma_cqthu>1056041</ma_cqthu>
+		<ma_kb>1360</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Thanh Hóa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3801</ma_cqt>
+		<ma_cqthu>1056038</ma_cqthu>
+		<ma_kb>1361</ma_kb>
+		<lcn_owner>KBA4010000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Thanh Hoá</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3802</ma_cqt>
+		<ma_cqthu>1056039</ma_cqthu>
+		<ma_kb>1387</ma_kb>
+		<lcn_owner>KBA4010100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Thanh Hoá</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3803</ma_cqt>
+		<ma_cqthu>1056188</ma_cqthu>
+		<ma_kb>1363</ma_kb>
+		<lcn_owner>KBA4010300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Bỉm Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3804</ma_cqt>
+		<ma_cqthu>1056189</ma_cqthu>
+		<ma_kb>1362</ma_kb>
+		<lcn_owner>KBA4010500</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Sầm Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3805</ma_cqt>
+		<ma_cqthu>1056345</ma_cqthu>
+		<ma_kb>1388</ma_kb>
+		<lcn_owner>KBA4010700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mường Lát</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3806</ma_cqt>
+		<ma_cqthu>1056346</ma_cqthu>
+		<ma_kb>1383</ma_kb>
+		<lcn_owner>KBA4010900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quan Hoá</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3807</ma_cqt>
+		<ma_cqthu>1056498</ma_cqthu>
+		<ma_kb>1384</ma_kb>
+		<lcn_owner>KBA4011100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quan Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3808</ma_cqt>
+		<ma_cqthu>1056193</ma_cqthu>
+		<ma_kb>1378</ma_kb>
+		<lcn_owner>KBA4011300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bá Thước</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3809</ma_cqt>
+		<ma_cqthu>1056495</ma_cqthu>
+		<ma_kb>1372</ma_kb>
+		<lcn_owner>KBA4011500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cẩm Thủy</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3810</ma_cqt>
+		<ma_cqthu>1056344</ma_cqthu>
+		<ma_kb>1375</ma_kb>
+		<lcn_owner>KBA4011700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lang Chánh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3811</ma_cqt>
+		<ma_cqthu>1054271</ma_cqthu>
+		<ma_kb>1373</ma_kb>
+		<lcn_owner>KBA4011900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thạch Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3812</ma_cqt>
+		<ma_cqthu>1056194</ma_cqthu>
+		<ma_kb>1376</ma_kb>
+		<lcn_owner>KBA4012100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ngọc Lặc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3813</ma_cqt>
+		<ma_cqthu>1056341</ma_cqthu>
+		<ma_kb>1377</ma_kb>
+		<lcn_owner>KBA4012300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thường Xuân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3814</ma_cqt>
+		<ma_cqthu>1056340</ma_cqthu>
+		<ma_kb>1367</ma_kb>
+		<lcn_owner>KBA4012500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Như Xuân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3815</ma_cqt>
+		<ma_cqthu>1056195</ma_cqthu>
+		<ma_kb>1385</ma_kb>
+		<lcn_owner>KBA4012700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Như Thanh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3816</ma_cqt>
+		<ma_cqthu>1056190</ma_cqthu>
+		<ma_kb>1374</ma_kb>
+		<lcn_owner>KBA4012900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vĩnh Lộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3817</ma_cqt>
+		<ma_cqthu>1056339</ma_cqthu>
+		<ma_kb>1382</ma_kb>
+		<lcn_owner>KBA4013100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hà Trung</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3818</ma_cqt>
+		<ma_cqthu>1056342</ma_cqthu>
+		<ma_kb>1371</ma_kb>
+		<lcn_owner>KBA4013300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nga Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3819</ma_cqt>
+		<ma_cqthu>1056496</ma_cqthu>
+		<ma_kb>1369</ma_kb>
+		<lcn_owner>KBA4013500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Định</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3820</ma_cqt>
+		<ma_cqthu>1056347</ma_cqthu>
+		<ma_kb>1368</ma_kb>
+		<lcn_owner>KBA4013700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thọ Xuân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3821</ma_cqt>
+		<ma_cqthu>1056191</ma_cqthu>
+		<ma_kb>1381</ma_kb>
+		<lcn_owner>KBA4013900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hậu Lộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3822</ma_cqt>
+		<ma_cqthu>1056493</ma_cqthu>
+		<ma_kb>1386</ma_kb>
+		<lcn_owner>KBA4014100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thiệu Hoá</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3823</ma_cqt>
+		<ma_cqthu>1056192</ma_cqthu>
+		<ma_kb>1380</ma_kb>
+		<lcn_owner>KBA4014300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hoằng Hoá</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3824</ma_cqt>
+		<ma_cqthu>1056187</ma_cqthu>
+		<ma_kb>1364</ma_kb>
+		<lcn_owner>KBA4014500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đông Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3825</ma_cqt>
+		<ma_cqthu>1056044</ma_cqthu>
+		<ma_kb>1379</ma_kb>
+		<lcn_owner>KBA4014700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Triệu Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3826</ma_cqt>
+		<ma_cqthu>1056343</ma_cqthu>
+		<ma_kb>1366</ma_kb>
+		<lcn_owner>KBA4014900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quảng Xương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3827</ma_cqt>
+		<ma_cqthu>1056042</ma_cqthu>
+		<ma_kb>1365</ma_kb>
+		<lcn_owner>KBA4015100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nông Cống</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>3828</ma_cqt>
+		<ma_cqthu>1056492</ma_cqthu>
+		<ma_kb>1370</ma_kb>
+		<lcn_owner>KBA4015300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tĩnh Gia</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4000</ma_cqt>
+		<ma_cqthu>1056494</ma_cqthu>
+		<ma_kb>1410</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Nghệ An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4001</ma_cqt>
+		<ma_cqthu>1056501</ma_cqthu>
+		<ma_kb>1411</ma_kb>
+		<lcn_owner>KBA4030000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Nghệ An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4002</ma_cqt>
+		<ma_cqthu>1055350</ma_cqthu>
+		<ma_kb>1430</ma_kb>
+		<lcn_owner>KBA4030100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Vinh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4003</ma_cqt>
+		<ma_cqthu>1056499</ma_cqthu>
+		<ma_kb>1429</ma_kb>
+		<lcn_owner>KBA4030300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Cửa Lò</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4004</ma_cqt>
+		<ma_cqthu>1056500</ma_cqthu>
+		<ma_kb>1424</ma_kb>
+		<lcn_owner>KBA4030500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quế Phong</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4005</ma_cqt>
+		<ma_cqthu>1056497</ma_cqthu>
+		<ma_kb>1428</ma_kb>
+		<lcn_owner>KBA4030700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quỳ Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4006</ma_cqt>
+		<ma_cqthu>1055356</ma_cqthu>
+		<ma_kb>1427</ma_kb>
+		<lcn_owner>KBA4030900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kỳ Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4007</ma_cqt>
+		<ma_cqthu>1055353</ma_cqthu>
+		<ma_kb>1423</ma_kb>
+		<lcn_owner>KBA4031100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quỳ Hợp</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4008</ma_cqt>
+		<ma_cqthu>1055354</ma_cqthu>
+		<ma_kb>1421</ma_kb>
+		<lcn_owner>KBA4031300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nghĩa Đàn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4009</ma_cqt>
+		<ma_cqthu>1083882</ma_cqthu>
+		<ma_kb>1473</ma_kb>
+		<lcn_owner>KBA4031400</lcn_owner>
+		<ten_cqt>Chi cục Thuế TX Thái Hoà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4010</ma_cqt>
+		<ma_cqthu>1055351</ma_cqthu>
+		<ma_kb>1426</ma_kb>
+		<lcn_owner>KBA4031500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tương Dương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4011</ma_cqt>
+		<ma_cqthu>1055352</ma_cqthu>
+		<ma_kb>1414</ma_kb>
+		<lcn_owner>KBA4031700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quỳnh Lưu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4012</ma_cqt>
+		<ma_cqthu>1055816</ma_cqthu>
+		<ma_kb>1422</ma_kb>
+		<lcn_owner>KBA4031900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Kỳ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4013</ma_cqt>
+		<ma_cqthu>1055817</ma_cqthu>
+		<ma_kb>1425</ma_kb>
+		<lcn_owner>KBA4032100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Con Cuông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4014</ma_cqt>
+		<ma_cqthu>1055357</ma_cqthu>
+		<ma_kb>1413</ma_kb>
+		<lcn_owner>KBA4032300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Yên Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4015</ma_cqt>
+		<ma_cqthu>1055358</ma_cqthu>
+		<ma_kb>1412</ma_kb>
+		<lcn_owner>KBA4032500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Diễn Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4016</ma_cqt>
+		<ma_cqthu>1055355</ma_cqthu>
+		<ma_kb>1419</ma_kb>
+		<lcn_owner>KBA4032700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Anh Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4017</ma_cqt>
+		<ma_cqthu>1055823</ma_cqthu>
+		<ma_kb>1420</ma_kb>
+		<lcn_owner>KBA4032900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đô Lương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4018</ma_cqt>
+		<ma_cqthu>1055820</ma_cqthu>
+		<ma_kb>1418</ma_kb>
+		<lcn_owner>KBA4033100</lcn_owner>
+		<ten_cqt>Chi cụcThuế huyện Thanh Chương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4019</ma_cqt>
+		<ma_cqthu>1055821</ma_cqthu>
+		<ma_kb>1415</ma_kb>
+		<lcn_owner>KBA4033300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nghi Lộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4020</ma_cqt>
+		<ma_cqthu>1055818</ma_cqthu>
+		<ma_kb>1417</ma_kb>
+		<lcn_owner>KBA4033500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nam Đàn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4021</ma_cqt>
+		<ma_cqthu>1055819</ma_cqthu>
+		<ma_kb>1416</ma_kb>
+		<lcn_owner>KBA4033700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hưng Nguyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4200</ma_cqt>
+		<ma_cqthu>1055970</ma_cqthu>
+		<ma_kb>1460</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Hà Tĩnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4201</ma_cqt>
+		<ma_cqthu>1055971</ma_cqthu>
+		<ma_kb>1461</ma_kb>
+		<lcn_owner>KBA4050000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Hà Tĩnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4202</ma_cqt>
+		<ma_cqthu>1055824</ma_cqthu>
+		<ma_kb>1461</ma_kb>
+		<lcn_owner>KBA4050100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố  Hà Tĩnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4203</ma_cqt>
+		<ma_cqthu>1055825</ma_cqthu>
+		<ma_kb>1470</ma_kb>
+		<lcn_owner>KBA4050300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Hồng Lĩnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4204</ma_cqt>
+		<ma_cqthu>1055822</ma_cqthu>
+		<ma_kb>1465</ma_kb>
+		<lcn_owner>KBA4050500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nghi Xuân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4205</ma_cqt>
+		<ma_cqthu>1055975</ma_cqthu>
+		<ma_kb>1464</ma_kb>
+		<lcn_owner>KBA4050700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đức Thọ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4206</ma_cqt>
+		<ma_cqthu>1055976</ma_cqthu>
+		<ma_kb>1462</ma_kb>
+		<lcn_owner>KBA4050900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hương Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4207</ma_cqt>
+		<ma_cqthu>1055973</ma_cqthu>
+		<ma_kb>1466</ma_kb>
+		<lcn_owner>KBA4051100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Can Lộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4208</ma_cqt>
+		<ma_cqthu>1055974</ma_cqthu>
+		<ma_kb>1467</ma_kb>
+		<lcn_owner>KBA4051300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thạch Hà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4209</ma_cqt>
+		<ma_cqthu>1055979</ma_cqthu>
+		<ma_kb>1468</ma_kb>
+		<lcn_owner>KBA4051500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cẩm Xuyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4210</ma_cqt>
+		<ma_cqthu>1056064</ma_cqthu>
+		<ma_kb>1463</ma_kb>
+		<lcn_owner>KBA4051700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hương Khê</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4211</ma_cqt>
+		<ma_cqthu>1055977</ma_cqthu>
+		<ma_kb>1469</ma_kb>
+		<lcn_owner>KBA4051900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kỳ Anh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4212</ma_cqt>
+		<ma_cqthu>1055972</ma_cqthu>
+		<ma_kb>1471</ma_kb>
+		<lcn_owner>KBA4052100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vũ Quang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4213</ma_cqt>
+		<ma_cqthu>1028843</ma_cqthu>
+		<ma_kb>1472</ma_kb>
+		<lcn_owner>KBA4052300</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Lộc Hà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4400</ma_cqt>
+		<ma_cqthu>1055978</ma_cqthu>
+		<ma_kb>1510</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Quảng Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4401</ma_cqt>
+		<ma_cqthu>1056125</ma_cqthu>
+		<ma_kb>1511</ma_kb>
+		<lcn_owner>KBA4070000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Quảng Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4402</ma_cqt>
+		<ma_cqthu>1056126</ma_cqthu>
+		<ma_kb>1518</ma_kb>
+		<lcn_owner>KBA4070100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Đồng Hới</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4403</ma_cqt>
+		<ma_cqthu>1056123</ma_cqthu>
+		<ma_kb>1512</ma_kb>
+		<lcn_owner>KBA4070300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tuyên Hoá</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4404</ma_cqt>
+		<ma_cqthu>1056124</ma_cqthu>
+		<ma_kb>1513</ma_kb>
+		<lcn_owner>KBA4070500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Minh Hoá</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4405</ma_cqt>
+		<ma_cqthu>1056216</ma_cqthu>
+		<ma_kb>1514</ma_kb>
+		<lcn_owner>KBA4070700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quảng Trạch</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4406</ma_cqt>
+		<ma_cqthu>1056129</ma_cqthu>
+		<ma_kb>1515</ma_kb>
+		<lcn_owner>KBA4070900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bố Trạch</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4407</ma_cqt>
+		<ma_cqthu>1056130</ma_cqthu>
+		<ma_kb>1517</ma_kb>
+		<lcn_owner>KBA4071100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quảng Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4408</ma_cqt>
+		<ma_cqthu>1056127</ma_cqthu>
+		<ma_kb>1516</ma_kb>
+		<lcn_owner>KBA4071300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lệ Thuỷ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4500</ma_cqt>
+		<ma_cqthu>1056128</ma_cqthu>
+		<ma_kb>1560</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Quảng Trị</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4501</ma_cqt>
+		<ma_cqthu>1056278</ma_cqthu>
+		<ma_kb>1561</ma_kb>
+		<lcn_owner>KBA4090000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Quảng Trị</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4502</ma_cqt>
+		<ma_cqthu>1056217</ma_cqthu>
+		<ma_kb>1561</ma_kb>
+		<lcn_owner>KBA4090100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Đông Hà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4503</ma_cqt>
+		<ma_cqthu>1056276</ma_cqthu>
+		<ma_kb>1565</ma_kb>
+		<lcn_owner>KBA4090300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Quảng Trị</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4504</ma_cqt>
+		<ma_cqthu>1056215</ma_cqthu>
+		<ma_kb>1563</ma_kb>
+		<lcn_owner>KBA4090500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vĩnh Linh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4505</ma_cqt>
+		<ma_cqthu>1056368</ma_cqthu>
+		<ma_kb>1564</ma_kb>
+		<lcn_owner>KBA4090700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Gio Linh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4506</ma_cqt>
+		<ma_cqthu>1056279</ma_cqthu>
+		<ma_kb>1568</ma_kb>
+		<lcn_owner>KBA4090900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cam Lộ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4507</ma_cqt>
+		<ma_cqthu>1056280</ma_cqthu>
+		<ma_kb>1566</ma_kb>
+		<lcn_owner>KBA4091100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Triệu Phong</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4508</ma_cqt>
+		<ma_cqthu>1056277</ma_cqthu>
+		<ma_kb>1567</ma_kb>
+		<lcn_owner>KBA4091300</lcn_owner>
+		<ten_cqt>Chi cục thuê huyện Hải Lăng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4509</ma_cqt>
+		<ma_cqthu>1056371</ma_cqthu>
+		<ma_kb>1562</ma_kb>
+		<lcn_owner>KBA4091500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hướng Hóa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4510</ma_cqt>
+		<ma_cqthu>1056372</ma_cqthu>
+		<ma_kb>1569</ma_kb>
+		<lcn_owner>KBA4091700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đa Krông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4511</ma_cqt>
+		<ma_cqthu>1068290</ma_cqthu>
+		<ma_kb>1519</ma_kb>
+		<lcn_owner>KBA4091900</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Đảo Cồn Cỏ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4600</ma_cqt>
+		<ma_cqthu>1056369</ma_cqthu>
+		<ma_kb>1610</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục Thuế Tỉnh Thừa Thiên - Huế</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4601</ma_cqt>
+		<ma_cqthu>1056370</ma_cqthu>
+		<ma_kb>1611</ma_kb>
+		<lcn_owner>KBA4110000</lcn_owner>
+		<ten_cqt>VP. Cục thuế Thừa Thiên - Huế</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4602</ma_cqt>
+		<ma_cqthu>1056281</ma_cqthu>
+		<ma_kb>1620</ma_kb>
+		<lcn_owner>KBA4110100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Huế</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4603</ma_cqt>
+		<ma_cqthu>1056435</ma_cqthu>
+		<ma_kb>1614</ma_kb>
+		<lcn_owner>KBA4110300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phong Điền</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4604</ma_cqt>
+		<ma_cqthu>1056436</ma_cqthu>
+		<ma_kb>1613</ma_kb>
+		<lcn_owner>KBA4110500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quảng Điền</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4605</ma_cqt>
+		<ma_cqthu>1056433</ma_cqthu>
+		<ma_kb>1612</ma_kb>
+		<lcn_owner>KBA4110700</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Hương Trà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4606</ma_cqt>
+		<ma_cqthu>1056434</ma_cqthu>
+		<ma_kb>1618</ma_kb>
+		<lcn_owner>KBA4110900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Vang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4607</ma_cqt>
+		<ma_cqthu>1054248</ma_cqthu>
+		<ma_kb>1619</ma_kb>
+		<lcn_owner>KBA4111100</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Hương Thuỷ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4608</ma_cqt>
+		<ma_cqthu>1054249</ma_cqthu>
+		<ma_kb>1615</ma_kb>
+		<lcn_owner>KBA4111300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Lộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4609</ma_cqt>
+		<ma_cqthu>1054246</ma_cqthu>
+		<ma_kb>1617</ma_kb>
+		<lcn_owner>KBA4111500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện A Lưới</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4610</ma_cqt>
+		<ma_cqthu>1054247</ma_cqthu>
+		<ma_kb>1616</ma_kb>
+		<lcn_owner>KBA4111700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nam Đông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4800</ma_cqt>
+		<ma_cqthu>1054323</ma_cqthu>
+		<ma_kb>0160</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế T.Phố Đà Nẵng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4801</ma_cqt>
+		<ma_cqthu>1054252</ma_cqthu>
+		<ma_kb>0161</ma_kb>
+		<lcn_owner>KBA5010000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế TP. Đà Nẵng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4802</ma_cqt>
+		<ma_cqthu>1054253</ma_cqthu>
+		<ma_kb>0167</ma_kb>
+		<lcn_owner>KBA5010100</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Hải Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4803</ma_cqt>
+		<ma_cqthu>1054250</ma_cqthu>
+		<ma_kb>0163</ma_kb>
+		<lcn_owner>KBA5010300</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Thanh Khê</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4804</ma_cqt>
+		<ma_cqthu>1054251</ma_cqthu>
+		<ma_kb>0164</ma_kb>
+		<lcn_owner>KBA5010500</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Sơn Trà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4805</ma_cqt>
+		<ma_cqthu>1054327</ma_cqthu>
+		<ma_kb>0165</ma_kb>
+		<lcn_owner>KBA5010700</lcn_owner>
+		<ten_cqt>Chi cục thuế quận Ngũ Hành Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4806</ma_cqt>
+		<ma_cqthu>1054324</ma_cqthu>
+		<ma_kb>0166</ma_kb>
+		<lcn_owner>KBA5010900</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Liên Chiểu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4807</ma_cqt>
+		<ma_cqthu>1054325</ma_cqthu>
+		<ma_kb>0162</ma_kb>
+		<lcn_owner>KBA5011100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hoà Vang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4808</ma_cqt>
+		<ma_cqthu>1007286</ma_cqthu>
+		<ma_kb>0168</ma_kb>
+		<lcn_owner>KBA5011500</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Cẩm Lệ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4900</ma_cqt>
+		<ma_cqthu>1054254</ma_cqthu>
+		<ma_kb>1960</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Quảng Nam</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4901</ma_cqt>
+		<ma_cqthu>1054322</ma_cqthu>
+		<ma_kb>1961</ma_kb>
+		<lcn_owner>KBA5030000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Quảng Nam</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4902</ma_cqt>
+		<ma_cqthu>1054330</ma_cqthu>
+		<ma_kb>1978</ma_kb>
+		<lcn_owner>KBA5030100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Tam Kỳ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4903</ma_cqt>
+		<ma_cqthu>1054331</ma_cqthu>
+		<ma_kb>1962</ma_kb>
+		<lcn_owner>KBA5030300</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Hội An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4904</ma_cqt>
+		<ma_cqthu>1054329</ma_cqthu>
+		<ma_kb>1967</ma_kb>
+		<lcn_owner>KBA5030700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đại Lộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4905</ma_cqt>
+		<ma_cqthu>1054326</ma_cqthu>
+		<ma_kb>1963</ma_kb>
+		<lcn_owner>KBA5030900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Điện Bàn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4906</ma_cqt>
+		<ma_cqthu>1054307</ma_cqthu>
+		<ma_kb>1974</ma_kb>
+		<lcn_owner>KBA5031100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Duy Xuyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4907</ma_cqt>
+		<ma_cqthu>1054304</ma_cqthu>
+		<ma_kb>1971</ma_kb>
+		<lcn_owner>KBA5031300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nam Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4908</ma_cqt>
+		<ma_cqthu>1054305</ma_cqthu>
+		<ma_kb>1966</ma_kb>
+		<lcn_owner>KBA5031500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thăng Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4909</ma_cqt>
+		<ma_cqthu>1054302</ma_cqthu>
+		<ma_kb>1964</ma_kb>
+		<lcn_owner>KBA5031700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Quế Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4910</ma_cqt>
+		<ma_cqthu>1083879</ma_cqthu>
+		<ma_kb>1979</ma_kb>
+		<lcn_owner>KBA5031800</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nông Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4911</ma_cqt>
+		<ma_cqthu>1054303</ma_cqthu>
+		<ma_kb>1973</ma_kb>
+		<lcn_owner>KBA5031900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hiệp Đức</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4912</ma_cqt>
+		<ma_cqthu>1054310</ma_cqthu>
+		<ma_kb>1968</ma_kb>
+		<lcn_owner>KBA5032100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tiên Phước</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4913</ma_cqt>
+		<ma_cqthu>1054358</ma_cqthu>
+		<ma_kb>1972</ma_kb>
+		<lcn_owner>KBA5032300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phước Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4914</ma_cqt>
+		<ma_cqthu>1054308</ma_cqthu>
+		<ma_kb>1965</ma_kb>
+		<lcn_owner>KBA5032500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Núi Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4915</ma_cqt>
+		<ma_cqthu>1014996</ma_cqthu>
+		<ma_kb>1975</ma_kb>
+		<lcn_owner>KBA5032900</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Nam Trà My</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4916</ma_cqt>
+		<ma_cqthu>1025891</ma_cqthu>
+		<ma_kb>1976</ma_kb>
+		<lcn_owner>KBA5030400</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tây Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4917</ma_cqt>
+		<ma_cqthu>1045321</ma_cqthu>
+		<ma_kb>1977</ma_kb>
+		<lcn_owner>KBA5030200</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Phú Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4918</ma_cqt>
+		<ma_cqthu>1054309</ma_cqthu>
+		<ma_kb>1969</ma_kb>
+		<lcn_owner>KBA5032700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bắc Trà My</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>4919</ma_cqt>
+		<ma_cqthu>1054328</ma_cqthu>
+		<ma_kb>1970</ma_kb>
+		<lcn_owner>KBA5030500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đông Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5100</ma_cqt>
+		<ma_cqthu>1054306</ma_cqthu>
+		<ma_kb>2110</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Quảng Ngãi</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5101</ma_cqt>
+		<ma_cqthu>1054306</ma_cqthu>
+		<ma_kb>2111</ma_kb>
+		<lcn_owner>KBA5050000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Quảng Ngãi</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5102</ma_cqt>
+		<ma_cqthu>1054362</ma_cqthu>
+		<ma_kb>2111</ma_kb>
+		<lcn_owner>KBA5050100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố  Quảng Ngãi</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5103</ma_cqt>
+		<ma_cqthu>1054359</ma_cqthu>
+		<ma_kb>2122</ma_kb>
+		<lcn_owner>KBA5050300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lý Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5104</ma_cqt>
+		<ma_cqthu>1054360</ma_cqthu>
+		<ma_kb>2112</ma_kb>
+		<lcn_owner>KBA5050500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bình Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5105</ma_cqt>
+		<ma_cqthu>1054365</ma_cqthu>
+		<ma_kb>2113</ma_kb>
+		<lcn_owner>KBA5050700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Trà Bồng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5106</ma_cqt>
+		<ma_cqthu>1072494</ma_cqthu>
+		<ma_kb>2124</ma_kb>
+		<lcn_owner>KBA5050800</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Tây Trà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5107</ma_cqt>
+		<ma_cqthu>1054366</ma_cqthu>
+		<ma_kb>2114</ma_kb>
+		<lcn_owner>KBA5050900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sơn Tịnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5108</ma_cqt>
+		<ma_cqthu>1054363</ma_cqthu>
+		<ma_kb>2123</ma_kb>
+		<lcn_owner>KBA5051100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sơn Tây</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5109</ma_cqt>
+		<ma_cqthu>1054364</ma_cqthu>
+		<ma_kb>2115</ma_kb>
+		<lcn_owner>KBA5051300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sơn Hà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5110</ma_cqt>
+		<ma_cqthu>1055801</ma_cqthu>
+		<ma_kb>2116</ma_kb>
+		<lcn_owner>KBA5051500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tư Nghĩa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5111</ma_cqt>
+		<ma_cqthu>1055802</ma_cqthu>
+		<ma_kb>2117</ma_kb>
+		<lcn_owner>KBA5051700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nghĩa Hành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5112</ma_cqt>
+		<ma_cqthu>1055799</ma_cqthu>
+		<ma_kb>2119</ma_kb>
+		<lcn_owner>KBA5051900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Minh Long</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5113</ma_cqt>
+		<ma_cqthu>1054272</ma_cqthu>
+		<ma_kb>2118</ma_kb>
+		<lcn_owner>KBA5052100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mộ Đức</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5114</ma_cqt>
+		<ma_cqthu>1055800</ma_cqthu>
+		<ma_kb>2120</ma_kb>
+		<lcn_owner>KBA5052300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đức Phổ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5115</ma_cqt>
+		<ma_cqthu>1055950</ma_cqthu>
+		<ma_kb>2121</ma_kb>
+		<lcn_owner>KBA5052500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ba Tơ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5200</ma_cqt>
+		<ma_cqthu>1055805</ma_cqthu>
+		<ma_kb>2010</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Bình định</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5201</ma_cqt>
+		<ma_cqthu>1055806</ma_cqthu>
+		<ma_kb>2011</ma_kb>
+		<lcn_owner>KBA5070000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Bình Định</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5202</ma_cqt>
+		<ma_cqthu>1055803</ma_cqthu>
+		<ma_kb>2022</ma_kb>
+		<lcn_owner>KBA5070100</lcn_owner>
+		<ten_cqt>Chi cục Thuế T.Phố Quy Nhơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5203</ma_cqt>
+		<ma_cqthu>1055804</ma_cqthu>
+		<ma_kb>2013</ma_kb>
+		<lcn_owner>KBA5070300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện An Lão</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5204</ma_cqt>
+		<ma_cqthu>1055954</ma_cqthu>
+		<ma_kb>2021</ma_kb>
+		<lcn_owner>KBA5070500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hoài Nhơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5205</ma_cqt>
+		<ma_cqthu>1055951</ma_cqthu>
+		<ma_kb>2012</ma_kb>
+		<lcn_owner>KBA5070700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hoài Ân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5206</ma_cqt>
+		<ma_cqthu>1055952</ma_cqthu>
+		<ma_kb>2014</ma_kb>
+		<lcn_owner>KBA5070900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phù Mỹ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5207</ma_cqt>
+		<ma_cqthu>1055807</ma_cqthu>
+		<ma_kb>2018</ma_kb>
+		<lcn_owner>KBA5071100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vĩnh Thạnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5208</ma_cqt>
+		<ma_cqthu>1055958</ma_cqthu>
+		<ma_kb>2015</ma_kb>
+		<lcn_owner>KBA5071300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phù Cát</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5209</ma_cqt>
+		<ma_cqthu>1055955</ma_cqthu>
+		<ma_kb>2017</ma_kb>
+		<lcn_owner>KBA5071500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tây Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5210</ma_cqt>
+		<ma_cqthu>1055956</ma_cqthu>
+		<ma_kb>2016</ma_kb>
+		<lcn_owner>KBA5071700</lcn_owner>
+		<ten_cqt>Chi cục thuế thị xã An Nhơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5211</ma_cqt>
+		<ma_cqthu>1055953</ma_cqthu>
+		<ma_kb>2020</ma_kb>
+		<lcn_owner>KBA5071900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tuy Phước</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5212</ma_cqt>
+		<ma_cqthu>1056105</ma_cqthu>
+		<ma_kb>2019</ma_kb>
+		<lcn_owner>KBA5072100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vân Canh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5400</ma_cqt>
+		<ma_cqthu>1056106</ma_cqthu>
+		<ma_kb>2160</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Phú Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5401</ma_cqt>
+		<ma_cqthu>1056045</ma_cqthu>
+		<ma_kb>2161</ma_kb>
+		<lcn_owner>KBA5090000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Phú Yên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5402</ma_cqt>
+		<ma_cqthu>1056104</ma_cqthu>
+		<ma_kb>2170</ma_kb>
+		<lcn_owner>KBA5090100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Tuy Hoà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5403</ma_cqt>
+		<ma_cqthu>1055957</ma_cqthu>
+		<ma_kb>2162</ma_kb>
+		<lcn_owner>KBA5090300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đồng Xuân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5404</ma_cqt>
+		<ma_cqthu>1056109</ma_cqthu>
+		<ma_kb>2164</ma_kb>
+		<lcn_owner>KBA5090500</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Sông Cầu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5405</ma_cqt>
+		<ma_cqthu>1056110</ma_cqthu>
+		<ma_kb>2163</ma_kb>
+		<lcn_owner>KBA5090700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tuy An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5406</ma_cqt>
+		<ma_cqthu>1056107</ma_cqthu>
+		<ma_kb>2166</ma_kb>
+		<lcn_owner>KBA5090900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sơn Hoà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5407</ma_cqt>
+		<ma_cqthu>1004874</ma_cqthu>
+		<ma_kb>2168</ma_kb>
+		<lcn_owner>KBA5091100</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Đông Hoà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5408</ma_cqt>
+		<ma_cqthu>1004772</ma_cqthu>
+		<ma_kb>2169</ma_kb>
+		<lcn_owner>KBA5091200</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Tây Hoà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5409</ma_cqt>
+		<ma_cqthu>1056197</ma_cqthu>
+		<ma_kb>2165</ma_kb>
+		<lcn_owner>KBA5091300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sông Hinh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5410</ma_cqt>
+		<ma_cqthu>1056184</ma_cqthu>
+		<ma_kb>2167</ma_kb>
+		<lcn_owner>KBA5091500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Hòa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5600</ma_cqt>
+		<ma_cqthu>1056198</ma_cqthu>
+		<ma_kb>2060</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Khánh Hòa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5601</ma_cqt>
+		<ma_cqthu>1056111</ma_cqthu>
+		<ma_kb>2061</ma_kb>
+		<lcn_owner>KBA5110000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Khánh Hòa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5602</ma_cqt>
+		<ma_cqthu>1056196</ma_cqthu>
+		<ma_kb>2068</ma_kb>
+		<lcn_owner>KBA5110100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Nha Trang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5603</ma_cqt>
+		<ma_cqthu>1056259</ma_cqthu>
+		<ma_kb>2062</ma_kb>
+		<lcn_owner>KBA5110300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vạn Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5604</ma_cqt>
+		<ma_cqthu>1056256</ma_cqthu>
+		<ma_kb>2067</ma_kb>
+		<lcn_owner>KBA5110500</lcn_owner>
+		<ten_cqt>Chi cục thuế thị xã Ninh Hoà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5605</ma_cqt>
+		<ma_cqthu>1056257</ma_cqthu>
+		<ma_kb>2065</ma_kb>
+		<lcn_owner>KBA5110700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Diên Khánh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5606</ma_cqt>
+		<ma_cqthu>1056258</ma_cqthu>
+		<ma_kb>2063</ma_kb>
+		<lcn_owner>KBA5110900</lcn_owner>
+		<ten_cqt>Chi Cục Thuế TP Cam Ranh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5607</ma_cqt>
+		<ma_cqthu>1056351</ma_cqthu>
+		<ma_kb>2066</ma_kb>
+		<lcn_owner>KBA5111100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Khánh Vĩnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5608</ma_cqt>
+		<ma_cqthu>1056348</ma_cqthu>
+		<ma_kb>2064</ma_kb>
+		<lcn_owner>KBA5111300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Khánh Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5609</ma_cqt>
+		<ma_cqthu>1028458</ma_cqthu>
+		<ma_kb>2069</ma_kb>
+		<lcn_owner>KBA5111700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cam Lâm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5800</ma_cqt>
+		<ma_cqthu>1054221</ma_cqthu>
+		<ma_kb>2210</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Ninh Thuận</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5801</ma_cqt>
+		<ma_cqthu>1054222</ma_cqthu>
+		<ma_kb>2211</ma_kb>
+		<lcn_owner>KBA7050000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Ninh Thuận</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5802</ma_cqt>
+		<ma_cqthu>1054255</ma_cqthu>
+		<ma_kb>2211</ma_kb>
+		<lcn_owner>KBA7050100</lcn_owner>
+		<ten_cqt>Chi cục thuế Phan Rang - Tháp Chàm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5803</ma_cqt>
+		<ma_cqthu>1054256</ma_cqthu>
+		<ma_kb>2212</ma_kb>
+		<lcn_owner>KBA7050300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ninh Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5804</ma_cqt>
+		<ma_cqthu>1054226</ma_cqthu>
+		<ma_kb>2213</ma_kb>
+		<lcn_owner>KBA7050500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ninh Hải</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5805</ma_cqt>
+		<ma_cqthu>1054259</ma_cqthu>
+		<ma_kb>2214</ma_kb>
+		<lcn_owner>KBA7050700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ninh Phước</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5806</ma_cqt>
+		<ma_cqthu>1054225</ma_cqthu>
+		<ma_kb>2215</ma_kb>
+		<lcn_owner>KBA7050900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bác ái</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5807</ma_cqt>
+		<ma_cqthu>1074596</ma_cqthu>
+		<ma_kb>2216</ma_kb>
+		<lcn_owner>KBA7051100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thuận Bắc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>5808</ma_cqt>
+		<ma_cqthu>1101112</ma_cqthu>
+		<ma_kb>2218</ma_kb>
+		<lcn_owner>KBA7051300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thuận Nam</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6000</ma_cqt>
+		<ma_cqthu>1054336</ma_cqthu>
+		<ma_kb>1660</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Bình Thuận</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6001</ma_cqt>
+		<ma_cqthu>1054337</ma_cqthu>
+		<ma_kb>1661</ma_kb>
+		<lcn_owner>KBA7150000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Bình Thuận</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6002</ma_cqt>
+		<ma_cqthu>1054334</ma_cqthu>
+		<ma_kb>1661</ma_kb>
+		<lcn_owner>KBA7150100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Phan Thiết</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6003</ma_cqt>
+		<ma_cqthu>1054335</ma_cqthu>
+		<ma_kb>1665</ma_kb>
+		<lcn_owner>KBA7150300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tuy Phong</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6004</ma_cqt>
+		<ma_cqthu>1054371</ma_cqthu>
+		<ma_kb>1663</ma_kb>
+		<lcn_owner>KBA7150500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bắc Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6005</ma_cqt>
+		<ma_cqthu>1054368</ma_cqthu>
+		<ma_kb>1666</ma_kb>
+		<lcn_owner>KBA7150700</lcn_owner>
+		<ten_cqt>Chi cụcThuếHuyện Hàm Thuận Bắc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6006</ma_cqt>
+		<ma_cqthu>1054369</ma_cqthu>
+		<ma_kb>1667</ma_kb>
+		<lcn_owner>KBA7150900</lcn_owner>
+		<ten_cqt>Chi cụcThuếHuyện Hàm Thuận Nam</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6007</ma_cqt>
+		<ma_cqthu>1054338</ma_cqthu>
+		<ma_kb>1669</ma_kb>
+		<lcn_owner>KBA7151100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tánh Linh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6008</ma_cqt>
+		<ma_cqthu>1066973</ma_cqthu>
+		<ma_kb>1670</ma_kb>
+		<lcn_owner>KBA7151300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Lagi</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6009</ma_cqt>
+		<ma_cqthu>1055722</ma_cqthu>
+		<ma_kb>1668</ma_kb>
+		<lcn_owner>KBA7151400</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hàm Tân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6010</ma_cqt>
+		<ma_cqthu>1055719</ma_cqthu>
+		<ma_kb>1662</ma_kb>
+		<lcn_owner>KBA7151500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đức Linh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6011</ma_cqt>
+		<ma_cqthu>1055720</ma_cqthu>
+		<ma_kb>1664</ma_kb>
+		<lcn_owner>KBA7151700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Quý</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6200</ma_cqt>
+		<ma_cqthu>1056349</ma_cqthu>
+		<ma_kb>3010</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Kon Tum</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6201</ma_cqt>
+		<ma_cqthu>1056260</ma_cqthu>
+		<ma_kb>3011</ma_kb>
+		<lcn_owner>KBA6010000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh KonTum</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6202</ma_cqt>
+		<ma_cqthu>1056261</ma_cqthu>
+		<ma_kb>3011</ma_kb>
+		<lcn_owner>KBA6010100</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Kon Tum</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6203</ma_cqt>
+		<ma_cqthu>1056413</ma_cqthu>
+		<ma_kb>3012</ma_kb>
+		<lcn_owner>KBA6010300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đắk Glei</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6204</ma_cqt>
+		<ma_cqthu>1056414</ma_cqthu>
+		<ma_kb>3016</ma_kb>
+		<lcn_owner>KBA6010500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ngọc Hồi</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6205</ma_cqt>
+		<ma_cqthu>1056352</ma_cqthu>
+		<ma_kb>3013</ma_kb>
+		<lcn_owner>KBA6010700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đắk Tô</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6206</ma_cqt>
+		<ma_cqthu>1056353</ma_cqthu>
+		<ma_kb>3015</ma_kb>
+		<lcn_owner>KBA6010800</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kon Rẫy</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6207</ma_cqt>
+		<ma_cqthu>1056272</ma_cqthu>
+		<ma_kb>3018</ma_kb>
+		<lcn_owner>KBA6010900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kon Plông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6208</ma_cqt>
+		<ma_cqthu>1056350</ma_cqthu>
+		<ma_kb>3017</ma_kb>
+		<lcn_owner>KBA6011100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đák Hà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6209</ma_cqt>
+		<ma_cqthu>1056505</ma_cqthu>
+		<ma_kb>3014</ma_kb>
+		<lcn_owner>KBA6011300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Sa Thầy</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6210</ma_cqt>
+		<ma_cqthu>1042302</ma_cqthu>
+		<ma_kb>3019</ma_kb>
+		<lcn_owner>KBA6011500</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Tu Mơ Rông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6400</ma_cqt>
+		<ma_cqthu>1056502</ma_cqthu>
+		<ma_kb>2910</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Gia Lai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6401</ma_cqt>
+		<ma_cqthu>1056503</ma_cqthu>
+		<ma_kb>2928</ma_kb>
+		<lcn_owner>KBA6030000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Gia Lai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6402</ma_cqt>
+		<ma_cqthu>1056415</ma_cqthu>
+		<ma_kb>2911</ma_kb>
+		<lcn_owner>KBA6030100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Pleiku</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6403</ma_cqt>
+		<ma_cqthu>1056416</ma_cqthu>
+		<ma_kb>2915</ma_kb>
+		<lcn_owner>KBA6030300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện KBang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6404</ma_cqt>
+		<ma_cqthu>1055272</ma_cqthu>
+		<ma_kb>2923</ma_kb>
+		<lcn_owner>KBA6030500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mang Yang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6405</ma_cqt>
+		<ma_cqthu>1056506</ma_cqthu>
+		<ma_kb>2922</ma_kb>
+		<lcn_owner>KBA6030700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Chư Păh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6406</ma_cqt>
+		<ma_cqthu>1056507</ma_cqthu>
+		<ma_kb>2914</ma_kb>
+		<lcn_owner>KBA6030900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ia Grai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6407</ma_cqt>
+		<ma_cqthu>1056504</ma_cqthu>
+		<ma_kb>2917</ma_kb>
+		<lcn_owner>KBA6031100</lcn_owner>
+		<ten_cqt>Chi cục thuế thị xã An Khê</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6408</ma_cqt>
+		<ma_cqthu>1055359</ma_cqthu>
+		<ma_kb>2920</ma_kb>
+		<lcn_owner>KBA6031300</lcn_owner>
+		<ten_cqt>Chi cục thuế Kông Chro</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6409</ma_cqt>
+		<ma_cqthu>1055360</ma_cqthu>
+		<ma_kb>2921</ma_kb>
+		<lcn_owner>KBA6031500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đức Cơ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6410</ma_cqt>
+		<ma_cqthu>1055273</ma_cqthu>
+		<ma_kb>2912</ma_kb>
+		<lcn_owner>KBA6031700</lcn_owner>
+		<ten_cqt>Chi cục thuế Chư Prông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6411</ma_cqt>
+		<ma_cqthu>1055274</ma_cqthu>
+		<ma_kb>2913</ma_kb>
+		<lcn_owner>KBA6031900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Chư Sê</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6412</ma_cqt>
+		<ma_cqthu>1020397</ma_cqthu>
+		<ma_kb>2924</ma_kb>
+		<lcn_owner>KBA6032000</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ia Pa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6413</ma_cqt>
+		<ma_cqthu>1055366</ma_cqthu>
+		<ma_kb>2919</ma_kb>
+		<lcn_owner>KBA6032100</lcn_owner>
+		<ten_cqt>Chi cục thuế thị xã Ayun Pa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6414</ma_cqt>
+		<ma_cqthu>1055363</ma_cqthu>
+		<ma_kb>2918</ma_kb>
+		<lcn_owner>KBA6032300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Krông Pa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6415</ma_cqt>
+		<ma_cqthu>1056508</ma_cqthu>
+		<ma_kb>2916</ma_kb>
+		<lcn_owner>KBA6032500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đắk Đoa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6416</ma_cqt>
+		<ma_cqthu>1073299</ma_cqthu>
+		<ma_kb>2925</ma_kb>
+		<lcn_owner>KBA6032700</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Đak Pơ Tỉnh Gia Lai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6417</ma_cqt>
+		<ma_cqthu>1028838</ma_cqthu>
+		<ma_kb>2926</ma_kb>
+		<lcn_owner>KBA6032900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Thiện</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6418</ma_cqt>
+		<ma_cqthu>1102411</ma_cqthu>
+		<ma_kb>2927</ma_kb>
+		<lcn_owner>KBA6033100</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Chư Pưh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6600</ma_cqt>
+		<ma_cqthu>1055364</ma_cqthu>
+		<ma_kb>2960</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Đắk Lắk</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6601</ma_cqt>
+		<ma_cqthu>1055361</ma_cqthu>
+		<ma_kb>2961</ma_kb>
+		<lcn_owner>KBA6050000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Đắk Lắk</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6602</ma_cqt>
+		<ma_cqthu>1055362</ma_cqthu>
+		<ma_kb>2974</ma_kb>
+		<lcn_owner>KBA6050100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP. Buôn Ma Thuột</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6603</ma_cqt>
+		<ma_cqthu>1055827</ma_cqthu>
+		<ma_kb>2971</ma_kb>
+		<lcn_owner>KBA6050300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ea H'leo</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6604</ma_cqt>
+		<ma_cqthu>1055828</ma_cqthu>
+		<ma_kb>2965</ma_kb>
+		<lcn_owner>KBA6050500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ea Súp</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6605</ma_cqt>
+		<ma_cqthu>1055738</ma_cqthu>
+		<ma_kb>2970</ma_kb>
+		<lcn_owner>KBA6050700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Krông Năng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6606</ma_cqt>
+		<ma_cqthu>1055826</ma_cqthu>
+		<ma_kb>2969</ma_kb>
+		<lcn_owner>KBA6053900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Krông Buk</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6607</ma_cqt>
+		<ma_cqthu>1055365</ma_cqthu>
+		<ma_kb>2973</ma_kb>
+		<lcn_owner>KBA6051100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Buôn Đôn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6608</ma_cqt>
+		<ma_cqthu>1055834</ma_cqthu>
+		<ma_kb>2962</ma_kb>
+		<lcn_owner>KBA6051300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cư M'gar</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6609</ma_cqt>
+		<ma_cqthu>1055831</ma_cqthu>
+		<ma_kb>2963</ma_kb>
+		<lcn_owner>KBA6051500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ea Kar</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6610</ma_cqt>
+		<ma_cqthu>1055832</ma_cqthu>
+		<ma_kb>2968</ma_kb>
+		<lcn_owner>KBA6051700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện M'Đrắk</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6611</ma_cqt>
+		<ma_cqthu>1055829</ma_cqthu>
+		<ma_kb>2972</ma_kb>
+		<lcn_owner>KBA6051900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Krông Pắc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6612</ma_cqt>
+		<ma_cqthu>1055981</ma_cqthu>
+		<ma_kb>2967</ma_kb>
+		<lcn_owner>KBA6052300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Krông A Na</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6613</ma_cqt>
+		<ma_cqthu>1055982</ma_cqthu>
+		<ma_kb>2964</ma_kb>
+		<lcn_owner>KBA6052500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Krông Bông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6614</ma_cqt>
+		<ma_cqthu>1055833</ma_cqthu>
+		<ma_kb>2966</ma_kb>
+		<lcn_owner>KBA6053100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lắk</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6615</ma_cqt>
+		<ma_cqthu>1027302</ma_cqthu>
+		<ma_kb>2975</ma_kb>
+		<lcn_owner>KBA6053700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cư Kuin</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6616</ma_cqt>
+		<ma_cqthu>1097475</ma_cqthu>
+		<ma_kb>2976</ma_kb>
+		<lcn_owner>KBA6050900</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Buôn Hồ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6700</ma_cqt>
+		<ma_cqthu>1059640</ma_cqthu>
+		<ma_kb>3060</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế Tỉnh Đắk Nông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6701</ma_cqt>
+		<ma_cqthu>1061607</ma_cqthu>
+		<ma_kb>3061</ma_kb>
+		<lcn_owner>KBA6060000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Tỉnh Đắk Nông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6702</ma_cqt>
+		<ma_cqthu>1019129</ma_cqthu>
+		<ma_kb>3061</ma_kb>
+		<lcn_owner>KBA6061300</lcn_owner>
+		<ten_cqt>Chi cục Thuế TX Gia Nghĩa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6703</ma_cqt>
+		<ma_cqthu>1055830</ma_cqthu>
+		<ma_kb>3065</ma_kb>
+		<lcn_owner>KBA6060300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cư Jút</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6704</ma_cqt>
+		<ma_cqthu>1055892</ma_cqthu>
+		<ma_kb>3063</ma_kb>
+		<lcn_owner>KBA6060700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đắk Mil</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6705</ma_cqt>
+		<ma_cqthu>1055980</ma_cqthu>
+		<ma_kb>3062</ma_kb>
+		<lcn_owner>KBA6060500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Krông Nô</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6706</ma_cqt>
+		<ma_cqthu>1056182</ma_cqthu>
+		<ma_kb>3066</ma_kb>
+		<lcn_owner>KBA6060900</lcn_owner>
+		<ten_cqt>Chi cục Thuế Huyện Đắk Song</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6707</ma_cqt>
+		<ma_cqthu>1055985</ma_cqthu>
+		<ma_kb>3064</ma_kb>
+		<lcn_owner>KBA6061100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đắk R'Lấp</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6708</ma_cqt>
+		<ma_cqthu>1055986</ma_cqthu>
+		<ma_kb>3067</ma_kb>
+		<lcn_owner>KBA6061500</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Đắk Glong</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6709</ma_cqt>
+		<ma_cqthu>1029446</ma_cqthu>
+		<ma_kb>3068</ma_kb>
+		<lcn_owner>KBA6061700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tuy Đức</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6800</ma_cqt>
+		<ma_cqthu>1055983</ma_cqthu>
+		<ma_kb>2860</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Lâm Đồng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6801</ma_cqt>
+		<ma_cqthu>1055984</ma_cqthu>
+		<ma_kb>2861</ma_kb>
+		<lcn_owner>KBA7030000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Lâm Đồng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6802</ma_cqt>
+		<ma_cqthu>1056131</ma_cqthu>
+		<ma_kb>2861</ma_kb>
+		<lcn_owner>KBA7030100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Đà Lạt</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6803</ma_cqt>
+		<ma_cqthu>1056132</ma_cqthu>
+		<ma_kb>2864</ma_kb>
+		<lcn_owner>KBA7030300</lcn_owner>
+		<ten_cqt>Chi cục thuế thành phố Bảo Lộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6804</ma_cqt>
+		<ma_cqthu>1055987</ma_cqthu>
+		<ma_kb>2871</ma_kb>
+		<lcn_owner>KBA7030500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lạc Dương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6805</ma_cqt>
+		<ma_cqthu>1054269</ma_cqthu>
+		<ma_kb>2869</ma_kb>
+		<lcn_owner>KBA7030700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đơn Dương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6806</ma_cqt>
+		<ma_cqthu>1055988</ma_cqthu>
+		<ma_kb>2867</ma_kb>
+		<lcn_owner>KBA7030900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đức Trọng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6807</ma_cqt>
+		<ma_cqthu>1056135</ma_cqthu>
+		<ma_kb>2868</ma_kb>
+		<lcn_owner>KBA7031100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lâm Hà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6808</ma_cqt>
+		<ma_cqthu>1056136</ma_cqthu>
+		<ma_kb>2870</ma_kb>
+		<lcn_owner>KBA7031300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bảo Lâm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6809</ma_cqt>
+		<ma_cqthu>1056133</ma_cqthu>
+		<ma_kb>2866</ma_kb>
+		<lcn_owner>KBA7031500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Di Linh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6810</ma_cqt>
+		<ma_cqthu>1056134</ma_cqthu>
+		<ma_kb>2865</ma_kb>
+		<lcn_owner>KBA7031700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đạ Huoai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6811</ma_cqt>
+		<ma_cqthu>1056139</ma_cqthu>
+		<ma_kb>2862</ma_kb>
+		<lcn_owner>KBA7031900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đạ Tẻh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6812</ma_cqt>
+		<ma_cqthu>1056282</ma_cqthu>
+		<ma_kb>2863</ma_kb>
+		<lcn_owner>KBA7032100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cát Tiên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>6813</ma_cqt>
+		<ma_cqthu>1046318</ma_cqthu>
+		<ma_kb>2872</ma_kb>
+		<lcn_owner>KBA7032300</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Đam Rông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7000</ma_cqt>
+		<ma_cqthu>1054270</ma_cqthu>
+		<ma_kb>1860</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Bình Phước</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7001</ma_cqt>
+		<ma_cqthu>1054284</ma_cqthu>
+		<ma_kb>1861</ma_kb>
+		<lcn_owner>KBA7070000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Bình Phước</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7002</ma_cqt>
+		<ma_cqthu>1054282</ma_cqthu>
+		<ma_kb>1866</ma_kb>
+		<lcn_owner>KBA7070100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đồng Phú</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7003</ma_cqt>
+		<ma_cqthu>1054283</ma_cqthu>
+		<ma_kb>1864</ma_kb>
+		<lcn_owner>KBA7070300</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Phước Long</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7004</ma_cqt>
+		<ma_cqthu>1054288</ma_cqthu>
+		<ma_kb>1863</ma_kb>
+		<lcn_owner>KBA7070500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lộc Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7005</ma_cqt>
+		<ma_cqthu>1020398</ma_cqthu>
+		<ma_kb>1868</ma_kb>
+		<lcn_owner>KBA7070600</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bù Đốp</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7006</ma_cqt>
+		<ma_cqthu>1054289</ma_cqthu>
+		<ma_kb>1865</ma_kb>
+		<lcn_owner>KBA7070700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bù Đăng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7007</ma_cqt>
+		<ma_cqthu>1054286</ma_cqthu>
+		<ma_kb>1862</ma_kb>
+		<lcn_owner>KBA7070900</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Bình Long</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7008</ma_cqt>
+		<ma_cqthu>1019679</ma_cqthu>
+		<ma_kb>1867</ma_kb>
+		<lcn_owner>KBA7071000</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Chơn Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7009</ma_cqt>
+		<ma_cqthu>1054285</ma_cqthu>
+		<ma_kb>null</ma_kb>
+		<lcn_owner>KBA7071100</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Đồng Xoài</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7010</ma_cqt>
+		<ma_cqthu>1101050</ma_cqthu>
+		<ma_kb>1869</ma_kb>
+		<lcn_owner>KBA7071300</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Hớn Quản</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7011</ma_cqt>
+		<ma_cqthu>1101049</ma_cqthu>
+		<ma_kb>1870</ma_kb>
+		<lcn_owner>KBA7071500</lcn_owner>
+		<ten_cqt>Chi cục huyện Bù Gia Mập</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7200</ma_cqt>
+		<ma_cqthu>1054232</ma_cqthu>
+		<ma_kb>1910</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Tây Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7201</ma_cqt>
+		<ma_cqthu>1054229</ma_cqthu>
+		<ma_kb>1920</ma_kb>
+		<lcn_owner>KBA7090000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Tây Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7202</ma_cqt>
+		<ma_cqthu>1054230</ma_cqthu>
+		<ma_kb>1911</ma_kb>
+		<lcn_owner>KBA7090100</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Tây Ninh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7203</ma_cqt>
+		<ma_cqthu>1054235</ma_cqthu>
+		<ma_kb>1912</ma_kb>
+		<lcn_owner>KBA7090300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Biên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7204</ma_cqt>
+		<ma_cqthu>1054264</ma_cqthu>
+		<ma_kb>1913</ma_kb>
+		<lcn_owner>KBA7090500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7205</ma_cqt>
+		<ma_cqthu>1054233</ma_cqthu>
+		<ma_kb>1915</ma_kb>
+		<lcn_owner>KBA7090700</lcn_owner>
+		<ten_cqt>Chi cụcThuếHuyện DươngMinhChâu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7206</ma_cqt>
+		<ma_cqthu>1054234</ma_cqthu>
+		<ma_kb>1914</ma_kb>
+		<lcn_owner>KBA7090900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Châu Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7207</ma_cqt>
+		<ma_cqthu>1054267</ma_cqthu>
+		<ma_kb>1919</ma_kb>
+		<lcn_owner>KBA7091100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hoà Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7208</ma_cqt>
+		<ma_cqthu>1054268</ma_cqthu>
+		<ma_kb>1916</ma_kb>
+		<lcn_owner>KBA7091300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bến Cầu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7209</ma_cqt>
+		<ma_cqthu>1054265</ma_cqthu>
+		<ma_kb>1917</ma_kb>
+		<lcn_owner>KBA7091500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Gò Dầu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7210</ma_cqt>
+		<ma_cqthu>1054266</ma_cqthu>
+		<ma_kb>1918</ma_kb>
+		<lcn_owner>KBA7091700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tràng Bàng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7400</ma_cqt>
+		<ma_cqthu>1054260</ma_cqthu>
+		<ma_kb>1810</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Bình Dương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7401</ma_cqt>
+		<ma_cqthu>1054257</ma_cqthu>
+		<ma_kb>1811</ma_kb>
+		<lcn_owner>KBA7110000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Bình Dương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7402</ma_cqt>
+		<ma_cqthu>1054258</ma_cqthu>
+		<ma_kb>1818</ma_kb>
+		<lcn_owner>KBA7110100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Thủ Dầu Một</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7403</ma_cqt>
+		<ma_cqthu>1054332</ma_cqthu>
+		<ma_kb>1812</ma_kb>
+		<lcn_owner>KBA7110300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bến Cát</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7404</ma_cqt>
+		<ma_cqthu>1054262</ma_cqthu>
+		<ma_kb>1814</ma_kb>
+		<lcn_owner>KBA7110500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Uyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7405</ma_cqt>
+		<ma_cqthu>1054276</ma_cqthu>
+		<ma_kb>1813</ma_kb>
+		<lcn_owner>KBA7110700</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Thuận An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7406</ma_cqt>
+		<ma_cqthu>1054277</ma_cqthu>
+		<ma_kb>1815</ma_kb>
+		<lcn_owner>KBA7110900</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Dĩ An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7407</ma_cqt>
+		<ma_cqthu>1054261</ma_cqthu>
+		<ma_kb>1816</ma_kb>
+		<lcn_owner>KBA7111100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Giáo</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7408</ma_cqt>
+		<ma_cqthu>1054263</ma_cqthu>
+		<ma_kb>1817</ma_kb>
+		<lcn_owner>KBA7111300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Dầu Tiếng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7500</ma_cqt>
+		<ma_cqthu>1054274</ma_cqthu>
+		<ma_kb>1760</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Đồng Nai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7501</ma_cqt>
+		<ma_cqthu>1054275</ma_cqthu>
+		<ma_kb>1761</ma_kb>
+		<lcn_owner>KBA7130000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Đồng Nai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7502</ma_cqt>
+		<ma_cqthu>1054280</ma_cqthu>
+		<ma_kb>1770</ma_kb>
+		<lcn_owner>KBA7130100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Biên Hoà</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7503</ma_cqt>
+		<ma_cqthu>1054333</ma_cqthu>
+		<ma_kb>1766</ma_kb>
+		<lcn_owner>KBA7130200</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Long Khánh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7504</ma_cqt>
+		<ma_cqthu>1054281</ma_cqthu>
+		<ma_kb>1763</ma_kb>
+		<lcn_owner>KBA7130300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Phú</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7505</ma_cqt>
+		<ma_cqthu>1054278</ma_cqthu>
+		<ma_kb>1768</ma_kb>
+		<lcn_owner>KBA7130500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Định Quán</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7506</ma_cqt>
+		<ma_cqthu>1054279</ma_cqthu>
+		<ma_kb>1762</ma_kb>
+		<lcn_owner>KBA7130700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vĩnh Cừu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7507</ma_cqt>
+		<ma_cqthu>1095446</ma_cqthu>
+		<ma_kb>1764</ma_kb>
+		<lcn_owner>KBA7130800</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Trảng Bom</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7508</ma_cqt>
+		<ma_cqthu>1054292</ma_cqthu>
+		<ma_kb>1771</ma_kb>
+		<lcn_owner>KBA7130900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thống Nhất</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7509</ma_cqt>
+		<ma_cqthu>1061608</ma_cqthu>
+		<ma_kb>1772</ma_kb>
+		<lcn_owner>KBA7131100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cẩm Mỹ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7510</ma_cqt>
+		<ma_cqthu>1054311</ma_cqthu>
+		<ma_kb>1765</ma_kb>
+		<lcn_owner>KBA7131300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Xuân Lộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7511</ma_cqt>
+		<ma_cqthu>1054312</ma_cqthu>
+		<ma_kb>1767</ma_kb>
+		<lcn_owner>KBA7131500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Long Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7512</ma_cqt>
+		<ma_cqthu>1054367</ma_cqthu>
+		<ma_kb>1769</ma_kb>
+		<lcn_owner>KBA7131700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nhơn Trạch</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7700</ma_cqt>
+		<ma_cqthu>1054370</ma_cqthu>
+		<ma_kb>1710</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Bà rịa  - Vũng Tàu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7701</ma_cqt>
+		<ma_cqthu>1055811</ma_cqthu>
+		<ma_kb>1711</ma_kb>
+		<lcn_owner>KBA7170000</lcn_owner>
+		<ten_cqt>VP Cục thuế tỉnh Bà Rịa  - Vũng Tàu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7702</ma_cqt>
+		<ma_cqthu>1055808</ma_cqthu>
+		<ma_kb>1711</ma_kb>
+		<lcn_owner>KBA7170100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Vũng Tàu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7703</ma_cqt>
+		<ma_cqthu>1055809</ma_cqthu>
+		<ma_kb>1714</ma_kb>
+		<lcn_owner>KBA7170300</lcn_owner>
+		<ten_cqt>Chi cục thuế Thành Phố Bà Rịa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7704</ma_cqt>
+		<ma_cqthu>1055721</ma_cqthu>
+		<ma_kb>1715</ma_kb>
+		<lcn_owner>KBA7170500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Châu Đức</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7705</ma_cqt>
+		<ma_cqthu>1055873</ma_cqthu>
+		<ma_kb>1712</ma_kb>
+		<lcn_owner>KBA7170700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Xuyên Mộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7706</ma_cqt>
+		<ma_cqthu>1055812</ma_cqthu>
+		<ma_kb>1716</ma_kb>
+		<lcn_owner>KBA7170900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7707</ma_cqt>
+		<ma_cqthu>1055813</ma_cqthu>
+		<ma_kb>1713</ma_kb>
+		<lcn_owner>KBA7171100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Long Điền</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7708</ma_cqt>
+		<ma_cqthu>1095093</ma_cqthu>
+		<ma_kb>1717</ma_kb>
+		<lcn_owner>KBA7171200</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Đất Đỏ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7709</ma_cqt>
+		<ma_cqthu>1055810</ma_cqthu>
+		<ma_kb>1718</ma_kb>
+		<lcn_owner>KBA7171300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Côn Đảo</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7900</ma_cqt>
+		<ma_cqthu>1056137</ma_cqthu>
+		<ma_kb>0110</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế T.p Hồ Chí Minh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7901</ma_cqt>
+		<ma_cqthu>1056138</ma_cqthu>
+		<ma_kb>0111</ma_kb>
+		<lcn_owner>KBA7010000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế TP. Hồ Chí Minh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7902</ma_cqt>
+		<ma_cqthu>1056285</ma_cqthu>
+		<ma_kb>0133</ma_kb>
+		<lcn_owner>KBA7010100</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận 1</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7903</ma_cqt>
+		<ma_cqthu>1056286</ma_cqthu>
+		<ma_kb>0129</ma_kb>
+		<lcn_owner>KBA7010300</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận 2</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7904</ma_cqt>
+		<ma_cqthu>1056283</ma_cqthu>
+		<ma_kb>0112</ma_kb>
+		<lcn_owner>KBA7010500</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận 3</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7905</ma_cqt>
+		<ma_cqthu>1056284</ma_cqthu>
+		<ma_kb>0113</ma_kb>
+		<lcn_owner>KBA7010700</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận 4</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7906</ma_cqt>
+		<ma_cqthu>1056289</ma_cqthu>
+		<ma_kb>0114</ma_kb>
+		<lcn_owner>KBA7010900</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận 5</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7907</ma_cqt>
+		<ma_cqthu>1056290</ma_cqthu>
+		<ma_kb>0115</ma_kb>
+		<lcn_owner>KBA7011100</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận 6</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7908</ma_cqt>
+		<ma_cqthu>1056287</ma_cqthu>
+		<ma_kb>0130</ma_kb>
+		<lcn_owner>KBA7011300</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận 7</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7909</ma_cqt>
+		<ma_cqthu>1056288</ma_cqthu>
+		<ma_kb>0116</ma_kb>
+		<lcn_owner>KBA7011500</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận 8</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7910</ma_cqt>
+		<ma_cqthu>1056439</ma_cqthu>
+		<ma_kb>0131</ma_kb>
+		<lcn_owner>KBA7011700</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận 9</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7911</ma_cqt>
+		<ma_cqthu>1056440</ma_cqthu>
+		<ma_kb>0117</ma_kb>
+		<lcn_owner>KBA7011900</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận 10</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7912</ma_cqt>
+		<ma_cqthu>1056437</ma_cqthu>
+		<ma_kb>0118</ma_kb>
+		<lcn_owner>KBA7012100</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận 11</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7913</ma_cqt>
+		<ma_cqthu>1056438</ma_cqthu>
+		<ma_kb>0132</ma_kb>
+		<lcn_owner>KBA7012300</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận12</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7914</ma_cqt>
+		<ma_cqthu>1056443</ma_cqthu>
+		<ma_kb>0121</ma_kb>
+		<lcn_owner>KBA7012500</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Gò Vấp</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7915</ma_cqt>
+		<ma_cqthu>1056444</ma_cqthu>
+		<ma_kb>0122</ma_kb>
+		<lcn_owner>KBA7012700</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Tân Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7916</ma_cqt>
+		<ma_cqthu>1059604</ma_cqthu>
+		<ma_kb>0135</ma_kb>
+		<lcn_owner>KBA7012800</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Tân Phú</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7917</ma_cqt>
+		<ma_cqthu>1056441</ma_cqthu>
+		<ma_kb>0120</ma_kb>
+		<lcn_owner>KBA7012900</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Bình Thạnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7918</ma_cqt>
+		<ma_cqthu>1056442</ma_cqthu>
+		<ma_kb>0119</ma_kb>
+		<lcn_owner>KBA7013100</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Phú Nhuận</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7919</ma_cqt>
+		<ma_cqthu>1054219</ma_cqthu>
+		<ma_kb>0123</ma_kb>
+		<lcn_owner>KBA7013300</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Thủ Đức</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7920</ma_cqt>
+		<ma_cqthu>1061346</ma_cqthu>
+		<ma_kb>0134</ma_kb>
+		<lcn_owner>KBA7013400</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Bình Tân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7921</ma_cqt>
+		<ma_cqthu>1054220</ma_cqthu>
+		<ma_kb>0127</ma_kb>
+		<lcn_owner>KBA7013500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Củ Chi</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7922</ma_cqt>
+		<ma_cqthu>1056445</ma_cqthu>
+		<ma_kb>0124</ma_kb>
+		<lcn_owner>KBA7013700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hóc Môn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7923</ma_cqt>
+		<ma_cqthu>1054218</ma_cqthu>
+		<ma_kb>0126</ma_kb>
+		<lcn_owner>KBA7013900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bình Chánh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7924</ma_cqt>
+		<ma_cqthu>1054223</ma_cqthu>
+		<ma_kb>0125</ma_kb>
+		<lcn_owner>KBA7014100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Nhà Bè</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>7925</ma_cqt>
+		<ma_cqthu>1054224</ma_cqthu>
+		<ma_kb>0128</ma_kb>
+		<lcn_owner>KBA7014300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cần Giờ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8000</ma_cqt>
+		<ma_cqthu>1054346</ma_cqthu>
+		<ma_kb>0510</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Long An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8001</ma_cqt>
+		<ma_cqthu>1054347</ma_cqthu>
+		<ma_kb>0511</ma_kb>
+		<lcn_owner>KBA8010000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Long An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8002</ma_cqt>
+		<ma_cqthu>1055727</ma_cqthu>
+		<ma_kb>0511</ma_kb>
+		<lcn_owner>KBA8010100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Tân An</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8003</ma_cqt>
+		<ma_cqthu>1055728</ma_cqthu>
+		<ma_kb>0524</ma_kb>
+		<lcn_owner>KBA8010300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Hưng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8004</ma_cqt>
+		<ma_cqthu>1055725</ma_cqthu>
+		<ma_kb>0522</ma_kb>
+		<lcn_owner>KBA8010500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vĩnh Hưng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8005</ma_cqt>
+		<ma_cqthu>1055726</ma_cqthu>
+		<ma_kb>0523</ma_kb>
+		<lcn_owner>KBA8010700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mộc Hóa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8006</ma_cqt>
+		<ma_cqthu>1055731</ma_cqthu>
+		<ma_kb>0521</ma_kb>
+		<lcn_owner>KBA8010900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Thạnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8007</ma_cqt>
+		<ma_cqthu>1055874</ma_cqthu>
+		<ma_kb>0520</ma_kb>
+		<lcn_owner>KBA8011100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thạnh Hóa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8008</ma_cqt>
+		<ma_cqthu>1055729</ma_cqthu>
+		<ma_kb>0517</ma_kb>
+		<lcn_owner>KBA8011300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đức Huệ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8009</ma_cqt>
+		<ma_cqthu>1055730</ma_cqthu>
+		<ma_kb>0516</ma_kb>
+		<lcn_owner>KBA8011500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đức Hòa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8010</ma_cqt>
+		<ma_cqthu>1055877</ma_cqthu>
+		<ma_kb>0514</ma_kb>
+		<lcn_owner>KBA8011700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bến Lức</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8011</ma_cqt>
+		<ma_cqthu>1055878</ma_cqthu>
+		<ma_kb>0515</ma_kb>
+		<lcn_owner>KBA8011900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thủ Thừa</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8012</ma_cqt>
+		<ma_cqthu>1055875</ma_cqthu>
+		<ma_kb>0512</ma_kb>
+		<lcn_owner>KBA8012100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Châu Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8013</ma_cqt>
+		<ma_cqthu>1055876</ma_cqthu>
+		<ma_kb>0513</ma_kb>
+		<lcn_owner>KBA8012300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Trụ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8014</ma_cqt>
+		<ma_cqthu>1055881</ma_cqthu>
+		<ma_kb>0519</ma_kb>
+		<lcn_owner>KBA8012500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cần Đước</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8015</ma_cqt>
+		<ma_cqthu>1055882</ma_cqthu>
+		<ma_kb>0518</ma_kb>
+		<lcn_owner>KBA8012700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cần Giuộc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8200</ma_cqt>
+		<ma_cqthu>1056205</ma_cqthu>
+		<ma_kb>0560</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Tiền Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8201</ma_cqt>
+		<ma_cqthu>1056291</ma_cqthu>
+		<ma_kb>0561</ma_kb>
+		<lcn_owner>KBA8070000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Tiền Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8202</ma_cqt>
+		<ma_cqthu>1056355</ma_cqthu>
+		<ma_kb>0562</ma_kb>
+		<lcn_owner>KBA8070100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Mỹ Tho</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8203</ma_cqt>
+		<ma_cqthu>1056356</ma_cqthu>
+		<ma_kb>0563</ma_kb>
+		<lcn_owner>KBA8070300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Gò Công</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8204</ma_cqt>
+		<ma_cqthu>1056294</ma_cqthu>
+		<ma_kb>0570</ma_kb>
+		<lcn_owner>KBA8070500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Phước</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8205</ma_cqt>
+		<ma_cqthu>1056354</ma_cqthu>
+		<ma_kb>0566</ma_kb>
+		<lcn_owner>KBA8070700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Châu Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8206</ma_cqt>
+		<ma_cqthu>1054227</ma_cqthu>
+		<ma_kb>0565</ma_kb>
+		<lcn_owner>KBA8070900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cai Lậy</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8207</ma_cqt>
+		<ma_cqthu>1054228</ma_cqthu>
+		<ma_kb>0567</ma_kb>
+		<lcn_owner>KBA8071100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Chợ Gạo</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8208</ma_cqt>
+		<ma_cqthu>1056357</ma_cqthu>
+		<ma_kb>0564</ma_kb>
+		<lcn_owner>KBA8071300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cái Bè</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8209</ma_cqt>
+		<ma_cqthu>1056358</ma_cqthu>
+		<ma_kb>0569</ma_kb>
+		<lcn_owner>KBA8071500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Gò Công Tây</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8210</ma_cqt>
+		<ma_cqthu>1054231</ma_cqthu>
+		<ma_kb>0568</ma_kb>
+		<lcn_owner>KBA8071700</lcn_owner>
+		<ten_cqt>Chi cụcThuế huyện Gò Công Đông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8211</ma_cqt>
+		<ma_cqthu>1083883</ma_cqthu>
+		<ma_kb>0571</ma_kb>
+		<lcn_owner>KBA8071900</lcn_owner>
+		<ten_cqt>Chi cụcThuế huyện Tân Phú Đông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8300</ma_cqt>
+		<ma_cqthu>1056267</ma_cqthu>
+		<ma_kb>0610</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Bến Tre</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8301</ma_cqt>
+		<ma_cqthu>1056264</ma_cqthu>
+		<ma_kb>0611</ma_kb>
+		<lcn_owner>KBA8110000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Bến Tre</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8302</ma_cqt>
+		<ma_cqthu>1056265</ma_cqthu>
+		<ma_kb>0611</ma_kb>
+		<lcn_owner>KBA8110100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Bến Tre</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8303</ma_cqt>
+		<ma_cqthu>1056270</ma_cqthu>
+		<ma_kb>0612</ma_kb>
+		<lcn_owner>KBA8110300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Châu Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8304</ma_cqt>
+		<ma_cqthu>1056417</ma_cqthu>
+		<ma_kb>0614</ma_kb>
+		<lcn_owner>KBA8110500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Chợ Lách</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8305</ma_cqt>
+		<ma_cqthu>1056268</ma_cqthu>
+		<ma_kb>0613</ma_kb>
+		<lcn_owner>KBA8110700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mỏ Cày Nam</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8306</ma_cqt>
+		<ma_cqthu>1056269</ma_cqthu>
+		<ma_kb>0617</ma_kb>
+		<lcn_owner>KBA8110900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Giồng Trôm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8307</ma_cqt>
+		<ma_cqthu>1056420</ma_cqthu>
+		<ma_kb>0618</ma_kb>
+		<lcn_owner>KBA8111100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bình Đại</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8308</ma_cqt>
+		<ma_cqthu>1056421</ma_cqthu>
+		<ma_kb>0615</ma_kb>
+		<lcn_owner>KBA8111300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ba Tri</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8309</ma_cqt>
+		<ma_cqthu>1056418</ma_cqthu>
+		<ma_kb>0616</ma_kb>
+		<lcn_owner>KBA8111500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thạnh Phú</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8310</ma_cqt>
+		<ma_cqthu>1097552</ma_cqthu>
+		<ma_kb>0619</ma_kb>
+		<lcn_owner>KBA8110800</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Mỏ Cày Bắc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8400</ma_cqt>
+		<ma_cqthu>1054287</ma_cqthu>
+		<ma_kb>1010</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Trà Vinh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8401</ma_cqt>
+		<ma_cqthu>1054340</ma_cqthu>
+		<ma_kb>1011</ma_kb>
+		<lcn_owner>KBA8170000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Trà Vinh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8402</ma_cqt>
+		<ma_cqthu>1054341</ma_cqthu>
+		<ma_kb>1011</ma_kb>
+		<lcn_owner>KBA8170100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Trà Vinh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8403</ma_cqt>
+		<ma_cqthu>1054290</ma_cqthu>
+		<ma_kb>1013</ma_kb>
+		<lcn_owner>KBA8170300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Càng Long</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8404</ma_cqt>
+		<ma_cqthu>1054339</ma_cqthu>
+		<ma_kb>1012</ma_kb>
+		<lcn_owner>KBA8170500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Châu Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8405</ma_cqt>
+		<ma_cqthu>1054344</ma_cqthu>
+		<ma_kb>1018</ma_kb>
+		<lcn_owner>KBA8170700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cầu Kè</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8406</ma_cqt>
+		<ma_cqthu>1054345</ma_cqthu>
+		<ma_kb>1017</ma_kb>
+		<lcn_owner>KBA8170900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tiểu Cần</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8407</ma_cqt>
+		<ma_cqthu>1054342</ma_cqthu>
+		<ma_kb>1015</ma_kb>
+		<lcn_owner>KBA8171100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cầu Ngang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8408</ma_cqt>
+		<ma_cqthu>1054343</ma_cqthu>
+		<ma_kb>1014</ma_kb>
+		<lcn_owner>KBA8171300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Trà Cú</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8409</ma_cqt>
+		<ma_cqthu>1055723</ma_cqthu>
+		<ma_kb>1016</ma_kb>
+		<lcn_owner>KBA8171500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Duyên Hải</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8600</ma_cqt>
+		<ma_cqthu>1056115</ma_cqthu>
+		<ma_kb>0710</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Vĩnh Long</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8601</ma_cqt>
+		<ma_cqthu>1056116</ma_cqthu>
+		<ma_kb>0711</ma_kb>
+		<lcn_owner>KBA8090000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Vĩnh Long</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8602</ma_cqt>
+		<ma_cqthu>1056113</ma_cqthu>
+		<ma_kb>0719</ma_kb>
+		<lcn_owner>KBA8090100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Vĩnh Long</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8603</ma_cqt>
+		<ma_cqthu>1056262</ma_cqthu>
+		<ma_kb>0713</ma_kb>
+		<lcn_owner>KBA8090300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Long Hồ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8604</ma_cqt>
+		<ma_cqthu>1056263</ma_cqthu>
+		<ma_kb>0717</ma_kb>
+		<lcn_owner>KBA8090500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mang Thít</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8605</ma_cqt>
+		<ma_cqthu>1056119</ma_cqthu>
+		<ma_kb>0715</ma_kb>
+		<lcn_owner>KBA8090700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bình Minh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8606</ma_cqt>
+		<ma_cqthu>1027398</ma_cqthu>
+		<ma_kb>0718</ma_kb>
+		<lcn_owner>KBA8090800</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Bình Tân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8607</ma_cqt>
+		<ma_cqthu>1056120</ma_cqthu>
+		<ma_kb>0714</ma_kb>
+		<lcn_owner>KBA8090900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tam Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8608</ma_cqt>
+		<ma_cqthu>1056117</ma_cqthu>
+		<ma_kb>0712</ma_kb>
+		<lcn_owner>KBA8091100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Trà Ôn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8609</ma_cqt>
+		<ma_cqthu>1056266</ma_cqthu>
+		<ma_kb>0716</ma_kb>
+		<lcn_owner>KBA8091300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vũng Liêm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8700</ma_cqt>
+		<ma_cqthu>1055879</ma_cqthu>
+		<ma_kb>0660</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Đồng Tháp</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8701</ma_cqt>
+		<ma_cqthu>1055880</ma_cqthu>
+		<ma_kb>0661</ma_kb>
+		<lcn_owner>KBA8030000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Đồng Tháp</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8702</ma_cqt>
+		<ma_cqthu>1056028</ma_cqthu>
+		<ma_kb>0672</ma_kb>
+		<lcn_owner>KBA8030100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Cao Lãnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8703</ma_cqt>
+		<ma_cqthu>1056029</ma_cqthu>
+		<ma_kb>0662</ma_kb>
+		<lcn_owner>KBA8030300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Sa Đéc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8704</ma_cqt>
+		<ma_cqthu>1055968</ma_cqthu>
+		<ma_kb>0670</ma_kb>
+		<lcn_owner>KBA8030500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Hồng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8705</ma_cqt>
+		<ma_cqthu>1056027</ma_cqthu>
+		<ma_kb>0666</ma_kb>
+		<lcn_owner>KBA8030700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hồng Ngự</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8706</ma_cqt>
+		<ma_cqthu>1056032</ma_cqthu>
+		<ma_kb>0664</ma_kb>
+		<lcn_owner>KBA8030900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tam Nông</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8707</ma_cqt>
+		<ma_cqthu>1056033</ma_cqthu>
+		<ma_kb>0665</ma_kb>
+		<lcn_owner>KBA8031100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thanh Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8708</ma_cqt>
+		<ma_cqthu>1056030</ma_cqthu>
+		<ma_kb>0669</ma_kb>
+		<lcn_owner>KBA8031300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tháp Mười</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8709</ma_cqt>
+		<ma_cqthu>1056031</ma_cqthu>
+		<ma_kb>0671</ma_kb>
+		<lcn_owner>KBA8031500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cao Lãnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8710</ma_cqt>
+		<ma_cqthu>1056122</ma_cqthu>
+		<ma_kb>0667</ma_kb>
+		<lcn_owner>KBA8031700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lấp Vò</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8711</ma_cqt>
+		<ma_cqthu>1056180</ma_cqthu>
+		<ma_kb>0668</ma_kb>
+		<lcn_owner>KBA8031900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Lai Vung</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8712</ma_cqt>
+		<ma_cqthu>1056034</ma_cqthu>
+		<ma_kb>0663</ma_kb>
+		<lcn_owner>KBA8032100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Châu Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8713</ma_cqt>
+		<ma_cqthu>1098452</ma_cqthu>
+		<ma_kb>0673</ma_kb>
+		<lcn_owner>KBA8032300</lcn_owner>
+		<ten_cqt>Chi cục thuế thị xã Hồng Ngự</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8900</ma_cqt>
+		<ma_cqthu>1055962</ma_cqthu>
+		<ma_kb>0760</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh An Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8901</ma_cqt>
+		<ma_cqthu>1055959</ma_cqthu>
+		<ma_kb>0761</ma_kb>
+		<lcn_owner>KBA8050000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh An Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8902</ma_cqt>
+		<ma_cqthu>1055960</ma_cqthu>
+		<ma_kb>0772</ma_kb>
+		<lcn_owner>KBA8050100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Long Xuyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8903</ma_cqt>
+		<ma_cqthu>1055814</ma_cqthu>
+		<ma_kb>0767</ma_kb>
+		<lcn_owner>KBA8050300</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Châu Đốc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8904</ma_cqt>
+		<ma_cqthu>1055966</ma_cqthu>
+		<ma_kb>0771</ma_kb>
+		<lcn_owner>KBA8050500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện An Phú</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8905</ma_cqt>
+		<ma_cqthu>1055963</ma_cqthu>
+		<ma_kb>0769</ma_kb>
+		<lcn_owner>KBA8050700</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Tân Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8906</ma_cqt>
+		<ma_cqthu>1055964</ma_cqthu>
+		<ma_kb>0768</ma_kb>
+		<lcn_owner>KBA8050900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Tân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8907</ma_cqt>
+		<ma_cqthu>1055961</ma_cqthu>
+		<ma_kb>0764</ma_kb>
+		<lcn_owner>KBA8051100</lcn_owner>
+		<ten_cqt>Chi cục thuê huyện Châu Phú</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8908</ma_cqt>
+		<ma_cqthu>1056114</ma_cqthu>
+		<ma_kb>0763</ma_kb>
+		<lcn_owner>KBA8051300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tịnh Biên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8909</ma_cqt>
+		<ma_cqthu>1055967</ma_cqthu>
+		<ma_kb>0762</ma_kb>
+		<lcn_owner>KBA8051500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tri Tôn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8910</ma_cqt>
+		<ma_cqthu>1056112</ma_cqthu>
+		<ma_kb>0765</ma_kb>
+		<lcn_owner>KBA8051700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Chợ Mới</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8911</ma_cqt>
+		<ma_cqthu>1055965</ma_cqthu>
+		<ma_kb>0770</ma_kb>
+		<lcn_owner>KBA8051900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Châu Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>8912</ma_cqt>
+		<ma_cqthu>1056118</ma_cqthu>
+		<ma_kb>0766</ma_kb>
+		<lcn_owner>KBA8052100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thoại Sơn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9100</ma_cqt>
+		<ma_cqthu>1056419</ma_cqthu>
+		<ma_kb>0810</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Kiên Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9101</ma_cqt>
+		<ma_cqthu>1056424</ma_cqthu>
+		<ma_kb>0811</ma_kb>
+		<lcn_owner>KBA8130000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Kiên Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9102</ma_cqt>
+		<ma_cqthu>1056425</ma_cqthu>
+		<ma_kb>0811</ma_kb>
+		<lcn_owner>KBA8130100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố  Rạch Giá</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9103</ma_cqt>
+		<ma_cqthu>1056423</ma_cqthu>
+		<ma_kb>0819</ma_kb>
+		<lcn_owner>KBA8130300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kiên Lương</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9104</ma_cqt>
+		<ma_cqthu>1055277</ma_cqthu>
+		<ma_kb>0813</ma_kb>
+		<lcn_owner>KBA8130500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hòn Đất</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9105</ma_cqt>
+		<ma_cqthu>1055278</ma_cqthu>
+		<ma_kb>0820</ma_kb>
+		<lcn_owner>KBA8130700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Tân Hiệp</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9106</ma_cqt>
+		<ma_cqthu>1055275</ma_cqthu>
+		<ma_kb>0818</ma_kb>
+		<lcn_owner>KBA8130900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Châu Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9107</ma_cqt>
+		<ma_cqthu>1055276</ma_cqthu>
+		<ma_kb>0822</ma_kb>
+		<lcn_owner>KBA8131100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Giồng Riềng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9108</ma_cqt>
+		<ma_cqthu>1055281</ma_cqthu>
+		<ma_kb>0814</ma_kb>
+		<lcn_owner>KBA8131300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Gò Quao</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9109</ma_cqt>
+		<ma_cqthu>1055282</ma_cqthu>
+		<ma_kb>0817</ma_kb>
+		<lcn_owner>KBA8131500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện An Biên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9110</ma_cqt>
+		<ma_cqthu>1055279</ma_cqthu>
+		<ma_kb>0815</ma_kb>
+		<lcn_owner>KBA8131700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện An Minh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9111</ma_cqt>
+		<ma_cqthu>1055280</ma_cqthu>
+		<ma_kb>0812</ma_kb>
+		<lcn_owner>KBA8131900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vĩnh Thuận</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9112</ma_cqt>
+		<ma_cqthu>1055740</ma_cqthu>
+		<ma_kb>0821</ma_kb>
+		<lcn_owner>KBA8132100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Quốc</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9113</ma_cqt>
+		<ma_cqthu>1055741</ma_cqthu>
+		<ma_kb>0816</ma_kb>
+		<lcn_owner>KBA8132300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kiên Hải</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9114</ma_cqt>
+		<ma_cqthu>1056422</ma_cqthu>
+		<ma_kb>0823</ma_kb>
+		<lcn_owner>KBA8132500</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Hà Tiên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9115</ma_cqt>
+		<ma_cqthu>1092935</ma_cqthu>
+		<ma_kb>0824</ma_kb>
+		<lcn_owner>KBA8132700</lcn_owner>
+		<ten_cqt>Chi cục thuế U Minh Thượng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9116</ma_cqt>
+		<ma_cqthu>1099540</ma_cqthu>
+		<ma_kb>0811</ma_kb>
+		<lcn_owner>KBA8130400</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Giang Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9200</ma_cqt>
+		<ma_cqthu>1055283</ma_cqthu>
+		<ma_kb>0860</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế TP Cần Thơ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9201</ma_cqt>
+		<ma_cqthu>1055739</ma_cqthu>
+		<ma_kb>0861</ma_kb>
+		<lcn_owner>KBA8150000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Cần Thơ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9202</ma_cqt>
+		<ma_cqthu>1055742</ma_cqthu>
+		<ma_kb>0863</ma_kb>
+		<lcn_owner>KBA8150300</lcn_owner>
+		<ten_cqt>CC Thuế quận Thốt Nốt</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9203</ma_cqt>
+		<ma_cqthu>1055743</ma_cqthu>
+		<ma_kb>0864</ma_kb>
+		<lcn_owner>KBA8150500</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Ô Môn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9204</ma_cqt>
+		<ma_cqthu>1055744</ma_cqthu>
+		<ma_kb>0869</ma_kb>
+		<lcn_owner>KBA8151900</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Ninh Kiều</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9205</ma_cqt>
+		<ma_cqthu>1059662</ma_cqthu>
+		<ma_kb>0867</ma_kb>
+		<lcn_owner>KBA8152100</lcn_owner>
+		<ten_cqt>CC Thuế quận Bình Thủy</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9206</ma_cqt>
+		<ma_cqthu>1059661</ma_cqthu>
+		<ma_kb>0862</ma_kb>
+		<lcn_owner>KBA8152300</lcn_owner>
+		<ten_cqt>Chi cục thuế Quận Cái Răng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9207</ma_cqt>
+		<ma_cqthu>1059660</ma_cqthu>
+		<ma_kb>0866</ma_kb>
+		<lcn_owner>KBA8152500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vĩnh Thạnh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9208</ma_cqt>
+		<ma_cqthu>1061397</ma_cqthu>
+		<ma_kb>0865</ma_kb>
+		<lcn_owner>KBA8152700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cờ Đỏ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9209</ma_cqt>
+		<ma_cqthu>1059659</ma_cqthu>
+		<ma_kb>0868</ma_kb>
+		<lcn_owner>KBA8152900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phong Điền</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9210</ma_cqt>
+		<ma_cqthu>1097553</ma_cqthu>
+		<ma_kb>0870</ma_kb>
+		<lcn_owner>KBA8153100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thới Lai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9300</ma_cqt>
+		<ma_cqthu>null</ma_cqthu>
+		<ma_kb>3110</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Hậu Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9301</ma_cqt>
+		<ma_cqthu>1007206</ma_cqthu>
+		<ma_kb>3111</ma_kb>
+		<lcn_owner>KBA8160000</lcn_owner>
+		<ten_cqt>Văn phòng cục thuế tỉnh Hậu Giang</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9302</ma_cqt>
+		<ma_cqthu>1055745</ma_cqthu>
+		<ma_kb>3111</ma_kb>
+		<lcn_owner>KBA8160100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Vị Thanh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9303</ma_cqt>
+		<ma_cqthu>1055893</ma_cqthu>
+		<ma_kb>3114</ma_kb>
+		<lcn_owner>KBA8160300</lcn_owner>
+		<ten_cqt>Chi cụcThuế huyện Châu Thành A</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9304</ma_cqt>
+		<ma_cqthu>1055894</ma_cqthu>
+		<ma_kb>3112</ma_kb>
+		<lcn_owner>KBA8160500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Châu Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9305</ma_cqt>
+		<ma_cqthu>1020034</ma_cqthu>
+		<ma_kb>3117</ma_kb>
+		<lcn_owner>KBA8160700</lcn_owner>
+		<ten_cqt>Chi cục thuế TX Ngã Bảy</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9306</ma_cqt>
+		<ma_cqthu>1055747</ma_cqthu>
+		<ma_kb>3116</ma_kb>
+		<lcn_owner>KBA8160900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vị Thủy</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9307</ma_cqt>
+		<ma_cqthu>1055897</ma_cqthu>
+		<ma_kb>3115</ma_kb>
+		<lcn_owner>KBA8161100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Long Mỹ</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9308</ma_cqt>
+		<ma_cqthu>1055746</ma_cqthu>
+		<ma_kb>3113</ma_kb>
+		<lcn_owner>KBA8160800</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phụng Hiệp</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9400</ma_cqt>
+		<ma_cqthu>1055898</ma_cqthu>
+		<ma_kb>1060</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế tỉnh Sóc Trăng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9401</ma_cqt>
+		<ma_cqthu>1055895</ma_cqthu>
+		<ma_kb>1061</ma_kb>
+		<lcn_owner>KBA8190000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế tỉnh Sóc Trăng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9402</ma_cqt>
+		<ma_cqthu>1055896</ma_cqthu>
+		<ma_kb>1061</ma_kb>
+		<lcn_owner>KBA8190100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố  Sóc Trăng</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9403</ma_cqt>
+		<ma_cqthu>1055901</ma_cqthu>
+		<ma_kb>1062</ma_kb>
+		<lcn_owner>KBA8190300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Kế Sách</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9404</ma_cqt>
+		<ma_cqthu>1056046</ma_cqthu>
+		<ma_kb>1064</ma_kb>
+		<lcn_owner>KBA8190500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Long Phú</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9405</ma_cqt>
+		<ma_cqthu>1056273</ma_cqthu>
+		<ma_kb>1068</ma_kb>
+		<lcn_owner>KBA8190600</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cù Lao Dung</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9406</ma_cqt>
+		<ma_cqthu>1055899</ma_cqthu>
+		<ma_kb>1063</ma_kb>
+		<lcn_owner>KBA8190700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mỹ Tú</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9407</ma_cqt>
+		<ma_cqthu>1055900</ma_cqthu>
+		<ma_kb>1066</ma_kb>
+		<lcn_owner>KBA8190900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Mỹ Xuyên</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9408</ma_cqt>
+		<ma_cqthu>1056049</ma_cqthu>
+		<ma_kb>1065</ma_kb>
+		<lcn_owner>KBA8191100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thạnh Trị</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9409</ma_cqt>
+		<ma_cqthu>1061972</ma_cqthu>
+		<ma_kb>1069</ma_kb>
+		<lcn_owner>KBA8191200</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Ngã Năm</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9410</ma_cqt>
+		<ma_cqthu>1056050</ma_cqthu>
+		<ma_kb>1067</ma_kb>
+		<lcn_owner>KBA8191300</lcn_owner>
+		<ten_cqt>Chi cục thuế Thị xã Vĩnh Châu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9411</ma_cqt>
+		<ma_cqthu>1095140</ma_cqthu>
+		<ma_kb>1070</ma_kb>
+		<lcn_owner>KBA8191500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Châu Thành</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9412</ma_cqt>
+		<ma_cqthu>1103751</ma_cqthu>
+		<ma_kb>1061</ma_kb>
+		<lcn_owner>KBA8191700</lcn_owner>
+		<ten_cqt>Chi cục Thuế huyện Trần Đề</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9500</ma_cqt>
+		<ma_cqthu>1056047</ma_cqthu>
+		<ma_kb>0910</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế Tỉnh Bạc Liêu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9501</ma_cqt>
+		<ma_cqthu>1056048</ma_cqthu>
+		<ma_kb>0911</ma_kb>
+		<lcn_owner>KBA8210000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Tỉnh Bạc Liêu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9502</ma_cqt>
+		<ma_cqthu>1056053</ma_cqthu>
+		<ma_kb>0911</ma_kb>
+		<lcn_owner>KBA8210100</lcn_owner>
+		<ten_cqt>Chi cục thuế TP Bạc Liêu</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9503</ma_cqt>
+		<ma_cqthu>1056051</ma_cqthu>
+		<ma_kb>0915</ma_kb>
+		<lcn_owner>KBA8210300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Hồng Dân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9504</ma_cqt>
+		<ma_cqthu>1056052</ma_cqthu>
+		<ma_kb>0917</ma_kb>
+		<lcn_owner>KBA8210500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Vĩnh  Lợi</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9505</ma_cqt>
+		<ma_cqthu>1063900</ma_cqthu>
+		<ma_kb>0913</ma_kb>
+		<lcn_owner>KBA8210600</lcn_owner>
+		<ten_cqt>Chi cục thuế Huyện Hoà Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9506</ma_cqt>
+		<ma_cqthu>1056199</ma_cqthu>
+		<ma_kb>0914</ma_kb>
+		<lcn_owner>KBA8210700</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Giá Rai</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9507</ma_cqt>
+		<ma_cqthu>1056054</ma_cqthu>
+		<ma_kb>0912</ma_kb>
+		<lcn_owner>KBA8210900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phước Long</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9508</ma_cqt>
+		<ma_cqthu>1056183</ma_cqthu>
+		<ma_kb>0916</ma_kb>
+		<lcn_owner>KBA8211100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đông Hải</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9600</ma_cqt>
+		<ma_cqthu>1056200</ma_cqthu>
+		<ma_kb>0960</ma_kb>
+		<lcn_owner>KBA00</lcn_owner>
+		<ten_cqt>Cục thuế Tỉnh Cà Mau</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9601</ma_cqt>
+		<ma_cqthu>1056140</ma_cqthu>
+		<ma_kb>0961</ma_kb>
+		<lcn_owner>KBA8230000</lcn_owner>
+		<ten_cqt>Văn phòng Cục thuế Tỉnh Cà Mau</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9602</ma_cqt>
+		<ma_cqthu>1056141</ma_cqthu>
+		<ma_kb>0961</ma_kb>
+		<lcn_owner>KBA8230100</lcn_owner>
+		<ten_cqt>Chi cục thuế T.Phố Cà Mau</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9603</ma_cqt>
+		<ma_cqthu>1056203</ma_cqthu>
+		<ma_kb>0962</ma_kb>
+		<lcn_owner>KBA8230300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Thới Bình</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9604</ma_cqt>
+		<ma_cqthu>1056204</ma_cqthu>
+		<ma_kb>0967</ma_kb>
+		<lcn_owner>KBA8230500</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện U Minh</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9605</ma_cqt>
+		<ma_cqthu>1056201</ma_cqthu>
+		<ma_kb>0966</ma_kb>
+		<lcn_owner>KBA8230700</lcn_owner>
+		<ten_cqt>Chi cụcThuếHuyện Trần Văn Thời</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9606</ma_cqt>
+		<ma_cqthu>1047048</ma_cqthu>
+		<ma_kb>0968</ma_kb>
+		<lcn_owner>KBA8230800</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Phú Tân</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9607</ma_cqt>
+		<ma_cqthu>1056202</ma_cqthu>
+		<ma_kb>0963</ma_kb>
+		<lcn_owner>KBA8230900</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Cái Nước</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9608</ma_cqt>
+		<ma_cqthu>1056292</ma_cqthu>
+		<ma_kb>0964</ma_kb>
+		<lcn_owner>KBA8231100</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Đầm Dơi</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9609</ma_cqt>
+		<ma_cqthu>1047047</ma_cqthu>
+		<ma_kb>0965</ma_kb>
+		<lcn_owner>KBA8231200</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Năm Căn</ten_cqt>
+	</info_cqt>
+	<info_cqt>
+		<ma_cqt>9610</ma_cqt>
+		<ma_cqthu>1056293</ma_cqthu>
+		<ma_kb>0969</ma_kb>
+		<lcn_owner>KBA8231300</lcn_owner>
+		<ten_cqt>Chi cục thuế huyện Ngọc Hiển</ten_cqt>
+	</info_cqt>
+</map_cqt>
